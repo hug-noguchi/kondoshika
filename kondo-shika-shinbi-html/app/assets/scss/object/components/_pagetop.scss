@@ -1,0 +1,40 @@
+.c-pagetop {
+  position: absolute;
+  top: 0%;
+  right: 8px;
+  transform: translateY(-50%);
+
+  @include breakpoint(small only){
+    display: none;
+  }
+  &__button {
+    display: block;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 32px;
+    line-height: 0.7;
+    background-color: $color-primary;
+    text-align: center;
+    transition: all .3s;
+    width: 56px;
+    height: 56px;
+    border-radius: 100px;
+    padding-top: 10px;
+    &:hover{
+      opacity: 1;
+      i{
+        animation-name:fuwafuwa;
+        animation-duration:1.5s;
+        animation-iteration-count:infinite;
+        /*-webkit-animation-direction:alternate;*/
+        animation-timing-function:ease;
+      }
+    }
+  }
+}
+
+@keyframes fuwafuwa {
+  0% {-webkit-transform:translate(0, 0);}
+  50% {-webkit-transform:translate(0, -4px);}
+  100% {-webkit-transform:translate(0, -2);}
+}

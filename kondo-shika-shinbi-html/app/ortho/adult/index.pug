@@ -1,0 +1,62 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "adult" // ページのID
+  - current.title = "成人矯正" // タイトル
+  - current.description = "これは成人矯正についての説明文です" // 説明文
+  - current.bodyClass = "adult" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-adult.jpg","成人矯正")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span: +a("/ortho/") 矯正治療
+        span >
+        span 成人矯正
+
+block body
+  section.l-main
+    .l-section.is-lower
+      .l-section.is-lower-inner
+        +c.title-block
+          +e.title
+            h2.heading.is-xlg.
+              成人からの矯正治療
+        +c.ortho-top.is-adult
+          +e.inner
+            +e.content.u-box-shadow
+              +e.title.
+                大人でも矯正治療は可能です
+              +e.text.
+                大人になってからでも、矯正治療は可能です。しかし、子どもと違い、成長発育は期待できませんので、理想的なより良い歯並びは追求せず、可能な範囲で、ということになります。<br>そして、抜歯をしないのは、小児と変わりません。抜歯をすることは、咬み合わせも変わり、歯の持ちも悪くなるためです。
+        +c.overview-normal.u-line-dot
+          +e.inner
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    h3.heading.is-lg 部分矯正
+                  +e.text.
+                    成人の場合は、骨格的に完成されているため、歯並び全体を大幅に変えるのではなく、無理なく可能な範囲での矯正治療を当クリニックではおすすめしています。さらに、抜歯も、親知らず以外は、原則としてしないようにしています。
+                  +e.button
+                    +a("/ortho/adult/portion/").c-button.is-md.is-arrow.is-primary.is-effect.
+                      詳細を見る
+              +e.images
+                +img("img-adult-01.jpg","部分矯正").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    h3.heading.is-lg マウスピース矯正
+                  +e.text.
+                    今、トレンドのマウスピース矯正です。<br>
+                    取り外し式の透明のマウスピースを使用しますので、従来の固定式矯正装置（マルチブラケット装置）と比較して目立たず、取り外し式なので、むし歯にもなりにくい、といったメリットがあります。
+                  +e.button
+                    +a("/ortho/adult/mouthpiece/").c-button.is-md.is-arrow.is-primary.is-effect.
+                      詳細を見る
+              +e.images
+                +img("img-adult-02.jpg","マウスピース矯正").u-image-radius

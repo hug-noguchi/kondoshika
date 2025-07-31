@@ -1,0 +1,94 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "flow" // ページのID
+  - current.title = "診療の流れ" // タイトル
+  - current.description = "これは診療の流れについての説明文です" // 説明文
+  - current.bodyClass = "flow" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-flow.jpg","診療の流れ")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span 診療の流れ
+
+block body
+  section.l-main
+    .l-section.is-lower
+      .l-section.is-lower-inner
+
+        +c.flow-conts
+          +e.inner
+            .l-container
+              .c-title-block
+                .l-container
+                  .c-title-block__title
+                    h2.heading.is-xlg.
+                      診療の流れ
+              +e.section
+                +e.block
+                  +e.images
+                    +img("img-flow-01.jpg","FLOW1. 初診相談").c-flow-conts__image
+                  +e.texts
+                    h3.heading.is-lg.
+                      FLOW1.  初診相談
+                    +e.text.
+                      おおまかな矯正治療の流れと、現在の口腔内の問題点を説明します。矯正が必要なのか実際に矯正できるのか、いつ頃から始めたら良いのかといったお話をします。あなたのライフステージに応じてご相談を受けさせていただきます。
+
+                +e.block
+                  +e.images
+                    +img("img-flow-02.jpg","FLOW2. 精密検査・資料").c-flow-conts__image
+                  +e.texts
+                    h3.heading.is-lg.
+                      FLOW2.  精密検査・資料
+                    +e.text.
+                      矯正の診断、診療方針・方法の決定に必要な資料をとります。<br>
+                      例えばレントゲン撮影（正面、側面の頭がい骨のレントゲンも撮影します）、口腔内・顔面の写真撮影、口腔内の型どり、虫歯の検査などです。必要に応じて検査項目を追加します。<br>
+                      細かく分析を行いますので、次の診断まで1か月ほどお時間をいただきます。
+
+
+                +e.block
+                  +e.images
+                    +img("img-flow-03.jpg","FLOW3. 診　断").c-flow-conts__image
+                  +e.texts
+                    h3.heading.is-lg.
+                      FLOW3.  診　断
+                    +e.text.
+                      検査結果に基づいた、診療方針・方法、タイムスケジュールについて説明します。歯を抜くのか抜かないのか、どんな装置を使うのか、おおよその期間、費用等についてお話しします。<br>
+                      同意書の内容についても説明させていただき、署名を頂いた後、矯正開始となります。十分に理解していただき、安心して治療をスタートしましょう！
+
+                +e.block
+                  +e.images
+                    +img("img-flow-04.jpg","FLOW4. 矯正開始").c-flow-conts__image
+                  +e.texts
+                    h3.heading.is-lg.
+                      FLOW4.  矯正開始
+                    +e.text.
+                      お子さんの場合は成長に応じた診療方法が優先されます。骨組みを改善し、大人の診療の前の土台づくりを行います。成長の終了した方や、大人の方は成人矯正としてマルチブラケット装置を用いて矯正を行います。
+
+                +e.block
+                  +e.images
+                    +img("img-flow-05.jpg","FLOW5. 後戻り防止・経過観察期間").c-flow-conts__image
+                  +e.texts
+                    h3.heading.is-lg.
+                      FLOW5.  後戻り防止・経過観察期間
+                    +e.text.
+                      歯並びが綺麗になり、咬み合わせが良くなっても、放置しておくと再度歯並びが乱れてしまいます。装置撤去後の”後戻り”といいます。後戻りを防ぐための装置を”リテーナー”といいますが、歯をさえている骨がしっかりするまで数年間使っていただきます。<br>
+                      この時期をさぼると何年もかけて治療したものが崩れてしまいます！
+
+                +e.block
+                  +e.images
+                    +img("img-flow-06.jpg","FLOW6. 診　断").c-flow-conts__image
+                  +e.texts
+                    h3.heading.is-lg.
+                      FLOW6.  診　断
+                    +e.text.
+                      素敵な笑顔で人生を楽しんでください！
+
+    //+c_relation_lg("flow","is-lower","関連コンテンツ")
+
+
+

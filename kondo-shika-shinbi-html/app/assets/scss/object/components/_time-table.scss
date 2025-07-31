@@ -1,0 +1,121 @@
+.c-time-table{
+/******************************
+  受付時間表
+******************************/
+  &__schedule {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 4px;
+    thead {
+      > tr {
+      }
+
+      > tr > th {
+        padding: 8px 12px;
+        text-align: center;
+        background-color: $color-primary;
+        border: 1px solid $border-base-color;
+        color: white;
+        font-size: rem-calc(16);
+        line-height: 1.2;
+        @media (max-width: 950px) {
+          padding: 8px 2px;
+          font-size: rem-calc(11);
+        }
+      }
+
+      > tr > th:first-child {
+        @media (max-width: 950px) {
+          padding: 8px 10px;
+        }
+      }
+
+      > tr > th:last-child {
+        padding: 8px 2px;
+        @media (max-width: 950px) {
+          padding: 8px 2px;
+        }
+      }
+    }
+
+    tbody {
+      > tr {
+      }
+
+      > tr > th {
+        padding: 8px 12px;
+        text-align: center;
+        border: 1px solid $border-base-color;
+        font-size: rem-calc(16);
+        background-color: white;
+        line-height: 1.2;
+        @media (max-width: 950px) {
+          padding: 8px 12px;
+          font-size: rem-calc(11);
+        }
+      }
+
+      > tr > th:first-child {
+        @media (max-width: 950px) {
+          padding: 8px 12px;
+        }
+      }
+
+      > tr > td {
+        padding: 8px 6px;
+        text-align: center;
+        border: 1px solid $border-base-color;
+        background-color: white;
+        line-height: 1.2;
+        width: 10.8%;
+        @include breakpoint(small only){
+          width: 10.8%;
+        }
+        @media (max-width: 950px) {
+          padding: 8px 6px;
+        }
+        span {
+          font-size: rem-calc(22);
+          color: $color-primary;
+          @media (max-width: 950px) {
+            font-size: rem-calc(12);
+          }
+        }
+
+      }
+
+      > tr > td:first-child {
+        padding: 8px 6px;
+        letter-spacing: 0.1px;
+        width: 24%;
+        @include breakpoint(small only){
+          width: 24%;
+        }
+        span.is-text-lg{
+          color: $font-base-color;
+          font-size: 18px;
+          font-weight: normal;
+          @include breakpoint(small only){
+            font-size: 12px;
+            margin-bottom: 4px;
+            line-height: 1.5;
+          }
+        }
+      }
+
+    }
+  }
+  &__text{
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 1.4;
+    text-align: left;
+    @include breakpoint(small only){
+      font-size: 12px;
+    }
+  }
+}
+
+
+
+

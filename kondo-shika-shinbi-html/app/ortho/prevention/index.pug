@@ -1,0 +1,131 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "prevention" // ページのID
+  - current.title = "予防矯正" // タイトル
+  - current.description = "これは予防矯正についての説明文です" // 説明文
+  - current.bodyClass = "prevention" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-prevention.jpg","予防矯正")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span: +a("/ortho/") 矯正治療
+        span >
+        span 予防矯正
+
+
+block body
+  section.l-main
+    .l-section.is-lower.is-top
+      .l-section.is-lower-inner
+        +c.lower-about-top
+          +img("img-cloud-blue.png").c-lower-about-top__deco
+          +e.inner
+            +e.conts.l-container
+              +e.images
+                .c-title-block
+                  .c-title-block__title
+                    h2.heading.is-xlg.is-xlg-left.
+                      予防矯正とは
+                +e.image
+                  +img("img-ortho-top-01.jpg","予防矯正とは").u-image-radius
+              +e.text-block.
+                期間、費用、手間のかかる、矯正治療をより、軽い状況で、手間、費用などの患者さんにご負担のかかりにくい状態に変えていくためには、“予防矯正”という考え方がだいじです。<br class="u-hidden-sm">
+                疾病は重症になります。そして、近年はどの病気に関しても治療よりも、“予防”が重要という流れになっています。<br class="u-hidden-sm">
+                矯正治療にも、“予防”はたいへん効果的です。なぜならば、歯並びは生まれてからの生活習慣、食生活、咬み方などの“環境的原因”が大きな影響を及ぼしているからです。<br class="u-hidden-sm">
+                従来、歯並び、噛み合わせは、“遺伝的要因”が強い、と言われ、その考え方で矯正治療が行われてきました。<br>
+                その予測のもとに、永久歯を抜いて歯を並ぶスペースをつくり、治療をしていたのです。<br class="u-hidden-sm">
+                “予防＝環境的要因の改善”をしていくことにより、大変な矯正治療をより軽度に、さらにはより、幼少期から取り組めば、矯正治療自体、行う必要が無くなることもあると思います。
+
+
+        +c.lower-content.is-bule
+          +e.inner
+            .l-container
+              +e.block
+                +e.title
+                  h3.heading.heading.is-lg.
+                    こんな場合はすぐ相談にいらしてください
+                +e.lists.u-box-shadow
+                  ul
+                    li
+                      span 他で「まだ様子を見ましょう」と言われたが、不安
+                    li
+                      span まだ、赤ちゃんですが、“歯並びの良い子ども”に育てたい
+                    li
+                      span 大人の歯が出るまで待ちましょう、と言われた
+                    li
+                      span 受け口が気になる
+                    li
+                      span 受け口になった
+                    li
+                      span 歯が重なって生えてきた
+                    li
+                      span 前歯が出っぱってきた
+              +e.block
+                +e.title
+                  h3.heading.heading.is-lg.
+                    近藤歯科クリニックの予防矯正では
+                +e.text-block.u-box-shadow
+                  +e.text-block-inner
+                    +e.text-block-top-text.
+                      もともと、当クリニックでは、小児矯正治療も出来るだけ早期（７～８歳）から開始していましたが、最近の傾向として、あごの成長不足による難症例化があるため、もっと早い時期である幼児期からの対応の必要が出てきています。
+                    +e.text-block-2col
+                      +e.text-block-box
+                        +e.box-title
+                          h3.heading.is-xlg ３歳以上の予防歯科
+                        +e.box-text.u-text-center.
+                          受け口、前歯の重なり（叢生＝そうせい）、出っ歯などの見た目の歯の様子で、ちょっとでも気になるところがありましたら、早めに診せてください。この時期の受け口、歯並びの乱れは、生活習慣の影響によるものがほとんどなので、早期の対処が有効です。
+                      +e.text-block-box
+                        +e.box-title
+                          h3.heading.is-xlg ３歳未満の予防歯科
+                        +e.box-text.u-text-center.
+                          お子さんの“歯並び”は、お母様のお腹の中、胎児期から、と言っても言い過ぎではありません。さらに、授乳期、離乳期も大変重要です。最近、お子様たちのお口の機能（噛み方や、口周りの筋肉の状況など）が落ちてきており、その結果が“歯並び”に出てきています。<br>
+                          したがって、妊婦健診から、乳児期、幼児期、それぞれ、チェックポイントがあるといえます。
+
+        +c.overview-number
+          .c-title-block
+            .l-container
+              .c-title-block__title
+                h2.heading.is-xlg.
+                  これからは矯正も予防の時代
+          +e.inner
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 01
+                    h3.heading.is-xlg.is-xlg-left 予防矯正の考え方
+                  +e.text.
+                    ほとんどの矯正歯科の考え方は、“歯をいかに動かすか”、または、“新しい歯並びをいかにして作るか”に偏っていました。さらに“歯並び、噛み合わせは遺伝的のものが殆んど”という考え方がベースでしたので、生まれてからの環境的要因を変えて、歯並びを良くしていく、という概念はありませんでした。
+              +e.images
+                +img("img-prevention-01.jpg","予防矯正の考え方").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 02
+                    h3.heading.is-xlg.is-xlg-left 当クリニックの予防矯正
+                  +e.text.
+                    当クリニックでは、もともと、小児矯正を始める前に、4，5歳から“矯正準備期間”として、生活習慣指導、噛み方、姿勢指導、マウスピースを使用した舌のトレーニングをしてきました。それをさらに、低年齢の時期、乳児期、離乳期から定期的に診ながら、むし歯のチェックとともに、口腔機能の向上を図ような良い生活習慣をつくっていくアドバイスをしていきます。
+              +e.images
+                +img("img-prevention-02.jpg","当クリニックの予防矯正").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 03
+                    h3.heading.is-xlg.is-xlg-left 予防矯正の費用
+                  +e.text.
+                    簡単な説明文テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。<br>
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
+              +e.images
+                +img("img-prevention-03.jpg","お子様に楽しんでもらう矯正治療").u-image-radius
+
+    +c_relation_lg("prevention","is-lower","関連コンテンツ")

@@ -1,0 +1,34 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "sitemap" // ページのID
+  - current.title = "サイトマップ" // タイトル
+  - current.description = "これはサイトマップについての説明文です" // 説明文
+  - current.bodyClass = "sitemap" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-sitemap.jpg","サイトマップ")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span サイトマップ
+
+block body
+  section.l-main
+    .l-section.is-lower
+      .l-section.is-lower-inner
+
+        +c.sitemap
+          +e.inner
+            .l-container
+              +e.conts
+                +c_sitemap("sitemap")
+
+
+
+
+
+
+

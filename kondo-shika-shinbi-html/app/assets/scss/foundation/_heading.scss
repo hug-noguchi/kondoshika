@@ -1,0 +1,427 @@
+// ベース
+//
+// Styleguide 1.0.0
+
+// 見出し
+//
+// Styleguide 1.1.0
+
+$heading-color: $font-base-color !default;
+$heading-weight: normal !default;
+$heading-accent-color: $font-base-color !default;
+
+.heading {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-weight: 500;
+  @include breakpoint(small only) {
+
+  }
+  small {
+    font-size: 0.65em;
+  }
+}
+
+// 見出し - 極大
+//
+// markup:
+// <h1 class="heading is-xlg">見出し - 極大 <small>heading top</small</h1>
+//
+// Styleguide 1.1.1
+
+
+// h1
+.heading.is-xlg {
+  text-align: center;
+  font-size : 30px;
+  line-height : 1.5;
+  letter-spacing : 3px;
+  padding-bottom: 18px;
+  position: relative;
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  @include breakpoint(small only){
+    font-size : 22px;
+    margin-bottom: 16px;
+  }
+  &:before{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 114px;
+    height: 12px;
+    background-image: url("../images/bg-heading-dot.png");
+    background-size: contain;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    @include breakpoint(small only){
+      width: 85px;
+      height: 9px;
+      background-repeat: no-repeat;
+    }
+  }
+  .heading-text-big{
+    font-size: 64px;
+    color: $color-primary;
+    padding: 0px 8px 0px;
+    display: inline-block;
+    @include webfont-Montserrat-normal();
+    @include breakpoint(small only){
+      font-size: 45px;
+      line-height: 1;
+      transform: translateY(8px);
+    }
+  }
+
+}
+.heading.is-xlg-left{
+  text-align: left;
+  position: relative;
+  &:before{
+    left: 0%;
+    transform: translateX(0%);
+    @include breakpoint(small only){
+    }
+  }
+}
+
+//page-header
+.heading.is-page-header{
+  text-align: center;
+  font-size : 30px;
+  line-height : 1.5;
+  letter-spacing : 3px;
+  @include breakpoint(small only){
+    font-size : 22px;
+  }
+}
+//page-header
+.heading.is-bottom-border{
+  padding-bottom: 8px;
+  border-bottom: 2px solid $color-primary;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  i{
+    color: $color-primary;
+    margin-right: 16px;
+    @include breakpoint(small only){
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+  @include breakpoint(small only){
+    font-size: 14px;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+}
+
+// 見出し - 大
+//
+// markup:
+// <h1 class="heading is-lg">見出し:大 <small>heading large</small</h1>
+//
+// Styleguide 1.1.2
+
+// h2
+.heading.is-lg {
+  font-size : 28px;
+  line-height : 1.5;
+  letter-spacing : 2.8px;
+  padding-bottom: 6px;
+  position: relative;
+  margin-bottom: 24px;
+  @include breakpoint(small only){
+    font-size: (28px * 0.75);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+
+  }
+  &:before{
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: $color-primary;
+  }
+}
+//lg center
+.heading.is-lg-center{
+  @extend .heading.is-lg;
+  text-align: center;
+  &:before{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.heading.is-lg-message{
+  @extend .heading.is-lg;
+  position: relative;
+  margin-bottom: 52px;
+  @include breakpoint(small only){
+    margin-bottom: 32px;
+  }
+  &:after{
+    position: absolute;
+    color: $color-primary-dark;
+    display: block;
+    content: "MESSAGE";
+    font-size: 16px;
+    @include webfont-Montserrat-normal();
+    bottom: -32px;
+  }
+}
+
+
+
+// 見出し - 中
+//
+// markup:
+// <h1 class="heading is-md">見出し:中 <small>heading middle</small</h1>
+//
+// Styleguide 1.1.3
+
+// h3
+.heading.is-md {
+  font-size: 24px;
+  line-height : 1.5;
+  letter-spacing : 1.8px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  position: relative;
+  @include breakpoint(small only) {
+    font-size: (24px * 0.75);
+    margin-bottom: 16px;
+  }
+  &:before{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 114px;
+    height: 12px;
+    background-image: url("../images/bg-heading-dot.png");
+    background-size: contain;
+    left: 0%;
+    bottom: 0px;
+    @include breakpoint(small only){
+      width: 85px;
+      height: 9px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.heading.is-md-normal{
+  font-size: 24px;
+  line-height : 1.5;
+  letter-spacing : 2.4px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  position: relative;
+  @include breakpoint(small only) {
+    font-size: (24px * 0.75);
+    margin-bottom: 16px;
+  }
+}
+
+
+// 見出し - 小
+//
+// markup:
+// <h1 class="heading is-sm">見出し:小 <small>heading small</small</h1>
+//
+// Styleguide 1.1.4
+
+//h4
+.heading.is-sm {
+  font-weight : bold;
+  font-size : 16px;
+  line-height : 1.25;
+  letter-spacing : 0.8px;
+  margin-bottom: 16px;
+  @include breakpoint(small only) {
+    font-size: (16px * 0.75);
+    margin-bottom: 16px;
+  }
+}
+
+
+
+// 見出し - 極小
+//
+// markup:
+// <h1 class="heading is-xs">見出し:極小 <small>heading small</small</h1>
+//
+// Styleguide 1.1.5
+
+//h5
+.heading.is-xs {
+  font-size : 16px;
+  line-height : 1.25;
+  letter-spacing : 0.8px;
+  margin-bottom: 16px;
+  @include breakpoint(small only) {
+    font-size: (16px * 0.75);
+    margin-bottom: 16px;
+  }
+}
+
+//h6
+.heading.is-xxs {
+  font-size : 14px;
+  line-height : 1.25;
+  letter-spacing : 0.8px;
+  margin-bottom: 16px;
+  @include breakpoint(small only) {
+    //font-size: (14px * 0.75);
+    margin-bottom: 16px;
+  }
+}
+
+.heading.is-news{
+  margin-bottom: 24px;
+  @include webfont-Montserrat-normal();
+  @include breakpoint(small only){
+    margin-bottom: 18px;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+  }
+  span{
+    display: block;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 700;
+    @include breakpoint(small only){
+      display: inline-block;
+      font-size: 36px;
+      margin-right: 16px;
+    }
+  }
+  small{
+    display: block;
+    color: $color-primary;
+    font-size: 18px;
+    @include breakpoint(small only){
+      display: inline-block;
+      font-size: 14px;
+      padding-top: 6px;
+    }
+
+  }
+}
+.heading.is-table-caption{
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: $color-primary;
+  display: flex;
+  &:before{
+    content: "●";
+    display: block;
+    margin-right: 4px;
+  }
+  @include breakpoint(small only){
+    font-size: (20px * 0.75);
+    margin-bottom: 6px;
+  }
+
+}
+
+// カラー
+.heading.is-primary {
+  color: $color-primary;
+}
+//color
+.heading.is-white{
+  color: $color-white;
+}
+
+//bold
+.heading.is-bold{
+  font-weight: bold;
+}
+
+//position
+.heading.is-center{
+  text-align: center;
+}
+
+//center
+.heading.is-line-center{
+  &:before{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  text-align: center;
+}
+
+// 装飾
+.heading.is-underline {
+  position: relative;
+  border-bottom: 3px solid $color-secondary;
+  padding-bottom: 18px;
+  margin-bottom: 40px;
+  @include breakpoint(small only) {
+    border-width: 2px;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+  }
+  &:before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: $color-primary;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    @include breakpoint(small only) {
+      height: 2px;
+      bottom: -2px;
+    }
+  }
+}
+
+.heading.is-bg {
+  background-color: rgba($color-primary,0.1);
+  padding: 6px 20px;
+  border-left: 4px solid $color-primary;
+  @include breakpoint(small only) {
+    padding: 6px 12px;
+  }
+}
+
+.heading.is-icon {
+  position: relative;
+  padding-left: 25px;
+  @include breakpoint(small only) {
+    padding-left: 20px;
+  }
+  &:before {
+    content: "\f111";
+    font-family: "FontAwesome";
+    color: $color-primary;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    @include breakpoint(small only) {
+      top: 0;
+    }
+  }
+}
+
+// マージン調整
+.heading.is-top {
+  margin-bottom: 0!important;
+}
+
+.heading.is-bottom {
+  margin-top: 0!important;
+}

@@ -1,0 +1,44 @@
+// 投稿詳細ナビゲーション
+//
+// 投稿詳細ページの記事ナビゲーション
+//
+// markup:
+// <nav class="c-post-navs">
+//     <ul>
+//         <li class="c-post-navs__prev"><a href="#">前の記事へ</a></li>
+//         <li class="c-post-navs__next"><a href="#">次の記事へ</a></li>
+//     </ul>
+// </nav>
+//
+// Styleguide 2.16.0
+.c-post-navs {
+  margin-top: rem-calc(64);
+  @include breakpoint(small only) {
+    margin-top: rem-calc(32);
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    @include breakpoint(small only) {
+      display: block;
+    }
+  }
+  &__prev,
+  &__next,
+  &__center{
+    margin: 0 8px;
+    @include breakpoint(small only) {
+      margin: 0 auto 8px;
+    }
+    a {
+      min-width: rem-calc(160);
+      @include breakpoint(small only) {
+        min-width: rem-calc(140);
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__next {
+  }
+}

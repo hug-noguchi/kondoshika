@@ -1,0 +1,67 @@
+.c-aboutus-power{
+  padding-top: 40px;
+  @include breakpoint(small only) {
+    padding-top: 24px;
+  }
+  &__top-image{
+
+  }
+  &__content{
+    background: url("../images/bg-blue.jpg");
+    background-repeat: repeat;
+    padding-bottom: 40px;
+    position: relative;
+    //overflow: hidden;
+    @include breakpoint(small only){
+      padding-bottom: 0px;
+    }
+  }
+  &__deco{
+    position: absolute;
+    z-index: 1000;
+    @include breakpoint(small only){
+      display: none;
+    }
+    &.is-left{
+      width: 389px;
+      left: 32px;
+      bottom: 40px;
+      @include fuwafuwaAction(2s,6s)
+    }
+    &.is-right{
+      width: 323px;
+      right: 32px;
+      top: 140px;
+      @include fuwafuwaAction(1s,10s)
+    }
+  }
+
+  &__text-block{
+    padding-bottom: 40px;
+    background: $color-white;
+    border-radius: 16px;
+    max-width: 1016px;
+    margin: 0 auto;
+    padding: 72px 5%;
+    position: relative;
+    z-index: 2000;
+    transform: translateY(-100px);
+    @include breakpoint(small only){
+      padding: 36px 4%;
+      width: 86%;
+      transform: translateY(-64px);
+    }
+  }
+  &__title{
+    text-align: center;
+  }
+  &__text{
+    margin-bottom: 32px;
+    @include breakpoint(small only){
+      margin-bottom: 16px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+}

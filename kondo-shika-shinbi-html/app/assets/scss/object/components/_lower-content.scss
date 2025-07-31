@@ -1,0 +1,232 @@
+.c-lower-content{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include breakpoint(small only){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &.is-bule{
+    background: url("../images/bg-blue.jpg");
+    background-repeat: repeat;
+  }
+  &.is-yellow{
+    background: #fcf8e1;
+  }
+  &__inner{
+
+  }
+  &__block{
+    margin-bottom: 80px;
+    @include breakpoint(small only){
+      margin-bottom: 40px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+
+  }
+  &__title{
+
+
+  }
+
+  //lists
+  &__lists{
+    background: $color-white;
+    padding: 80px 80 / 1140 * 100%;
+    border-radius: 16px;
+    @include breakpoint(small only){
+      padding: 40px 24px;
+    }
+    > ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include breakpoint(small only){
+        display: block;
+      }
+    }
+    > ul > li{
+      width: 48%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      font-size: 20px;
+      align-items: flex-start;
+      @include breakpoint(small only){
+        width: 100%;
+        margin-bottom: 24px;
+        font-size: 16px;
+      }
+      &:last-child{
+        @include breakpoint(small only){
+          margin-bottom: 24px;
+        }
+      }
+      &:nth-last-child(-n+2){
+        margin-bottom: 0px;
+        @include breakpoint(small only){
+          margin-bottom: 24px;
+        }
+      }
+
+      &:before{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        content: "";
+        background-image: url("../images/icon-check.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-right: 16px;
+        @include breakpoint(small only){
+          width: 32px;
+          height: 32px;
+        }
+      }
+      span{
+        border-bottom: 2px solid $color-accent-yellow;
+        width: calc(100% - 60px);
+      }
+    }
+  }
+
+  //text-block
+  &__text-block{
+    background: $color-white;
+    padding: 80px 80 / 1140 * 100%;
+    border-radius: 16px;
+    @include breakpoint(small only){
+      padding: 40px 24px;
+    }
+  }
+  &__text-block-inner{
+
+  }
+  &__text-block-top-text{
+    text-align: left;
+    margin-bottom: 32px;
+    @include breakpoint(small only){
+      margin-bottom: 24px;
+    }
+
+  }
+
+  //2col
+  &__text-block-2col{
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(small only){
+      display: block;
+    }
+  }
+  &__text-block-box{
+    width: 48%;
+    padding: 40px;
+    border-radius: 16px;
+    background: #fcf8e1;
+    @include breakpoint(small only){
+      width: 100%;
+      padding: 24px 18px;
+      margin-bottom: 16px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+  &__box-title{
+
+  }
+  &__box-title{
+
+  }
+
+  //tooth
+  &__tooth{
+    background: $color-white;
+    padding: 80px 80 / 1140 * 100%;
+    border-radius: 16px;
+    @include breakpoint(small only){
+      padding: 40px 24px;
+    }
+  }
+
+  &__tooth-top-text{
+    text-align: left;
+    margin-bottom: 32px;
+    @include breakpoint(small only){
+      margin-bottom: 24px;
+    }
+  }
+  &__tooth-blocks{
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(small only){
+      display: block;
+
+    }
+  }
+  &__tooth-block{
+    width: 304 / (1140 - 160) * 100%;
+    margin-right: 34 / (1140 - (160 - (304*3))) * 100%;
+    @include breakpoint(small only){
+      width: 80%;
+      margin: 0 auto 32px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+    &:nth-child(3n){
+      margin-right: 0px;
+    }
+    &:nth-child(n + 3){
+      margin-bottom: 40px;
+      @include breakpoint(small only){
+        margin: 0 auto 32px;
+      }
+    }
+  }
+  &__tooth-title{
+    margin-bottom: 16px;
+    font-size: 18px;
+    display: flex;
+    padding-left: 26px;
+    position: relative;
+    letter-spacing: 0.5px;
+    @include breakpoint(small only){
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    &:before{
+      position: absolute;
+      left: 0px;
+      top: 6px;
+      content: "";
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background: url("../images/icon-arrow-md.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      @include breakpoint(small only){
+        top: 6px;
+        height: 16px;
+        width: 16px;
+      }
+
+    }
+
+  }
+  &__tooth-text{
+    font-size: $font-base-size-sub;
+  }
+  &__tooth-image{
+    margin-bottom: 16px;
+    @include breakpoint(small only){
+      margin: 0 auto 16px;
+      display: block;
+    }
+  }
+}

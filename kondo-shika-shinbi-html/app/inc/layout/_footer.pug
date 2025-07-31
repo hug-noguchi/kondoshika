@@ -1,0 +1,38 @@
+//- filename: footer.jade
+//- description: フッター
+
++c_offer()
+footer.l-footer
+  .c-pagetop
+    +a("#").c-pagetop__button.js-anchor(data-anchor-target="html") <i class="fa fa-angle-up" aria-hidden="true"></i>
+
+  .l-footer__utiltty
+    .l-footer__utiltty-inner.l-container
+      .l-footer__info
+        +a("/").l-footer__logo: +img("logo-footer.jpg","近藤歯科クリニック")
+        .l-footer__add.is-add-pc.
+          東京都立川市高松町2-25-3 メープル立川1F<br>
+          立川駅徒歩10分
+        +c_time_table()
+
+      .l-footer__map
+        +c_map()
+        .l-footer__add.is-add-sp.
+          東京都立川市高松町2-25-3 メープル立川1F<br>
+          立川駅徒歩10分
+        .l-footer__map-button
+          a(href="//goo.gl/maps/UtkYHCBFPCzSBrga6" target="_blank").c-button.is-md.is-arrow.is-primary.is-effect.
+            Mapを見る
+
+
+  .l-footer__menu
+    .l-footer__menu-inner.l-container
+      +c_sitemap("footer")
+
+
+  .l-footer__bottom
+    .l-container
+      ul.l-footer__privacys
+        li: +a("/privacy-policy/") 個人情報保護方針
+        li: +a("/sitemap/") サイトマップ
+      .l-footer__copyright COPYRIGHT© 立川 矯正歯科 近藤歯科クリニック. <br class="u-hidden-lg">ALL RIGHTS RESERVED.

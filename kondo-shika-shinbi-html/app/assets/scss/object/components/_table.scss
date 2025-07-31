@@ -1,0 +1,137 @@
+// テーブル
+//
+// テーブルのスタイル
+//
+// markup:
+// <table class="c-table">
+//     <thead>
+//         <tr>
+//              <th>テーブル見出し</th>
+//              <th>テーブル見出し</th>
+//         <tr>
+//     </thead>
+//     <tbody>
+//         <tr>
+//              <td>テーブルセル</td>
+//              <td>テーブルセル</td>
+//         <tr>
+//         <tr>
+//              <td>テーブルセル</td>
+//              <td>テーブルセル</td>
+//         <tr>
+//     </tbody>
+// </table>
+// <table class="c-table">
+//     <tbody>
+//         <tr>
+//              <th width="300">テーブル見出し</th>
+//              <td>テーブルセル</td>
+//         <tr>
+//         <tr>
+//              <th>テーブル見出し</th>
+//              <td>テーブルセル</td>
+//         <tr>
+//     </tbody>
+// </table>
+//
+// Styleguide 2.12.0
+
+.c-table {
+  //min-width: 600px;
+  width: 100%;
+  border-top: 1px solid $border-base-color;
+
+  // table全体
+  tr th,
+  tr td {
+  }
+
+  // thead
+  thead tr th {
+
+  }
+
+  // tbody
+  tbody tr th {
+    text-align: left;
+    width: 168px;
+    padding: 22px 20px;
+    color: $font-base-color;
+    font-weight: bold;
+    background: none;
+    position: relative;
+    vertical-align: top;
+    font-weight: 500;
+    @include breakpoint(small only){
+      padding: 16px 8px;
+      width: 100px;
+    }
+    &:before{
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      bottom: -1px;
+      background-color: $color-accent;
+    }
+  }
+
+  tbody tr td {
+    padding: 22px 48px;
+    background: none;
+
+    @include breakpoint(small only){
+      padding: 24px;
+      padding: 16px 24px;
+    }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid $border-base-color;
+  }
+  &__list{
+    li{
+      display: flex;
+    }
+  }
+}
+
+//js-responsive-table
+.js-responsive-table {
+  overflow-x: scroll;
+  white-space: nowrap;
+  width: 100%;
+  word-break: break-all;
+}
+.c-table.is-sub{
+  border-top: solid 1px $color-primary;
+  th,td{
+    vertical-align: middle;
+  }
+  th{
+    color: $color-white;
+    background: $color-primary;
+    border-bottom: solid 1px $color-white;
+    border-top: none;
+    padding: 16px 20px;
+    width: 234px;
+    @include breakpoint(small only){
+      padding: 12px 12px;
+      width: 140px;
+    }
+    &:before{
+      display: none;
+    }
+
+  }
+  td{
+    background: $color-white;
+    border-bottom: solid 1px $color-primary;
+    padding: 16px 20px;
+    @include breakpoint(small only){
+      padding: 12px 12px;
+    }
+  }
+}

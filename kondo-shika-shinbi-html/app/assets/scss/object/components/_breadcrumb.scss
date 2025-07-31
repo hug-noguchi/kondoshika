@@ -1,0 +1,43 @@
+// パンくずナビゲーション
+//
+// markup:
+// <nav class="c-breadcrumb">
+//     <ul>
+//         <li><i class="fa fa-home"></i> <a href="#">ホーム</a></li>
+//         <li><a href="#">下層ページ1</a></li>
+//         <li>下層ページ2</li>
+//         <li>下層ページ3</li>
+//     </ul>
+// </nav>
+//
+// Styleguide 2.3.0
+.c-breadcrumb {
+  margin-top: 24px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  @include breakpoint(small only) {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 4px;
+  }
+  span {
+    margin-right: 6px;
+    color: $color-white;
+    @include breakpoint(small only) {
+      font-size: 12px;
+    }
+    &:last-child {
+      color: $color-white;
+    }
+  }
+  a {
+    font-weight: 400;
+    text-decoration: none;
+    color: $color-white;
+    transition: all 0.2s;
+    &:hover{
+      color: $color-primary;
+    }
+  }
+}

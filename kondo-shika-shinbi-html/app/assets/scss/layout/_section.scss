@@ -1,0 +1,147 @@
+// セクション
+//
+// セクションのスタイル
+//
+// markup:
+// <dev class="l-section [is-lg | is-md | is-sm | is-bottom | is-top]"></dev>
+//
+// Styleguide 5.3.0
+.l-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &.is-xlg {
+    padding-top: 80px !important;
+    padding-bottom: 96px !important;
+    @include breakpoint(small only) {
+      padding-top: 48px !important;
+      padding-bottom: 48px !important;
+    }
+  }
+
+  &.is-lg {
+    padding-top: 64px !important;
+    padding-bottom: 96px !important;
+    @include breakpoint(small only) {
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
+    }
+  }
+
+  &.is-md {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    @include breakpoint(small only) {
+      padding-top: 32px !important;
+      padding-bottom: 32px !important;
+    }
+  }
+
+  &.is-sm {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    @include breakpoint(small only) {
+      padding-top: 24px !important;
+      padding-bottom: 24px !important;
+    }
+  }
+  &.is-lower-two{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: -80px;
+    position: relative;
+    @include breakpoint(small only){
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-top: -40px;
+    }
+
+  }
+  &.is-lower{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: -80px;
+    position: relative;
+    @include breakpoint(small only){
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-top: -40px;
+    }
+    &:before{
+      content: "";
+      display: block;
+      top: 0px;
+      left: 0px;
+      background-image: url("../images/bg-wave-lower.png");
+      background-repeat: no-repeat;
+      background-position: top left;
+      height: 80px;
+      width: 100%;
+      background-size: cover;
+      z-index: 10;
+      position: absolute;
+      @include breakpoint(small only){
+        height: 40px;
+      }
+    }
+
+  }
+  &.is-blue{
+    &:before{
+      background-image: url("../images/bg-wave-blue-top.png");
+    }
+  }
+  &.is-lower-inner{
+    padding-top: 80px;
+    padding-bottom: 0px;
+    @include breakpoint(small only){
+      padding-top: 40px;
+    }
+    &.is-blue{
+      background-image: url(../images/bg-blue.jpg);
+      background-repeat: repeat;
+      background-position: top left;
+    }
+  }
+
+  &.is-top {
+    padding-bottom: 0 !important;
+  }
+
+  &.is-bottom {
+    padding-top: 0 !important;
+  }
+
+  // 背景
+  &.is-gray {
+    background-color: #F6F7F9;
+  }
+  &.is-bg {
+    background: url("../images/ptn-stripe.png") repeat;
+  }
+
+  &.is-half-bg {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 64px;
+    @include breakpoint(small only) {
+      background: url("../images/ptn-stripe.png") repeat;
+      padding-bottom: 40px;
+    }
+    &:after {
+      content: "";
+      display: block;
+      background: url("../images/ptn-stripe.png") repeat;
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 96px);
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      @include breakpoint(small only) {
+        display: none;
+      }
+    }
+  }
+
+}

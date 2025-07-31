@@ -1,0 +1,390 @@
+//- img タグ
+mixin img(file,alt)
+  -
+    if ( typeof alt === "undefined" ){
+    var alt = ""
+    }
+  img(src=config.rootpath + "/assets/images/" + file, alt!=alt)&attributes(attributes)
+
+//- 背景画像
+mixin bgimg(file)
+  div(style="background-image: url(" + config.rootpath + "/assets/images/" + file + ")")&attributes(attributes)
+    block
+
+//- ページヘッダー
+mixin c_page_header(image,title,subtitle)
+  +bgimg(image).c-page-header
+    .c-page-header__inner
+      h2.c-page-header__title!= title
+
+//- ループ
+//- +loop(10)
+//-   p ここにループするコンテンツ
+mixin loop(count)
+  - var n = 0
+  while n < count
+    block
+    - n++
+
+//- よくあるご質問
+mixin c_faqbox(title,content)
+  .c-faqbox.js-accordion
+    .c-faqbox__title(data-accordion-title="true")!= title
+    .c-faqbox__content(data-accordion-content="true",style="display: none")
+      if content
+        != content
+      else
+        block
+
+//- ページネーション
+mixin c_pagination()
+  .c-pagination
+    ul
+      li: +a("#").c-pagination__prev « 前へ
+      li: span.is-active 1
+      li: +a("#") 2
+      li: +a("#") 3
+      li: +a("#") 4
+      li: +a("#") 5
+      li: +a("#").c-pagination__next 次へ »
+
+//- 投稿ページナビゲーション
+mixin c_post_nav()
+  nav.c-post-navs
+    ul
+      li.c-post-navs__prev: +a("#") 前の記事へ
+      li.c-post-navs__next: +a("#") 次の記事へ
+
+//- table row
+mixin tr(th, td)
+  tr&attributes(attributes)
+    th!= th
+    td!= td
+
+mixin c_relation()
+  +c.relation
+    .l-container
+      +e.title 関連するコンテンツ
+      +e.button
+        ul
+          li: +a("/aboutus/") 私たちについて
+          li: +a("/company/greeting/") 代表あいさつ
+          li: +a("/company/profile/") 会社概要
+          li: +a("/company/history/") 沿革
+
+
+mixin c_offer()
+  +c.offer
+    .l-container
+      +e.inner
+        +e.title
+          h2.heading.is-xlg.
+            お問い合わせ / ご予約
+        +e.lead.
+          近藤歯科クリニックは立川駅にある矯正歯科、<br class="u-hidden-lg">小児矯正歯科クリニックです。<br>
+          矯正に関する、ご相談・お問い合わせはお気軽に<br class="u-hidden-lg">下記よりご連絡ください。
+        +e.box
+          +e.button
+            +e.tel-text.
+              お電話でのご予約お問い合わせはこちら
+            a(href="tel:042-524-0722").c-offer__tel.
+              <i class="fa fa-phone" aria-hidden="true"></i>042-524-0722
+          +e.button
+            +a("/contact/").c-button.is-mail.is-arrow.is-yellow.is-effect.
+              メールでのお問い合わせはこちら
+
+
+
+
+mixin link(href)
+  link(href=config.rootpath + href)&attributes(attributes)
+
+mixin script(src)
+  script(src=config.rootpath + src)&attributes(attributes)
+
+
+
+mixin c_time_table(area)
+  .c-time-table
+    table.c-time-table__schedule
+      thead
+        tr
+          th.u-text-left 受付<br class="u-hidden-lg">時間
+          th 月
+          th 火
+          th 水
+          th 木
+          th 金
+          th 土
+          th 日/祝
+      tbody
+        tr
+          td.u-text-left.
+            <span class="is-text-lg">午前</span><br>
+            9:30～13:00
+          td <span>▲1</span>
+          td <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+          td <span><i class="fa fa-times" aria-hidden="true"></i></span>
+          td <span><i class="fa fa-circle" aria-hidden="true"></i></span
+          td <span>▲1</i></span>
+          td <span>▲2</span
+          td <span><i class="fa fa-times" aria-hidden="true"></i></span>
+        tr
+          td.u-text-left.
+            <span class="is-text-lg">午後</span><br>
+            14:30～19:00
+          td <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+          td <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+          td <span><i class="fa fa-times" aria-hidden="true"></i></span>
+          td <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+          td <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+          td <span><i class="fa fa-times" aria-hidden="true"></i></span>
+          td <span><i class="fa fa-times" aria-hidden="true"></i></span>
+    .c-time-table__text
+      | ※▲1: 10:00～13:00迄です <br class="u-hidden-lg">▲2: 9:40～13:30迄です（受付時間 12:30まで）<br>
+      | ※初診随時受付（予約制） ※電話予約可能
+
+
+mixin c_map(area)
+  - if(area == "acsess")
+      .c-google-map.is-acsess
+        .c-google-map__inner
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6479.693715862818!2d139.419512!3d35.705386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e16eecc0673d%3A0xe4d9cfb7db427108!2z44CSMTkwLTAwMTEg5p2x5Lqs6YO956uL5bed5biC6auY5p2-55S677yS5LiB55uu77yS77yV4oiS77yT!5e0!3m2!1sja!2sjp!4v1562305321309!5m2!1sja!2sjp" frameborder="0" style="border:0" allowfullscreen></iframe>
+        .c-google-map__detail
+          .c-google-map__text.
+            東京都立川市高松町2-25-3 メープル立川1F<br>
+            立川駅徒歩10分
+          .c-google-map__button
+            a(href="//goo.gl/maps/UtkYHCBFPCzSBrga6" target="_blank").c-button.is-md.is-arrow.is-primary.is-effect.
+              Mapを見る
+
+  - else
+      .c-google-map
+        .c-google-map__inner
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6479.693715862818!2d139.419512!3d35.705386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e16eecc0673d%3A0xe4d9cfb7db427108!2z44CSMTkwLTAwMTEg5p2x5Lqs6YO956uL5bed5biC6auY5p2-55S677yS5LiB55uu77yS77yV4oiS77yT!5e0!3m2!1sja!2sjp!4v1562305321309!5m2!1sja!2sjp" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+
+
+//関連コンテンツ
+mixin c_relation_lg(dir,className,title)
+  -
+    //変数のセット
+    var relation_cont
+    if(dir == "top")
+      relation_cont = [
+        ["img-relation-top-01.png","費用について","矯正治療を身近なものにするために従来の半分以下にしています。","/price/"],
+        ["img-relation-top-02.png","小児矯正を始める時期","“まだ、永久歯が生えるまで様子を見ましょう”と言われることが多いですが、それでは手遅れになってしまいます。お母様が気になったら、直ぐです！","#"],
+        ["img-relation-top-03.png","矯正治療の治療期間について","治療期間は永久歯を抜かないので、比較的短くなっています。お子様の場合は、個人差はありますが、“よく、噛んで食べる”とより短くなります。","#"]
+      ]
+    else if(dir == "child")
+      relation_cont = [
+        ["img-relation-child-01.png","小児矯正の治療の流れ","まず、型取りとレントゲンで治療の見積もりを出します。","/flow/"],
+        ["img-relation-child-02.png","小児矯正の知識","小児矯正お役立ち情報です。","#"],
+        ["img-relation-child-03.png","子どもの歯並び","子どもの歯並びについての詳しい情報です。","#"]
+      ]
+    else if(dir == "prevention")
+      relation_cont = [
+        ["img-relation-prevention-01.png","費用について","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/price/"],
+        ["img-relation-prevention-02.png","診療の流れ","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/flow/"],
+        ["img-relation-prevention-03.png","患者様の声","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/voice/"]
+      ]
+    else if(dir == "portion")
+      relation_cont = [
+        ["img-relation-prevention-01.png","費用について","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/price/"],
+        ["img-relation-portion-02.png","噛みあわせと矯正","“矯正治療によって、噛みあわせを変えていく”という考え方について詳しく述べてみます。","#"],
+        ["img-relation-portion-03.png","矯正治療後の後戻りについて","矯正治療で最も問題になるのは、“後戻り現象”です。いったい“後戻り”とは？","#"]
+      ]
+    else if(dir == "mouthpiece")
+      relation_cont = [
+        ["img-relation-prevention-01.png","費用について","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/price/"],
+        ["img-relation-prevention-02.png","診療の流れ","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/flow/"],
+        ["img-relation-mouthpiece-03.png","大人の矯正","大人の矯正・部分矯正・ブライダル矯正・見えない矯正歯科・マウスピース矯正・インプラント矯正について説明しております。","/ortho/adult/"]
+      ]
+    else if(dir == "aboutus")
+      relation_cont = [
+        ["img-relation-aboutus-01.png","院長、スタッフ紹介","矯正治療では、院長、スタッフ（歯科衛生士）が一体となって以心伝心で矯正治療並びに、患者さんのサポートをしていきます。当クリニックの特徴の一つがこのスタッフ力です。","/staff/"],
+        ["img-relation-aboutus-02.png","院内紹介","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/introduction/"],
+        ["img-relation-aboutus-03.png","アクセス・診療時間","ＪＲ中央線立川駅から、徒歩12分、駐車場は2台分あります。休診日は水曜日と土曜日の午後です。詳しくはこちらをご覧ください。","/access/"],
+        ["img-relation-aboutus-04.png","床矯正の治療は治るのでしょうか？","当クリニックでは、機能トレーニングを含めた矯正治療を指します。しっかりと機能トレーニングを患者さんがやっていただけると良い結果が得られることが多いといえます。","#"],
+        ["img-relation-aboutus-05.png","患者様の声","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/voice/"],
+        ["img-relation-aboutus-06.png","小児矯正について","当クリニックでは、お子様の矯正治療、小児矯正に最も力を入れています。","/ortho/child/"]
+      ]
+    else if(dir == "flow")
+      relation_cont = [
+        ["img-relation-flow-01.png","小児矯正","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/ortho/child/"],
+        ["img-relation-flow-02.png","予防矯正","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/ortho/prevention/"],
+        ["img-relation-flow-03.png","成人矯正","テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。","/ortho/adult/"]
+      ]
+
+  //出力
+  +c.relation-lg(class=className)
+    +e.inner
+      .l-container
+        +e.title
+          h2.heading.is-xlg!=title
+        +e.links
+          - for(var i = 0; i<relation_cont.length; i++){
+            +a(relation_cont[i][3]).c-relation-lg__block
+              +e("span").image
+                +img(relation_cont[i][0],relation_cont[i][0])
+              +e("span").block-title!=relation_cont[i][1]
+              +e("span").text!=relation_cont[i][2]
+          - }
+
+
+
+mixin c_tabs(current)
+  .c-tabs.is-page-link
+    .l-container
+      ul.c-tabs__navs
+        - if(current == "child")
+            li: +a("#").js-anchor.is-active(data-anchor-target="#child") 小児矯正
+        - else
+            li: +a("#").js-anchor(data-anchor-target="#child") 小児矯正
+
+        - if(current == "prevention")
+            li: +a("#").js-anchor.is-active(data-anchor-target="#prevention") 予防矯正
+        - else
+            li: +a("#").js-anchor(data-anchor-target="#prevention") 予防矯正
+
+        - if(current == "portion")
+            li: +a("#").js-anchor.is-active(data-anchor-target="#portion") 部分矯正
+        - else
+            li: +a("#").js-anchor(data-anchor-target="#portion") 部分矯正
+
+        - if(current == "mouthpiece")
+            li: +a("#").js-anchor.is-active(data-anchor-target="#mouthpiece") マウスピース矯正
+        - else
+            li: +a("#").js-anchor(data-anchor-target="#mouthpiece") マウスピース矯正
+
+
+
+mixin c_sitemap(dir)
+  - if(dir == "footer")
+    .l-footer__menu-block
+      ul.l-footer__list
+        li: +a("/") ホーム
+        li: +a("/ortho/") 矯正治療
+        li: +a("/ortho/child/") 小児矯正
+        li: +a("/ortho/prevention/") 予防矯正
+        li: +a("/ortho/adult/") 成人矯正
+        li: +a("/ortho/adult/portion/") 部分矯正
+        li: +a("/ortho/adult/mouthpiece/") マウスピース矯正
+        li: +a("/price/") 費用について
+    .l-footer__menu-block
+      ul.l-footer__list
+        li: +a("/aboutus/") 近藤歯科クリニックについて
+        li: +a("/staff/") 院長・スタッフ紹介
+        li: +a("/introduction/") 院内紹介
+        li: +a("/access/") アクセス・診療時間
+        li: +a("/flow/") 診療の流れ
+        li: +a("/contact/") お問い合わせ
+    .l-footer__menu-block
+      ul.l-footer__list
+        li: +a("/voice/") 患者の声
+        li: +a("/news/") お知らせ
+        li: +a("/school-blog/") 小学生のみなさんへ
+    .l-footer__menu-block
+      ul.l-footer__list
+        li: +a("/staff-blog/") スタッフブログ
+        li: +a("/column/") コラム
+
+  - else if(dir == "sitemap")
+    .c-sitemap__section
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/").heading.is-xxs.is-icon ホーム
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/aboutus/").heading.is-xxs.is-icon 近藤歯科クリニックについて
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/ortho/").heading.is-xxs.is-icon 矯正治療
+          li: +a("/ortho/child/").heading.is-xxs.is-icon 小児矯正
+          li: +a("/ortho/prevention/").heading.is-xxs.is-icon 予防矯正
+          li: +a("/ortho/adult/").heading.is-xxs.is-icon 成人矯正
+          li.is-sub: +a("/ortho/adult/portion/") 部分矯正
+          li.is-sub: +a("/ortho/adult/mouthpiece/") マウスピース矯正
+          li: +a("/price/").heading.is-xxs.is-icon 費用について
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/introduction/").heading.is-xxs.is-icon 院内紹介
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/access/").heading.is-xxs.is-icon アクセス・診療時間
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/staff/").heading.is-xxs.is-icon 院長・スタッフ紹介
+
+    .c-sitemap__section
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/flow/").heading.is-xxs.is-icon 診療の流れ
+          li: +a("/column/").heading.is-xxs.is-icon コラム
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/voice/").heading.is-xxs.is-icon 患者の声
+          li: +a("/contact/").heading.is-xxs.is-icon お問い合わせ
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/news/").heading.is-xxs.is-icon お知らせ
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/school-blog/").heading.is-xxs.is-icon 小学生のみなさんへ
+      .c-sitemap__menu-block
+        ul.c-sitemap__list
+          li: +a("/staff-blog/").heading.is-xxs.is-icon スタッフブログ
+
+mixin c_title-block-two(dir)
+  -if(dir == "voice")
+    .c-title-block.u-mbs.is-bottom.is-lg
+      .l-container
+        .c-title-block__title
+          h2.heading.is-xlg.
+            当院の患者様の声
+        .c-title-block__lead.
+          説明テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキストテキストテキストテキスト。
+
+  //-else if(dir == "news" || dir == "school-blog" || dir == "staff-blog" || dir == "column")
+    .c-title-block.u-mbs.is-bottom.is-lg
+      .l-container
+        .c-title-block__title
+          h2.heading.is-xlg.
+            テキスト
+
+
+
+
+
+
+
+
+mixin c_pagenaton()
+  <div class="c-pagination">
+  <ul>
+  // <li><a class="c-pagination__prev" href="#/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+  <li><span class="is-active">1</span></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a class="c-pagination__next" href="#/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+  </ul>
+  </div>
+
+
+
+mixin c_doctors_banner(size)
+
+  .c-doctors-banner(class=size)
+    .c-doctors-banner__banner.l-container
+      .c-doctors-banner__banner-button
+        a(href="//doctorsfile.jp/h/38731/df/1/" target="_blank")
+          +img("img-banner-doctors-top.png","ドクターズファイル").u-hidden-sm
+          +img("img-banner-doctors-top-sp.png","ドクターズファイル").u-hidden-lg
+      .c-doctors-banner__banner-button
+        a(href="//appt.doctorsfile.jp/Patient/?hid=38731" target="_blank")
+          +img("img-banner-res-top.png","ドクターズファイル")

@@ -1,0 +1,51 @@
+
+.l-wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: -80px;
+  position: relative;
+  @include breakpoint(small only){
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: -40px;
+  }
+  &:before{
+    content: "";
+    display: block;
+    top: 0px;
+    left: 0px;
+    background-image: url("../images/bg-wave-lower.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 80px;
+    width: 100%;
+    background-size: cover;
+    z-index: 10;
+    position: absolute;
+    @include breakpoint(small only){
+      height: 40px;
+    }
+  }
+
+
+  @media (max-width: 1140px) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  @media (max-width: 950px) {
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+  @include breakpoint(small only) {
+
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  &__inner{
+    padding-top: 80px;
+    @include breakpoint(small only) {
+      padding-top: 40px;
+    }
+  }
+
+}

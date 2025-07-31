@@ -1,0 +1,214 @@
+.c-opening {
+  margin-bottom: 40px;
+  background-position: left top;
+  background-repeat: repeat;
+  padding-bottom: 24px;
+  position: relative;
+  @include breakpoint(small only){
+    padding-bottom: 0px;
+  }
+  .c-title-block{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include breakpoint(small only){
+      padding-top: 0px;
+    }
+  }
+  &__inner{
+    background-image: url("../images/bg-blue.jpg");
+    &.is-bottom{
+      padding-bottom: 80px;
+      @include breakpoint(small only){
+        padding: 0 24px 64px;
+      }
+    }
+  }
+
+  //block
+  &__blocks{
+    max-width: 1260px;
+    margin: 0 auto;
+    background: $color-white;
+    border-radius: 16px;
+    padding: 80px 80px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px rgba(#000,0.1);
+    @include breakpoint(small only){
+      display: block;
+      padding: 40px 16px;
+    }
+  }
+  &__block{
+    width: 510 / (1260 - 160) * 100%;
+    @include breakpoint(small only){
+      width: 100%;
+    }
+    &:first-child{
+      @include breakpoint(small only){
+        margin-bottom: 32px;
+      }
+    }
+  }
+  &__block-image{
+    margin-bottom: 8px;
+
+  }
+  &__block-name{
+    margin-bottom: 8px;
+    span:nth-child(1){
+      font-size: 20px;
+      display: block;
+      line-height: 1;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+    span:nth-child(2){
+      font-size: $font-base-size-sub;
+      color: $color-primary;
+      display: block;
+      line-height: 1;
+      text-align: left;
+    }
+
+  }
+  &__block-table{
+
+  }
+
+  //texts
+  &__block-add-texts{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    @include breakpoint(small only){
+      display: block;
+    }
+  }
+  &__block-add-text{
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-bottom: 24px;
+
+  }
+  &__block-add-map-button{
+    width: 160px;
+    @include breakpoint(small only){
+      width: 80%;
+      margin: 0 auto;
+      > a{
+        margin: 0 auto;
+      }
+    }
+  }
+
+  //map
+  &__block-add-map{
+    margin-bottom: 24px;
+
+  }
+
+  //button
+  &__block-add-buttons{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include breakpoint(small only){
+      display: block;
+    }
+    &:before{
+      content: "";
+      display: block;
+      width: 2px;
+      height: auto;
+      background: red;
+      position: relative;
+      top: 0px;
+      left: 50%;
+      background: url("../images/bg-border-dot-gray.png");
+      background-repeat: repeat-x;
+      background-size: cover;
+      background-position: top center;
+      @include breakpoint(small only){
+        display: none;
+      }
+    }
+
+  }
+  &__block-add-button{
+    width: 100%;
+    max-width: 246px;
+    @include breakpoint(small only) {
+      text-align: center;
+    }
+
+
+    &:nth-child(1){
+      margin-right: auto;
+      @include breakpoint(small only){
+        margin: 0 auto 8px;
+        a{
+          margin: 0 auto;
+        }
+
+      }
+    }
+    &:nth-child(2){
+      margin-left: auto;
+      @include breakpoint(small only){
+        margin: 0 auto;
+        a{
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+
+  //decoration
+  &__image-deco{
+    position: absolute;
+    &.is-left{
+      width: 343px;
+      left: -40px;
+      top: -90px;
+      @include fuwafuwaAction(3s,5s);
+      @include breakpoint(small only){
+        display: none;
+      }
+    }
+    &.is-right{
+      width: 361px;
+      right: 0px;
+      top: -110px;
+      @include fuwafuwaAction(6s,7s);
+      @include breakpoint(small only){
+        display: none;
+      }
+    }
+    &.is-bird{
+      width: 72px;
+      right: 0px;
+      top: 160px;
+      @include fuwafuwaAction(5s,1s);
+      @include breakpoint(small only){
+        width: 40px;
+        top: 30px;
+        right: 16px;
+      }
+    }
+    &.is-cloud{
+      width: 166px;
+      right: 0px;
+      top: 600px;
+      z-index: 100;
+      @include fuwafuwaAction(3s,6s);
+      @include breakpoint(small only){
+        width: 166px;
+        left: -40px;
+        right: auto;
+        top: 0px;
+      }
+    }
+  }
+}

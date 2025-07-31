@@ -1,0 +1,94 @@
+.c-sidebar {
+  margin-bottom: 40px;
+  max-width: 293px;
+  margin-left: auto;
+  @include breakpoint(small only) {
+    margin-bottom: 32px;
+    max-width: 100%;
+  }
+  &__title {
+    width: 100%;
+    color: $color-white;
+    background-color: $color-primary;
+    text-align: center;
+    padding: 9px;
+    font-weight: 500;
+    font-size: 18px;
+    @include breakpoint(small only) {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    &.is-archive{
+      position: relative;
+      &:after{
+        content: "\f107";
+        display: block;
+        font-family: FontAwesome;
+
+        position: absolute;
+        top: 50%;
+        right: 32px;
+        transform: translateY(-50%);
+      }
+
+    }
+  }
+  ul {
+
+
+  }
+
+  &__list li,
+  &__item {
+    &:last-child {
+      border-bottom: none;
+    }
+    a {
+      text-decoration: none;
+      color: $font-base-color;
+      padding: 11px 16px 10px 48px;
+      display: block;
+      position: relative;
+      font-weight: normal;
+      transition: all .3s;
+      background: rgba(#f0eddc, 0.5);
+      @include breakpoint(small only) {
+        padding: 12px 16px 11px 32px;
+      }
+      &:hover {
+        opacity: 1;
+        color: $color-white;
+        background: rgba(#6dbcca, 0.5);
+        color: $color-white;
+        &:after{
+          color: $color-white;
+        }
+      }
+      &:after {
+        content: "\f138";
+        font-family: "FontAwesome";
+        color: $color-primary;
+        position: absolute;
+        left: 24px;
+        top: 11px;
+        @include breakpoint(small only) {
+          top: 11px;
+          left: 14px;
+        }
+      }
+    }
+  }
+  &__banners{
+
+
+  }
+  &__banner{
+    margin-bottom: 8px;
+    display: block;
+    @include breakpoint(small only){
+      width: 70%;
+      margin: 0 auto 8px;
+    }
+
+  }
+}

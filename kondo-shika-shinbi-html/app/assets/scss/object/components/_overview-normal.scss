@@ -1,0 +1,81 @@
+.c-overview-normal{
+  &__inner{
+    padding: 64px 54px 0px;
+    @include breakpoint(small only){
+      padding: 32px 16px 0px;
+
+    }
+  }
+  &__block{
+    display: flex;
+    margin-bottom: 80px;
+    @include breakpoint(small only){
+      margin-bottom: 64px;
+      flex-direction : column-reverse;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+    //逆
+    &:nth-child(2n){
+      display: flex;
+      flex-direction:row-reverse;
+      @include breakpoint(small only){
+        flex-direction : column-reverse
+      }
+    }
+    &:nth-child(2n){
+      .c-overview-normal__texts{
+        margin-right: 85px;
+        margin-left: auto;
+
+      }
+      .c-overview-normal__images{
+        margin-left: 0px;
+        margin-right: auto;
+
+      }
+    }
+  }
+
+  &__texts{
+    width: 560 / 1320 * 100%;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 85px;
+    @include breakpoint(small only){
+      width: 100%;
+      margin: 0 auto;
+    }
+
+  }
+  &__texts-inner{
+
+  }
+  &__title{
+
+  }
+  &__text{
+    margin-bottom: 32px;
+    @include breakpoint(small only){
+      margin-bottom: 16px;
+    }
+  }
+  &__button{
+    text-align: center;
+    > a{
+      @include breakpoint(small only){
+        margin: 0 auto;
+      }
+    }
+  }
+  &__images{
+    width: 580 / 1320 * 100%;
+    margin-left: auto;
+    @include breakpoint(small only){
+      width: 100%;
+      margin: 0 auto 16px;
+    }
+  }
+}

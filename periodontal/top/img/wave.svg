@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="16" viewBox="0 0 640 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="wave.svg" class="cls-1" d="M0,891c39.942,0,40.942-16,80.885-16s39.942,16,79.885,16,39.937-16,79.874-16,39.938,16,79.876,16,39.936-16,79.872-16,39.936,16,79.872,16,39.931-16,79.862-16,39.935,16,79.87,16v-0.26H0.064Z" transform="translate(0 -875)"/>
+</svg>

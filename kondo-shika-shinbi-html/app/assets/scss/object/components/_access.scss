@@ -1,0 +1,76 @@
+.c-access {
+
+
+  &__inner {
+    &.is-blue {
+      background-image: url(../images/bg-blue.jpg);
+      background-repeat: repeat;
+      background-position: top left;
+      //padding-top: 80px;
+      //padding-bottom: 80px;
+      @include breakpoint(small only) {
+        //padding-top: 40px;
+        //padding-bottom: 40px;
+      }
+    }
+
+  }
+  &__section {
+    margin-bottom: 72px;
+    @include breakpoint(small only) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__conts {
+    &.is-sm {
+      max-width: 1010px;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__block {
+
+  }
+  &__images {
+    margin-bottom: 72px;
+    @include breakpoint(small only) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__title {
+
+  }
+  &__text {
+
+  }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    @include breakpoint(small only) {
+      margin-top: 24px;
+    }
+  }
+  &__button {
+    width: 246px;
+    margin: 0 10px;
+    @include breakpoint(small only) {
+      margin: 0 auto 8px;
+    }
+    > a {
+      width: 100%;
+      @include breakpoint(small only) {
+        margin: 0 auto;
+      }
+
+    }
+  }
+}
+
+
+

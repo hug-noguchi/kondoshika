@@ -1,0 +1,82 @@
+.c-flow-conts {
+
+
+  &__inner{
+
+  }
+  &__section{
+    //margin-bottom: 124px;
+    @include breakpoint(small only){
+      //margin-bottom: 64px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+
+  &__title {
+
+  }
+
+  &__block {
+    border: solid 1px $color-primary;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-direction: row-reverse;
+    margin-bottom: 64px;
+    padding: 24px 24px 24px 45px;
+    @include breakpoint(small only) {
+      display: block;
+      padding: 16px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+      &:after{
+        display: none;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      left: 50%;
+      bottom: -34px;
+      content: "";
+      display: block;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 35px 36px 0 36px;
+      transform: translateX(-50%);
+      border-color: $color-accent-yellow transparent transparent transparent;
+      @include breakpoint(small only) {
+        border-width: 16px 18px 0 18px;
+        bottom: -16px;
+      }
+    }
+
+  }
+  &__images {
+    width: 31%;
+    @include breakpoint(small only){
+      width: 100%;
+      margin: 0 auto 24px;
+    }
+  }
+  &__image{
+    height: auto;
+    width: 100%;
+  }
+
+  &__texts {
+    width: calc(69% - 72px);
+    @include breakpoint(small only){
+      width: 100%;
+    }
+  }
+
+
+}

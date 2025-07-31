@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+.mv {
+  background-image: url(https://kondo-shika-shinbi.test-hug.net/periodontal/about/img/mv_about.jpg);
+  background-position: center 0;
+}
+
+h3 {
+  padding-bottom: 20px;
+  color: #7ac96e;
+}
+
+.problem_box_02 {
+  margin: 80px 0;
+}
+.problem_box_02 div:nth-child(1) {
+  padding-bottom: 40px;
+}
+.problem_box_02 h4 {
+  padding-bottom: 20px;
+}
+.problem_box_02 ul li {
+  padding-left: 1rem;
+  text-indent: -1rem;
+}
+.problem_box_02 ul li:not(:last-child) {
+  padding-bottom: 10px;
+}
+.problem_box_03 p:nth-child(2) {
+  padding-bottom: 30px;
+}
+.problem_box_03 ul {
+  display: flex;
+  justify-content: space-between;
+}
+.problem_box_03 ul li {
+  width: 32%;
+}
+.problem_box_03 ul li h4 {
+  padding-bottom: 14px;
+}
+.problem_box_03 ul li:last-child p {
+  padding-top: 34px;
+}
+
+.flow {
+  background-color: #faf2e7;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+.flow .flow_box .flow_list {
+  border: 2px solid #ff9fa0;
+  border-radius: 8px;
+  padding: 40px;
+  margin: 10px 0 30px;
+}
+.flow .flow_box ul {
+  line-height: 2.8;
+}
+.flow .flow_box p .space {
+  letter-spacing: -0.1px;
+}
+
+.toothpaste p {
+  padding-bottom: 20px;
+}
+.toothpaste .toothpaste_list1 {
+  font-weight: bold;
+  color: #7ac96e;
+  width: 20%;
+}
+.toothpaste .list_title {
+  color: #7ac96e;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.toothpaste .toothpaste_txt {
+  padding: 20px 0;
+}
+.toothpaste .toothpaste_list1 li,
+.toothpaste .toothpaste_list2 li:nth-child(3),
+.toothpaste .toothpaste_list2 li:nth-child(4),
+.toothpaste .toothpaste_list2 li:nth-child(5) {
+  color: #7ac96e;
+  font-weight: bold;
+}
+.toothpaste .toothpaste_list2 li:nth-child(2) {
+  padding-bottom: 10px;
+}
+
+.drug {
+  background-color: #faf2e7;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+.ikuta-seminar p {
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 481px) {
+  .ikuta-seminar img:nth-child(1) {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .problem_box_03 ul {
+    flex-direction: column;
+  }
+  .problem_box_03 ul li {
+    width: 100%;
+  }
+  .problem_box_03 ul li:not(:last-child) {
+    padding-bottom: 40px;
+  }
+  .problem_box_03 ul li:last-child p {
+    padding-top: 14px;
+  }
+
+  .flow .flow_box .flow_list {
+    padding: 40px 20px;
+  }
+
+  .toothpaste .toothpaste_list1 {
+    width: 100%;
+  }
+  .toothpaste .toothpaste_list2 li {
+    padding-left: 1rem;
+    text-indent: -1rem;
+  }
+
+  .ikuta-seminar img {
+    width: 100%;
+  }
+  .ikuta-seminar img:nth-child(1) {
+    margin-bottom: 20px;
+  }
+}

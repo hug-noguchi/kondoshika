@@ -1,0 +1,90 @@
+.c-director{
+
+  &__inner{
+
+  }
+  &__cont{
+    position: relative;
+    height: auto;
+    max-width: 1012px;
+    margin: 0 auto 64px;
+    padding-bottom: 47px;
+    @include breakpoint(small only){
+      margin: 0 auto 48px;
+      padding-bottom: 0px;
+
+    }
+  }
+  &__image{
+    display: block;
+    border-radius: 16px;
+
+  }
+  &__detail{
+    position: absolute;
+    width: 411px;
+    background: $color-primary;
+    color: $color-white;
+    right: -64px;
+    bottom: 0px;
+    border-radius: 16px;
+    padding: 20px 5%;
+    @media (max-width: 1190px) {
+      position: relative;
+      margin: -24px auto 0;
+      width: 90%;
+      z-index: 10;
+      right: 0px;
+    }
+  }
+  &__name{
+    font-size: 30px;
+    margin-bottom: 16px;
+    font-size: $font-base-size-sub;
+    @include breakpoint(small only){
+      margin-bottom: 8px;
+      font-size: (30px * 0.75);
+    }
+  }
+  &__hobby{
+    margin-bottom: 16px;
+    display: flex;
+    font-size: $font-base-size-sub;
+    @include breakpoint(small only){
+      margin-bottom: 8px;
+    }
+    span:nth-child(1){
+      display: block;
+      width: 14%;
+
+    }
+    span:nth-child(2){
+      display: block;
+      width: 86%;
+
+    }
+
+  }
+  &__text{
+    font-size: $font-base-size-sub;
+  }
+
+  &__deco{
+    position: absolute;
+    width: 128px;
+    z-index: 100;
+    @include breakpoint(small only){
+      display: none;
+    }
+    &.is-left{
+      left: -40px;
+      bottom: 80px;
+      @include kirakiraAction(2s,2s);
+    }
+    &.is-right{
+      right: 0px;
+      top: -48px;
+      @include kirakiraAction(4s,4s);
+    }
+  }
+}

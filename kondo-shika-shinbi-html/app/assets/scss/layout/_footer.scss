@@ -1,0 +1,190 @@
+// フッター
+//
+// フッターの標準スタイル
+//
+// markup:
+// <footer class="l-footer"></footer>
+//
+// Styleguide 5.2.0
+.l-footer {
+  position: relative;
+  z-index: 10;
+  background-color: #fcf8e1;
+  position: relative;
+  padding-top: 62px;
+
+  @include breakpoint(small only) {
+    padding-top: 32px;
+  }
+
+  //utiltty
+  &__utiltty{
+
+
+  }
+  &__utiltty-inner{
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(small only){
+      display: block;
+    }
+  }
+  //info
+  &__info{
+    width: 510 / 1140 * 100%;
+    @include breakpoint(small only){
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+  &__logo{
+    display: block;
+    max-width: 349px;
+    margin-left: 8px;
+    margin-bottom: 32px;
+    @include breakpoint(small only){
+      max-width: 100%;
+      width: 66%;
+      margin: 0 auto 32px;
+
+    }
+  }
+  &__add{
+    margin-bottom: 32px;
+    @include breakpoint(small only){
+      font-size: 14px;
+    }
+    &.is-add-pc{
+      @include breakpoint(small only){
+        display: none;
+      }
+    }
+
+    &.is-add-sp{
+      @media (min-width: 950px) {
+        display: none;
+      }
+      @include breakpoint(small only){
+        display: block;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  //map
+  &__map{
+    width: 510 / 1140 * 100%;
+    @include breakpoint(small only){
+      width: 100%;
+    }
+    > .c-google-map{
+      margin-bottom: 16px;
+      @include breakpoint(small only){
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+    }
+
+  }
+  &__map-button{
+    text-align: right;
+    a{
+      margin-left: auto;
+      @include breakpoint(small only){
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+
+
+  //menu
+  &__menu{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    @include breakpoint(small only){
+      display: none;
+    }
+
+  }
+  &__menu-inner{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__menu-block{
+
+
+  }
+
+
+  &__list{
+    > li{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0px;
+      }
+    }
+    > li > a{
+      color: rgba($font-base-color,0.5);
+      font-size: $font-base-size-sub;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      letter-spacing: 0;
+      &:before{
+        margin-right: 6px;
+        content: "\f105";
+        font-family: FontAwesome;
+        color: $color-primary;
+      }
+    }
+  }
+
+
+
+  //copyright
+  &__bottom {
+    .l-container{
+      border-top: solid 1px rgba($font-base-color,0.5);
+      display: flex;
+      flex-direction: row-reverse;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      @include breakpoint(small only){
+        border: none;
+        padding-top: 32px;
+        padding-bottom: 16px;
+      }
+    }
+
+  }
+  &__privacys{
+    display: flex;
+    align-items: center;
+    @include breakpoint(small only){
+      display: none;
+    }
+    li{
+      &:first-child{
+        margin-right: 32px;
+      }
+      a{
+        font-size: $font-base-size-sub;
+        color: rgba($font-base-color,0.5);
+      }
+    }
+  }
+  &__copyright{
+    font-size: 12px;
+    color: rgba($font-base-color,0.5);
+    margin-right: auto;
+    @include breakpoint(small only){
+      font-size: 10px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}

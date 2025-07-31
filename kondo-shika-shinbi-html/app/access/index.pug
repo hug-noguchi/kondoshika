@@ -1,0 +1,151 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "access" // ページのID
+  - current.title = "アクセス・診療時間" // タイトル
+  - current.description = "これはアクセス・診療時間についての説明文です" // 説明文
+  - current.bodyClass = "access" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-access.jpg","アクセス・診療時間")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span アクセス・診療時間
+
+block body
+  section.l-main
+    .l-section.is-lower.is-blue
+      .l-section.is-lower-inner.is-blue
+        +c.access
+          +e.inner.is-blue
+            +e.section.is-blue
+              .c-title-block
+                .l-container
+                  .c-title-block__title
+                    h2.heading.is-xlg.
+                      医院概要
+              +e.conts.is-sm
+                .l-container
+                  +e.block
+                    +e.images
+                      +img("img-access-top.png","医院概要")
+                    table.c-table
+                      tr
+                        th 当医院名
+                        td 近藤歯科クリニック
+                      tr
+                        th 住所
+                        td 東京都立川市高松町2-25-3　メープル立川1F
+                      tr
+                        th TEL・FAX
+                        td 042-524-0722
+                      tr
+                        th URL
+                        td <a href="//www.kondo-shika-shinbi.com/" taget="_blank">http://www.kondo-shika-shinbi.com/</a>
+
+            +e.section
+              .c-title-block
+                .l-container
+                  .c-title-block__title
+                    h2.heading.is-xlg.
+                      診療時間について
+              +e.conts.is-sm
+                .l-container
+                  +e.block
+                    +c_time_table()
+                  +e.buttons
+                    +e.button
+                      a(href="tel:042-524-0722").c-button.is-phone.is-arrow.is-yellow.is-effect.
+                        042-524-0722
+                    +e.button
+                      +a("/contact/").c-button.is-normal.is-arrow.is-yellow.is-effect.
+                        お問い合わせ
+
+            +e.section
+              .c-title-block
+                .l-container
+                  .c-title-block__title
+                    h2.heading.is-xlg.
+                      アクセスについて
+              +e.conts.is-sm
+                .l-container
+                  +e.block
+                    +c_map("acsess")
+
+
+        +c.access-flow
+          +e.inner
+            .l-container
+              +e.section
+                +e.title
+                  h3.heading.is-lg.
+                    立川駅からの道順（徒歩でのご来院の場合）
+                +e.block
+                  +e.images
+                    +img("img-access-flow-01.jpg","立川駅からの道順（徒歩でのご来院の場合）").c-access-flow__image
+                  +e.text
+                    +e.text-inner.
+                      JR立川駅の北口コンコースをビックカメラの脇のエスカレーターを降り、立川通り沿いにまっすぐ北に向かいます。
+
+                +e.block
+                  +e.images
+                    +img("img-access-flow-02.jpg","立川駅からの道順（徒歩でのご来院の場合）").c-access-flow__image
+                  +e.text
+                    +e.text-inner.
+                      大きな交差点を二つ渡って、さらに北へ向かって歩きます。
+
+                +e.block
+                  +e.images
+                    +img("img-access-flow-03.jpg","立川駅からの道順（徒歩でのご来院の場合）").c-access-flow__image
+                  +e.text
+                    +e.text-inner.
+                      駅から約10分程度歩くと、最初のバス亭（高松町3丁目）があり、脇にセブンイレブンがあります。<br>
+                      <br>
+                      この先の交差点は直進します。<br>
+                      （“立川市健康会館西”の信号機があります。旧診療所は右折でしたが、お間違いなく。）
+
+                +e.block
+                  +e.images
+                    +img("img-access-flow-04.jpg","立川駅からの道順（徒歩でのご来院の場合）").c-access-flow__image
+                  +e.text
+                    +e.text-inner.
+                      この交差点は直進です。<br>
+                      交差点の信号は”立川市健康会館西”です。
+
+                +e.block
+                  +e.images
+                    +img("img-access-flow-05.jpg","立川駅からの道順（徒歩でのご来院の場合）").c-access-flow__image
+                  +e.text
+                    +e.text-inner.
+                      この交差点（“立川税務署前”の信号機）も直進、横断歩道を渡ってください。<br>
+                      渡って右側3軒目のテナントに近藤歯科クリニックがあります。
+
+              +e.section
+                +e.title
+                  h3.heading.is-lg.
+                    バスでのご来院の場合
+                +e.block
+                  +e.images
+                    +img("img-access-flow-06.jpg","立川駅からの道順（徒歩でのご来院の場合）").c-access-flow__image
+                  +e.text
+                    +e.text-inner.
+                      高松町2丁目のバス停を降り、立川駅方面へ歩いて1分、下り方面のバス停からは、通りを渡って、立川駅方面に戻って3分ほどになります。<br>
+                      立川駅から、立川通りを通るバス（バス乗り場?〜?のバス）すべてOKです。<br>
+                      本数が多いので、ほぼ5分毎に来ます。
+
+              +e.section
+                +e.title
+                  h3.heading.is-lg.
+                    お車でのご来院の場合
+                +e.block
+                  +e.images
+                    +img("img-access-flow-07.jpg","立川駅からの道順（徒歩でのご来院の場合）").c-access-flow__image
+                  +e.text
+                    +e.text-inner.
+                      写真の駐車場、2番、3番になります。<br>
+                      ※駐車場2台完備
+
+

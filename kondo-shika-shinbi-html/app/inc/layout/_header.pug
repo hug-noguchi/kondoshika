@@ -1,0 +1,61 @@
+mixin c_header_cont()
+  .l-header__top
+    .l-header__logos
+      h1.l-header__heading-text.
+        立川市の矯正歯科・小児矯正歯科なら近藤歯科クリニック
+      if current.id == "top"
+        .l-header__heading
+          +a("/").l-header__logo: +img("logo.png","近藤歯科クリニック")
+      else
+        .l-header__heading
+          +a("/").l-header__logo: +img("logo.png","近藤歯科クリニック")
+    a(href="tel:042-524-0722").l-header__sp-tel.u-hidden-lg <i class="fa fa-phone" aria-hidden="true"></i>
+    .l-header__info
+      .l-header__tel
+        span.l-header__tel-text ご予約お問い合わせはこちら！
+        a(href="tel:0425240722").l-header__tel-number <i class="fa fa-phone" aria-hidden="true"></i>042-524-0722
+      .l-header__contacts
+        +a("/contact/").l-header__contact <span>お問い合わせ</span>
+        a(href="//appt.doctorsfile.jp/Patient/?hid=38731", target="_blank").l-header__reservation <span>ご予約</span>
+  nav.l-header__nav
+    ul.l-header__nav-inner
+      li
+        +a("/ortho/")
+          +img("icon-global-nav-01.png","矯正治療")
+          span 矯正治療
+      li
+        +a("/price/")
+          +img("icon-global-nav-02.png","費用について")
+          span 費用について
+      li
+        +a("/aboutus/")
+          +img("icon-global-nav-03.png","近藤歯科クリニックについて")
+          span 近藤歯科クリニックについて
+      li
+        +a("/access/")
+          +img("icon-global-nav-04.png","アクセス・診療時間")
+          span アクセス・診療時間
+      li
+        +a("/staff/")
+          +img("icon-global-nav-05.png","院長・スタッフ紹介")
+          span 院長・スタッフ紹介
+      li
+        +a("/introduction/")
+          +img("icon-global-nav-06.png","院内紹介")
+          span 院内紹介
+      li
+        +a("/flow/")
+          +img("icon-global-nav-07.png","診療の流れ")
+          span 診療の流れ
+
+
+if current.id == "top"
+  header.l-header.is-top
+    +c_header_cont()
+
+else
+  header.l-header.is-lower
+    +c_header_cont()
+
+
+

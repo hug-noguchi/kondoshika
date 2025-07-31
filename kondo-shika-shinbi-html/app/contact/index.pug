@@ -1,0 +1,121 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "contact" // ページのID
+  - current.title = "お問い合わせ" // タイトル
+  - current.description = "これはお問い合わせの説明文です" // 説明文
+  - current.bodyClass = "contact" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-contact.jpg","お問い合わせ")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span お問い合わせ
+
+block body
+  section.l-main
+    .l-section.is-lower
+      .l-section.is-lower-inner
+        .l-container
+          .row
+            .large-10.is-push-lg-1.small-12
+              +c.form-head
+                +e.tel
+                  +e.tel-text
+                    h2.heading.is-xlg.
+                      お電話でのご予約・お問い合わせはこちら
+                  a(href="tel:042-524-0722").c-form-head__tel-number.
+                    <i class="fa fa-phone" aria-hidden="true"></i>042-524-0722
+                +e.lead-lg.
+                  その他お問い合わせは下記webフォームからお受けしております。
+                +e.lead.
+                  各項目入力後、画面下部の【確認画面へ】 ボタンをクリックしていただきますと、入力内容を確認していただけます。<br>
+                  内容を確認後、【送信】ボタンを押して下さい。
+                +e.lead.
+                  ※ご予約はwebフォームから受け付けておりませんのでご了承ください。
+
+              form(name="name",action="action")
+                +c.form-block
+                  +e.block
+                    +e.title
+                      span おなまえ
+                      +e.label 必須
+                    +e.content
+                      input.c-form-block__input(name="name",type="text",placeholder="おなまえをご記入ください。")
+                  +e.block
+                    +e.title
+                      span フリガナ
+                      +e.label 必須
+                    +e.content
+                      input.c-form-block__input(name="kana",type="text",placeholder="フリガナをご記入ください。")
+                  +e.block
+                    +e.title
+                      span メールアドレス
+                      +e.label 必須
+                    +e.content
+                      input.c-form-block__input(name="e-mail",type="text",placeholder="メールアドレスをご記入ください。")
+                  +e.block
+                    +e.title
+                      span 電話番号
+                      +e.label 必須
+                    +e.content
+                      input.c-form-block__input(name="tel",type="text",placeholder="電話番号をご記入ください。")
+
+                  +e.block
+                    +e.title
+                      span 性別
+                      +e.label 必須
+                    +e.content
+                      +e.radio
+                        label.c-form-block__radio-box
+                          input.c-form-block__input(name="性別" ,type="radio" ,checked)
+                          span 男性
+                        label.c-form-block__radio-box
+                          input.c-form-block__input(name="性別" ,type="radio")
+                          span 女性
+                  +e.block
+                    +e.title
+                      span 年齢
+                      +e.label 必須
+                    +e.content
+                      +e.select
+                        .select-block
+                          select.box
+                            option(value='') ご年齢を選択してください　　　
+                            - for (var i = 1; i<=60; i++){
+                              option(value='')!= i  + "歳"
+                            -}
+
+                  +e.block
+                    +e.title
+                      span 気になるところ
+                      +e.label 必須
+                    +e.content
+                      textarea.c-form-block__textarea(name="message",placeholder="気になるところを入力してください。")
+                  +e.block
+                    +e.title
+                      span ご希望（たとえば歯を抜かないとか、固定式装置をつけないとか）
+                    +e.content
+                      textarea.c-form-block__textarea(name="message",placeholder="ご希望をご記入ください。")
+                  +e.block
+                    +e.title
+                      span 口の中の歯の様子<br>（できるだけ細かく）
+                    +e.content
+                      textarea.c-form-block__textarea(name="message",placeholder="口の中の歯の様子をご記入ください。")
+                  +e.block
+                    +e.title
+                      span 写真
+                    +e.content
+                      label.c-form-block__file-box
+                        input.c-form-block__input(name="写真",type="file")
+
+                  +e.checkbox
+                    input(type="checkbox",id="privacy-policy",name="個人情報保護方針の内容に同意する",value="同意する")
+                    label(for="privacy-policy")
+                      +a("/privacy-policy/") 個人情報保護方針
+                      | の内容に同意する
+                  +e.submit.is-confirm
+                    button.c-button.is-lg.is-arrow.is-primary.is-effect 確認画面へ

@@ -1,0 +1,357 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.kondo-shika-shinbi\.com
+RewriteRule ^(.*) https://kondo-shika-shinbi.com/$1 [R=301,L]
+# Support
+<IfModule mod_expires.c>
+	ExpiresActive On
+# ExpiresDefault "access plus 2592000 seconds"
+# ExpiresByType text/html "access plus 2592000 seconds"
+	ExpiresByType image/gif "access plus 2592000 seconds"
+	ExpiresByType image/jpeg "access plus 2592000 seconds"
+	ExpiresByType image/png "access plus 2592000 seconds"
+	ExpiresByType image/x-icon "access plus 2590000 seconds"
+	ExpiresByType text/css "access plus 2590000 seconds"
+	ExpiresByType text/javascript "access plus 2590000 seconds"
+	ExpiresByType application/x-javascript "access plus 2590000 seconds"
+	ExpiresByType application/x-shockwave-flash "access plus 25920000 seconds"
+</IfModule>
+<IfModule mod_deflate.c>
+	SetOutputFilter DEFLATE
+	BrowserMatch ^Mozilla/4 gzip-only-text/html
+	BrowserMatch ^Mozilla/4\.0[678] no-gzip
+	BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+	SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|ico)$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI _\.utxt$ no-gzip
+# DeflateCompressionLevel 9
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/atom_xml
+	AddOutputFilterByType DEFLATE application/x-javascript
+	AddOutputFilterByType DEFLATE application/x-httpd-php
+</IfModule>
+SetEnvIf Request_URI ".*" Ngx_Cache_NoCacheMode=off
+SetEnvIf Request_URI ".*" Ngx_Cache_StaticMode
+
+#SITEGUARD_PLUGIN_SETTINGS_START
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_START
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /
+	RewriteRule ^wp-signup\.php 404-siteguard [L]
+	RewriteRule ^wp-activate\.php 404-siteguard [L]
+	RewriteRule ^login_78983(.*)$ wp-login.php$1 [L]
+</IfModule>
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_END
+#SITEGUARD_PLUGIN_SETTINGS_END
+
+
+RewriteEngine on
+RewriteRule ^shisyubyokenkyujo/index.html$ https://kondo-shika-shinbi.com/periodontal/ [L,R=301]
+RewriteRule ^shisyubyokenkyujo/saishin.html$ https://kondo-shika-shinbi.com/periodontal/about/ [L,R=301]
+RewriteRule ^shisyubyokenkyujo/brushing.html$ https://kondo-shika-shinbi.com/periodontal/brushing/ [L,R=301]
+RewriteRule ^shisyubyokenkyujo/brush.html$ https://kondo-shika-shinbi.com/periodontal/toothbrush/ [L,R=301]
+RewriteRule ^shisyubyokenkyujo/clenching.html$ https://kondo-shika-shinbi.com/periodontal/teeth-grinding/ [L,R=301]
+
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+	RewriteBase /
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+RewriteEngine on
+Redirect permanent /ortho/index.html /aboutus/
+Redirect permanent /ortho/ortho01.html /ortho/
+Redirect permanent /ortho/not-extraction.html /ortho/
+Redirect permanent /ortho/ortho03.html /price/
+Redirect permanent /ortho/ortho02.html /archives/852/
+Redirect permanent /ortho/ending.html /archives/839/
+Redirect permanent /ortho/choose.html /archives/834/
+Redirect permanent /ortho/consultation.html /archives/835/
+Redirect permanent /ortho/ortho06.html /archives/856/
+Redirect permanent /ortho/type.html /archives/873/
+Redirect permanent /ortho/difficulty.html /archives/838/
+Redirect permanent /ortho/prevention.html /archives/863/
+Redirect permanent /ortho/ortho09.html /archives/859/
+Redirect permanent /ortho/alignment.html /archives/786/
+Redirect permanent /ortho/ortho04.html /archives/854/
+Redirect permanent /ortho/ortho05.html /archives/855/
+Redirect permanent /ortho/informed.html /archives/848/
+Redirect permanent /ortho/dental.html /archives/837/
+Redirect permanent /ortho/ortho10.html /archives/860/
+Redirect permanent /ortho/ortho11.html /archives/861/
+Redirect permanent /ortho/wisdom.html /archives/876/
+Redirect permanent /ortho/perio.html /archives/862/
+Redirect permanent /ortho/ortho08.html /archives/858/
+Redirect permanent /ortho/ortho07.html /archives/857/
+Redirect permanent /ortho/ortho_qanda.html /ortho/
+Redirect permanent /ortho/about.html /archives/778/
+Redirect permanent /ortho/child02.html /archives/791/
+Redirect permanent /ortho/child03.html /archives/792/
+Redirect permanent /ortho/child10.html /archives/799/
+Redirect permanent /ortho/child04.html /archives/793/
+Redirect permanent /ortho/children.html /archives/805/
+Redirect permanent /ortho/children15.html /archives/819/
+Redirect permanent /ortho/need.html /archives/849/
+Redirect permanent /qanda /archives/879/
+Redirect permanent /ortho/whatssyouni.html /ortho/child/
+Redirect permanent /before /archives/878/
+Redirect permanent /ortho/characteristic.html /archives/789/
+Redirect permanent /ortho/children06.html /archives/810/
+Redirect permanent /ortho/correction.html /archives/836/
+Redirect permanent /ortho/child.html /archives/790/
+Redirect permanent /ortho/children05.html /archives/809/
+Redirect permanent /ortho/children02.html /archives/806/
+Redirect permanent /ortho/child14.html /archives/803/
+Redirect permanent /ortho/children03.html /archives/807/
+Redirect permanent /children04.html /archives/808/
+Redirect permanent /ortho/children14.html /archives/818/
+Redirect permanent /ortho/child12.html /archives/801/
+Redirect permanent /ortho/children08.html /archives/812/
+Redirect permanent /ortho/children07.html /archives/811/
+Redirect permanent /ortho/children09.html /archives/813/
+Redirect permanent /ortho/bio.html /archives/788/
+Redirect permanent /ortho/children16.html /archives/820/
+Redirect permanent /ortho/children17.html /archives/821/
+Redirect permanent /ortho/child11.html /archives/800/
+Redirect permanent /ortho/child06.html /archives/795/
+Redirect permanent /ortho/child05.html /archives/794/
+Redirect permanent /ortho/children12.html /archives/816/
+Redirect permanent /ortho/bad_habit.html /archives/787/
+Redirect permanent /ortho/child15.html /archives/804/
+Redirect permanent /ortho/children11.html /archives/815/
+Redirect permanent /ortho/children10.html /archives/814/
+Redirect permanent /ortho/child13.html /archives/802/
+Redirect permanent /ortho/children19.html //archives/823/
+Redirect permanent /ortho/children18.html /archives/822/
+Redirect permanent /ortho/adult.html /archives/780/
+Redirect permanent /ortho/adult04.html /archives/783/
+Redirect permanent /ortho/adult04.htm /archives/783/
+Redirect permanent /archives/883/characteristic.html /archives/789/
+Redirect permanent /archives/873/characteristic.html /archives/789/
+Redirect permanent /archives/778/bio.html /archives/789/
+Redirect permanent /archives/778/child04.html /archives/789/
+Redirect permanent /archives/855/ortho04.html /archives/789/
+Redirect permanent /archives/847/about.html /archives/789/
+Redirect permanent /archives/847/characteristic.html /archives/789/
+Redirect permanent /archives/847/child.html /archives/789/
+Redirect permanent /archives/847/alignment.html /archives/789/
+Redirect permanent /archives/847/type.html /archives/789/
+Redirect permanent /archives/840/about.html /archives/789/
+Redirect permanent /archives/847/adult.html /archives/789/
+Redirect permanent /archives/851/characteristic.html /archives/789/
+Redirect permanent /ortho/adult05.html /archives/784/
+Redirect permanent /ortho/adult02.html /archives/781/
+Redirect permanent /ortho/adult03.html /archives/782/
+Redirect permanent /ortho/adult06.html /archives/785/
+Redirect permanent /ortho/hanarabi01.html /archives/841/
+Redirect permanent /ortho/hanarabi02.html /archives/842/
+Redirect permanent /ortho/children13.html /archives/817/
+Redirect permanent /ortho/hanarabi03.html /archives/843/
+Redirect permanent /ortho/hanarabi05.html /archives/845/
+Redirect permanent /ortho/hanarabi06.html /archives/846/
+Redirect permanent /ortho/child09.html /archives/798/
+Redirect permanent /ortho/child08.html /archives/797/
+Redirect permanent /column/ /information/
+Redirect permanent /form/kondo-dental/kyosei-consul /information/
+Redirect permanent /html5shiv.googlecode.com/svn/trunk/html5.html /information/
+Redirect permanent /inquiry /information/
+Redirect permanent /ortho/child07.html /information/
+Redirect permanent /ortho/syouni01.html /information/
+Redirect permanent /ortho/syouni02.html /information/
+Redirect permanent /ortho/syouni03.html /information/
+Redirect permanent /ortho/syouni04.html /information/
+Redirect permanent /ortho/syouni05.html /information/
+Redirect permanent /ortho/syouni06.html /information/
+Redirect permanent /ortho/syouni07.html /information/
+Redirect permanent /shisyubyokenkyujo/feed /information/
+Redirect permanent /shounikyousei /
+Redirect permanent /shounishika/shounishika/ /shounishika/
+Redirect permanent /archives/1852/ /information/1852/
+Redirect permanent /archives/1670/ /information/1670/
+Redirect permanent /archives/1511/ /information/1511/
+Redirect permanent /archives/1405/ /staff_blog/1405/
+Redirect permanent /archives/1407/ /staff_blog/1407/
+Redirect permanent /archives/609/ /staff_blog/609/
+Redirect permanent /archives/608/ /staff_blog/608/
+Redirect permanent /archives/607/ /staff_blog/607/
+Redirect permanent /archives/606/ /staff_blog/606/
+Redirect permanent /archives/605/ /staff_blog/605/
+Redirect permanent /archives/604/ /staff_blog/604/
+Redirect permanent /archives/603/ /staff_blog/603/
+Redirect permanent /archives/602/ /staff_blog/602/
+Redirect permanent /archives/601/ /staff_blog/601/
+Redirect permanent /archives/600/ /staff_blog/600/
+Redirect permanent /archives/1673/ /orthodontic_column/1673/
+Redirect permanent /archives/883/ /orthodontic_column/883/
+Redirect permanent /archives/817/ /orthodontic_column/817/
+Redirect permanent /archives/818/ /orthodontic_column/818/
+Redirect permanent /archives/832/ /orthodontic_column/832/
+Redirect permanent /archives/833/ /orthodontic_column/833/
+Redirect permanent /archives/841/ /orthodontic_column/841/
+Redirect permanent /archives/842/ /orthodontic_column/842/
+Redirect permanent /archives/843/ /orthodontic_column/843/
+Redirect permanent /archives/844/ /orthodontic_column/844/
+Redirect permanent /archives/845/ /orthodontic_column/845/
+Redirect permanent /archives/846/ /orthodontic_column/846/
+Redirect permanent /archives/1172/ /orthodontic_column/1172/
+Redirect permanent /archives/726/ /orthodontic_column/726/
+Redirect permanent /archives/878/ /orthodontic_column/878/
+Redirect permanent /archives/816/ /orthodontic_column/816/
+Redirect permanent /archives/819/ /orthodontic_column/819/
+Redirect permanent /archives/822/ /orthodontic_column/822/
+Redirect permanent /archives/788/ /orthodontic_column/788/
+Redirect permanent /archives/823/ /orthodontic_column/823/
+Redirect permanent /archives/789/ /orthodontic_column/789/
+Redirect permanent /archives/824/ /orthodontic_column/824/
+Redirect permanent /archives/791/ /orthodontic_column/791/
+Redirect permanent /archives/836/ /orthodontic_column/836/
+Redirect permanent /archives/793/ /orthodontic_column/793/
+Redirect permanent /archives/865/ /orthodontic_column/865/
+Redirect permanent /archives/794/ /orthodontic_column/794/
+Redirect permanent /archives/875/ /orthodontic_column/875/
+Redirect permanent /archives/799/ /orthodontic_column/799/
+Redirect permanent /archives/801/ /orthodontic_column/801/
+Redirect permanent /archives/803/ /orthodontic_column/803/
+Redirect permanent /archives/806/ /orthodontic_column/806/
+Redirect permanent /archives/809/ /orthodontic_column/809/
+Redirect permanent /archives/812/ /orthodontic_column/812/
+Redirect permanent /archives/814/ /orthodontic_column/814/
+Redirect permanent /archives/815/ /orthodontic_column/815/
+Redirect permanent /archives/1917/ /orthodontic_column/1917/
+Redirect permanent /archives/1906/ /orthodontic_column/1906/
+Redirect permanent /archives/798/ /orthodontic_column/798/
+Redirect permanent /archives/808/ /orthodontic_column/808/
+Redirect permanent /archives/1811/ /orthodontic_column/1811/
+Redirect permanent /archives/1808/ /orthodontic_column/1808/
+Redirect permanent /archives/1725/ /orthodontic_column/1725/
+Redirect permanent /archives/703/ /case_of_correction/703/
+Redirect permanent /archives/887/ /orthodontic_column/887/
+Redirect permanent /archives/885/ /orthodontic_column/885/
+Redirect permanent /archives/797/ /orthodontic_column/797/
+Redirect permanent /archives/838/ /orthodontic_column/838/
+Redirect permanent /archives/860/ /orthodontic_column/860/
+Redirect permanent /archives/839/ /orthodontic_column/839/
+Redirect permanent /archives/861/ /orthodontic_column/861/
+Redirect permanent /archives/800/ /orthodontic_column/800/
+Redirect permanent /archives/840/ /orthodontic_column/840/
+Redirect permanent /archives/862/ /orthodontic_column/862/
+Redirect permanent /archives/802/ /orthodontic_column/802/
+Redirect permanent /archives/847/ /orthodontic_column/847/
+Redirect permanent /archives/863/ /orthodontic_column/863/
+Redirect permanent /archives/804/ /orthodontic_column/804/
+Redirect permanent /archives/848/ /orthodontic_column/848/
+Redirect permanent /archives/864/ /orthodontic_column/864/
+Redirect permanent /archives/780/ /orthodontic_column/780/
+Redirect permanent /archives/805/ /orthodontic_column/805/
+Redirect permanent /archives/849/ /orthodontic_column/849/
+Redirect permanent /archives/873/ /orthodontic_column/873/
+Redirect permanent /archives/781/ /orthodontic_column/781/
+Redirect permanent /archives/807/ /orthodontic_column/807/
+Redirect permanent /archives/850/ /orthodontic_column/850/
+Redirect permanent /archives/874/ /orthodontic_column/874/
+Redirect permanent /archives/782/ /orthodontic_column/782/
+Redirect permanent /archives/851/ /orthodontic_column/851/
+Redirect permanent /archives/876/ /orthodontic_column/876/
+Redirect permanent /archives/783/ /orthodontic_column/783/
+Redirect permanent /archives/810/ /orthodontic_column/810/
+Redirect permanent /archives/852/ /orthodontic_column/852/
+Redirect permanent /archives/784/ /orthodontic_column/784/
+Redirect permanent /archives/811/ /orthodontic_column/811/
+Redirect permanent /archives/853/ /orthodontic_column/853/
+Redirect permanent /archives/785/ /orthodontic_column/785/
+Redirect permanent /archives/813/ /orthodontic_column/813/
+Redirect permanent /archives/854/ /orthodontic_column/854/
+Redirect permanent /archives/786/ /orthodontic_column/786/
+Redirect permanent /archives/820/ /orthodontic_column/820/
+Redirect permanent /archives/855/ /orthodontic_column/855/
+Redirect permanent /archives/787/ /orthodontic_column/787/
+Redirect permanent /archives/821/ /orthodontic_column/821/
+Redirect permanent /archives/856/ /orthodontic_column/856/
+Redirect permanent /archives/790/ /orthodontic_column/790/
+Redirect permanent /archives/834/ /orthodontic_column/834/
+Redirect permanent /archives/857/ /orthodontic_column/857/
+Redirect permanent /archives/792/ /orthodontic_column/792/
+Redirect permanent /archives/835/ /orthodontic_column/835/
+Redirect permanent /archives/858/ /orthodontic_column/858/
+Redirect permanent /archives/795/ /orthodontic_column/795/
+Redirect permanent /archives/837/ /orthodontic_column/837/
+Redirect permanent /archives/859/ /orthodontic_column/859/
+Redirect permanent /archives/779/ /orthodontic_column/779/
+Redirect permanent /archives/778/ /orthodontic_column/778/
+Redirect permanent /archives/724/ /case_of_correction/724/
+Redirect permanent /archives/723/ /case_of_correction/723/
+Redirect permanent /archives/722/ /case_of_correction/722/
+Redirect permanent /archives/721/ /case_of_correction/721/
+Redirect permanent /archives/719/ /case_of_correction/719/
+Redirect permanent /archives/315/ /case_of_correction/315/
+Redirect permanent /archives/718/ /case_of_correction/718/
+Redirect permanent /archives/716/ /case_of_correction/716/
+Redirect permanent /archives/310/ /case_of_correction/310/
+Redirect permanent /archives/303/ /case_of_correction/303/
+Redirect permanent /archives/302/ /case_of_correction/302/
+Redirect permanent /archives/301/ /case_of_correction/301/
+Redirect permanent /archives/713/ /case_of_correction/713/
+Redirect permanent /archives/712/ /case_of_correction/712/
+Redirect permanent /archives/710/ /case_of_correction/710/
+Redirect permanent /archives/709/ /case_of_correction/709/
+Redirect permanent /archives/707/ /case_of_correction/707/
+Redirect permanent /archives/706/ /case_of_correction/706/
+Redirect permanent /archives/702/ /case_of_correction/702/
+Redirect permanent /archives/700/ /case_of_correction/700/
+Redirect permanent /archives/699/ /case_of_correction/699/
+Redirect permanent /archives/698/ /case_of_correction/698/
+Redirect permanent /archives/696/ /orthodontics_case/696/
+Redirect permanent /archives/695/ /case_of_correction/695/
+Redirect permanent /archives/694/ /case_of_correction/694/
+Redirect permanent /archives/693/ /case_of_correction/693/
+Redirect permanent /archives/691/ /case_of_correction/691/
+Redirect permanent /archives/690/ /case_of_correction/690/
+Redirect permanent /archives/689/ /case_of_correction/689/
+Redirect permanent /archives/687/ /case_of_correction/553/
+Redirect permanent /archives/686/ /case_of_correction/686/
+Redirect permanent /archives/1710/ /orthodontic_column/1710/
+Redirect permanent /archives/704/ /case_of_correction/704/
+Redirect permanent /archives/725/ /orthodontic_column/725/
+Redirect permanent /archives/720/ /case_of_correction/720/
+Redirect permanent /archives/317/ /case_of_correction/317/
+Redirect permanent /archives/316/ /case_of_correction/316/
+Redirect permanent /archives/717/ /case_of_correction/717/
+Redirect permanent /archives/308/ /case_of_correction/308/
+Redirect permanent /archives/715/ /case_of_correction/715/
+Redirect permanent /archives/714/ /case_of_correction/714/
+Redirect permanent /archives/711/ /orthodontic_column/711/
+Redirect permanent /archives/708/ /case_of_correction/708/
+Redirect permanent /archives/705/ /case_of_correction/705/
+Redirect permanent /archives/701/ /case_of_correction/701/
+Redirect permanent /archives/697/ /staff_blog/697/
+Redirect permanent /archives/692/ /case_of_correction/692/
+Redirect permanent /archives/688/ /staff_blog/688/
+Redirect permanent /archives/879/ /faq/
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} ^(.*)\.html$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ https://kondo-shika-shinbi.com/info/ [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ https://kondo-shika-shinbi.com/info/ [R=301,L]

@@ -1,0 +1,1194 @@
+/* WordPress Gallery
+------------------------------------------ */
+
+.gallery {
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+}
+
+.gallery:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.gallery-item {
+	margin: 0;
+	float: left;
+	padding: 0.5em;
+}
+
+.gallery-item img {
+	width: 100%;
+}
+.pointPrice{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.gallery-columns-1 .gallery-item {
+	width: 100%;
+	float: none;
+}
+
+.gallery-columns-2 .gallery-item {
+	width: 50%
+}
+
+.gallery-columns-3 .gallery-item {
+	width: 33.3333%
+}
+
+.gallery-columns-4 .gallery-item {
+	width: 25%
+}
+
+.gallery-columns-5 .gallery-item {
+	width: 20%
+}
+
+.gallery-columns-6 .gallery-item {
+	width: 16.6667%
+}
+
+.gallery-columns-7 .gallery-item {
+	width: 14.2857%
+}
+
+.gallery-columns-8 .gallery-item {
+	width: 12.5%
+}
+
+.gallery-columns-9 .gallery-item {
+	width: 11.1111%
+}
+
+.gallery-columns-2 .gallery-item:nth-child(2n+1),
+.gallery-columns-3 .gallery-item:nth-child(3n+1),
+.gallery-columns-4 .gallery-item:nth-child(4n+1),
+.gallery-columns-5 .gallery-item:nth-child(5n+1),
+.gallery-columns-6 .gallery-item:nth-child(6n+1),
+.gallery-columns-7 .gallery-item:nth-child(7n+1),
+.gallery-columns-8 .gallery-item:nth-child(8n+1),
+.gallery-columns-9 .gallery-item:nth-child(9n+1) {
+	clear: left;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%; /* Image does not overflow the content area */
+	padding: 5px 3px 10px;
+	text-align: center;
+}
+
+.wp-caption.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+.sub_txt {
+	margin-bottom: 72px;
+}
+
+.t_style01 {
+	margin-top: 48px;
+}
+
+@media (max-width: 750px) {
+	.sp-br {
+		display: block;
+	}
+	.sub_txt {
+		margin-bottom: 32px;
+	}
+	.t_style01 {
+		margin-top: 32px;
+	}
+}
+
+.c-post-content .page_link,
+.c-post-content .mokuji_under {
+	padding: 16px;
+	background: #f5f5f5;
+}
+
+.box_case .start_list li {
+	float: left;
+	margin: 0 0 20px;
+}
+
+.start_list li {
+    padding: 0 20px;
+}
+.start_list {
+	overflow: hidden;
+}
+.t_cal {
+    border-top: 2px solid #a2cb2d
+}
+
+.t_cal .t_line {
+    border-left: 1px dotted #fff
+}
+
+.t_cal th {
+    text-align: center!important
+}
+
+.t_cal td {
+    text-align: center!important
+}
+
+.start_list {
+    overflow: hidden
+}
+
+.start_list li {
+    float: left;
+    margin: 0 0 20px
+}
+
+.start_list li.start_list02 {
+    padding: 0 20px
+}
+
+.start_sub_box {
+    padding: 20px;
+    border: 2px solid #ff9400
+}
+
+.start_list li#start_bus02 {
+    padding: 0 7px 0 10px
+}
+
+.start_list li#start_bus03 {
+    float: right
+}
+
+.start_point {
+    padding: 0 0 10px
+}
+
+.start_point li {
+    background-color: #e8f2f4;
+    padding: 12px 10px 10px;
+    margin: 0 0 15px;
+    font-size: 15px;
+    border-bottom: 3px solid #ddd
+}
+
+@media screen and (max-width: 1000px) {
+    .start_list {
+        overflow:inherit
+    }
+
+    ul.start_list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    ul.start_list li.start_list02,ul.start_list li {
+        margin: 0 3px 0 0;
+        padding: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        empty-cells: show
+    }
+}
+
+.sub_txt.brainadd .text-box {
+    border: solid 2px #a3c93d;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.img_left {
+    float: left;
+    padding: 5px 25px 15px 0;
+}
+
+.txt_p {
+	display: block;
+	margin: 1em 0;
+}
+.c-post-content strong {
+	color: #78c5d2;
+}
+
+
+/* .box_case img {
+    float: right;
+    margin-left: 1em;
+} */
+
+.right {
+	float: right;
+	margin-left: 1em;
+}
+
+.box_case .txt_p {
+	overflow: hidden;
+}
+
+.txtbold {
+	font-weight: bold;
+}
+.c-post-content .ti_h3_02:before {
+	content: none;
+}
+.c-post-content .ti_h3_02 {
+	background: #dff0f3;
+    font-size: 18px;
+    padding: 16px;
+    border-radius: 7px;
+}
+
+.c-content-box__sup {
+	margin-bottom: 16px;
+}
+.c-content-box__text p {
+	font-size: 14px;
+	letter-spacing: 0.03em;
+}
+
+#nav_local {
+    display: block;
+    overflow: hidden;
+    padding: 10px 0 25px;
+}
+#nav_local>li {
+    min-width: 48%;
+	max-width: 48%;
+	float: left;
+}
+#nav_local .imgHover02.scroll {
+    display: block;
+}
+#nav_local .in_link {
+    margin-top: 2em;
+}
+
+#nav_local .in_link li {
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: 1px solid #ccc;
+    line-height: 1.5;
+}
+#nav_local .in_link li a {
+    color: #6f6f6f;
+    text-indent: -1.5em;
+    margin-left: 1.5em;
+    display: block;
+    text-align: left;
+}
+
+
+.sub_cont_list ul {
+    max-width: 414px;
+    width: 100%;
+}
+
+.about_right {
+    float: right;
+    width: 249px
+}
+
+.about_nav {
+    overflow: hidden
+}
+
+.about_nav li {
+    float: left
+}
+
+.about_nav li#about_nav02 {
+    padding: 0 27px
+}
+
+.about_box {
+    background: #fff;
+    max-width: 580px;
+}
+
+.about_sub_box {
+    padding: 20px;
+    border-top: 2px solid #ff9400;
+    border-left: 2px solid #ff9400;
+    border-right: 2px solid #ff9400;
+    overflow: hidden
+}
+
+.about_sub_box+p {
+    margin: 0;
+    padding: 0;
+    line-height: 100%
+}
+
+.about_nav li#about_bus02 {
+    padding: 0 7px 0 10px
+}
+
+.about_nav li#about_bus03 {
+    float: right
+}
+
+.about_point {
+    padding: 0 0 10px
+}
+
+.about_point li {
+    background-color: #e8f2f4;
+    padding: 12px 10px 10px;
+    margin: 0 0 15px;
+    font-size: 15px;
+    border-bottom: 3px solid #ddd
+}
+
+.about_point li a {
+    font-size: 15px!important
+}
+
+.about_list {
+    padding: 0 0 10px
+}
+
+.about_list li {
+    margin: 0 0 15px;
+    font-size: 15px
+}
+
+.about_list li a {
+    color: #fff;
+    display: block;
+    padding: 12px 10px 10px;
+    background-color: #fea831;
+    font-size: 15px!important;
+    text-decoration: none;
+    border-bottom: 3px solid #d27800;
+    background-image: url(//kondo-shika-shinbi.com/wp-content/themes/kyousei/common/css/../img/about/ic_about.png);
+    background-repeat: no-repeat;
+    background-position: 545px center
+}
+
+.about_list li a:hover {
+    color: #fff;
+    background-color: #fdba5d
+}
+
+.sub_txt {
+    /* background-color: #f7f7f7; */
+    /* padding: 1em 70px !important; */
+    clear: both;
+    margin-top: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ti_h3 {
+    /* color: #594d37; */
+    /* background: url(//kondo-shika-shinbi.com/wp-content/themes/kyousei/common/css/../img/column/ti_h3-sp.jpg) left top no-repeat; */
+    /* font-size: 1.6rem; */
+    /* font-weight: 700; */
+    /* height: 70px; */
+    /* line-height: 2rem; */
+    /* padding: 0 20px 0 55px; */
+    /* margin: 7px 0 20px; */
+    /* display: flex; */
+    /* justify-content: left; */
+    /* align-items: center; */
+}
+
+.ti_h3 a.wp_links {
+    font-size: 25px;
+    line-height: 30px;
+    display: block;
+    width: 100%
+}
+
+#content.about h3.ti_h3 {
+    height: auto;
+    width: 100%;
+    background-size: auto 100%;
+    padding-top: .7em
+}
+
+@media screen and (max-width: 1000px) {
+    #m_sub_cont .sub_txt {
+        width:100%;
+        padding: 1em 5% !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .about_list li a {
+        color: #fff;
+        display: block;
+        padding: 12px 10px 10px;
+        background-color: #fea831;
+        font-size: 15px!important;
+        text-decoration: none;
+        border-bottom: 3px solid #d27800;
+        background-image: url(//kondo-shika-shinbi.com/wp-content/themes/kyousei/common/css/../img/about/ic_about.png);
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: contain
+    }
+
+    .about_box {
+        overflow: hidden
+    }
+
+    .about_sub_box {
+        padding: 2vw
+    }
+
+    .about_sub_box>img:nth-of-type(1) {
+        width: 35%;
+        height: auto
+    }
+
+    .about_sub_box>h3>img {
+        width: 60%;
+        height: auto
+    }
+
+    .about_sub_box+p img {
+        width: 100%;
+        height: auto
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sub_txt_box {
+        background-color:#fff;
+        padding: 3vw;
+        margin: 0 0 6px
+    }
+
+    .sub_txt_box img {
+        max-width: 100%;
+        height: auto
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #main_out h3,#main_out {
+        font-size:1.2rem;
+        line-height: 1.4rem
+    }
+
+    .sub_cont_list ul {
+        width: 100%;
+        overflow: inherit;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .sub_cont_list {
+        overflow: inherit;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .sub_cont_list ul li {
+        width: 100%;
+        display: block;
+        clear: both;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 1rem;
+        padding: 1.2em 0 .5em 1em;
+        margin: 0 0 1em
+    }
+
+    ul.about_list_ul+p {
+        background-color: #fff6d9;
+        padding: 1em !important;
+        margin-top: 1em !important;
+        font-weight: 700
+    }
+
+    .box_case,.about_nav {
+        overflow: inherit
+    }
+
+    .sub_txt img {
+        width: 100%;
+        clear: both;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 0 1em
+    }
+
+    .about_list li a {
+        color: #fff;
+        display: block;
+        padding: 1em;
+        background-color: #fea831;
+        font-size: 1.2rem!important;
+        text-decoration: none;
+        border-bottom: 3px solid #d27800;
+        background-image: url(//kondo-shika-shinbi.com/wp-content/themes/kyousei/common/css/../img/about/ic_about.png);
+        background-repeat: no-repeat;
+        background-position: 98% center;
+        background-size: auto 50%
+    }
+
+    #m_sub_cont .sub_txt {
+        width: 100%;
+        margin: 0;
+        padding: 1em 5% !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    #content.about h3.ti_h3 {
+        height: auto;
+        width: 100%;
+        background-position: 98% center;
+        background-size: auto 100%;
+        padding-top: .7em
+    }
+
+    .sub_txt#bnr_info+br,#m_sub_cont .sub_txt+br {
+        display: none
+    }
+
+    .sub_txt#bnr_info {
+        padding: 0 !important;
+        margin: 0
+    }
+
+    .about_sub_box>img:nth-of-type(1) {
+        width: 90%;
+        height: auto;
+        margin: 0 auto 1em auto;
+        display: block;
+        padding: 0;
+        float: none
+    }
+
+    .about_sub_box>h3>img {
+        width: 100%;
+        height: auto;
+        display: block;
+        clear: both
+    }
+
+    .about_sub_box+p>img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0
+    }
+
+    .about_sub_box {
+        padding: 1em 2vw
+    }
+}
+
+.about_sub_box h3 {
+	margin-top: 0px;
+}
+
+.c-relation-lg__minitext {
+	text-align: right;
+	margin-top: 8px;
+}
+
+@media (min-width: 950px) {
+.c-relation-lg__block {
+	position: relative;
+	padding-bottom: 40px;
+}
+.c-relation-lg__minitext {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+}
+
+.c-post-content strong {
+	color: #333;
+}
+
+.c-box-bgcolor {
+background-color: #faf4eb;
+    padding: 1px 32px 32px;
+    margin-top: 48px;
+}
+
+#m_sub_cont .sub_txt {
+	padding: 0!important;
+}
+
+#ez-toc-container {
+	margin: 2rem 0!important;
+    width: 100% !important!important;
+    background: #F9F7F0!important;
+    border-radius: 0px!important;
+    padding: 1rem 2.5rem 2.5rem!important;
+}
+
+@media (max-width: 750px) {
+	#ez-toc-container {
+		padding: 16px 20px!important;
+}
+}
+
+.ez-toc-title {
+	font-size: 1.125rem!important;
+    color: #78c5d2!important;
+    font-weight: 700!important;
+}
+
+.ez-toc-title-container {
+      margin-bottom: 1rem!important;
+}
+
+.ez-toc-list,
+.ez-toc-list li {
+	list-style: none!important;
+}
+
+.ez-toc-list li a{
+	display: block!important;
+    padding-left: 1rem!important;
+    transition: all ease .2s!important;
+    text-decoration: none!important;
+    color: #333!important;
+    font-weight: 400!important;
+}
+.c-opening {
+    position: relative;
+}
+.c-opening__info {
+    padding-top: 32px;
+}
+.c-opening__info__inner {
+    background-color: #FFF;
+    width: 100%;
+    border-radius: 20px;
+    padding: 32px 56px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 3px solid #78c5d2;
+    z-index: 999;
+    position: relative;
+}
+
+.c-opening__info__title {
+    font-size: 18px;
+    color: #78c5d2;
+    margin-top: 0;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.c-opening__info__inner p {
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .c-opening__info {
+        padding-top: 0;
+        margin-bottom: 48px;
+    }
+    .c-opening__info__inner {
+        padding: 24px;
+    }
+    .c-opening__info__title {
+        font-size: 16px;
+    }
+    .c-opening__info__inner p {
+        font-size: 12px;
+    }
+}
+
+.box_case.is-relation .page_link {
+    background: url(/wp-content/themes/kondo-shika-shinbi-html/dist/assets/images/bg-blue.jpg) repeat top left;
+    border-radius: 10px;
+    padding: 24px 32px;
+}
+
+.box_case.is-relation .page_link li {
+    margin-bottom: 8px;
+}
+
+.box_case.is-relation .page_link li:last-child {
+    margin-bottom: 0;
+}
+
+.box_case.is-relation .page_link li a {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    padding-left: 26px;
+    font-size: 18px;
+}
+
+.box_case.is-relation .page_link li a:after {
+    content: "";
+    display: block;
+    width: calc(100% - 26px);
+    height: 1px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+}
+
+.box_case.is-relation .page_link li a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    margin-right: 8px;
+    display: block;
+    background-image: url(/wp-content/themes/kondo-shika-shinbi-html/dist/assets/images/icon-arrow-relation.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 750px) {
+    .box_case.is-relation .page_link {
+        padding: 16px 20px;
+    }
+    .box_case.is-relation .page_link li a {
+        font-size: 15px;
+    }
+    .box_case.is-relation .page_link li a:before {
+        top: 1px;
+    }
+}
+
+.c-relation-top__banner {
+    padding-bottom: 24px;
+}
+.c-banners {
+    width: 100%;
+    max-width: 512px;
+    margin: 0 auto 40px;
+}
+
+@media (max-width: 750px) {
+    .c-banners {
+        margin-bottom: 32px;
+    }
+}
+
+
+/* --------------------- インビザライン（マウスピース矯正）ページ追加 --------------------- */
+
+.heading.is-xlg-left:before {
+    background-color: transparent;
+}
+
+.heading.is-xlg-left span.is-round-text {
+    padding: 2px 8px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    background-color: #78c5d2;
+    font-size: 20px;
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 59.3125em) and (min-width: 0em) {
+    .heading.is-xlg-left span.is-round-text {
+        font-size: 14px;
+        margin-left: 8px;
+    }
+}
+
+.c-lower-about-top__points.is-number-only .c-lower-about-top__point {
+    align-items: center;
+}
+
+.c-lower-about-top__points.is-number-only .c-lower-about-top__number {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.c-lower-about-top__points.is-number-only .c-lower-about-top__number span {
+    font-size: 24px;
+    display: block;
+    line-height: 1;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.c-lower-about-top__points.is-number-only .c-lower-about-top__number span::before {
+    content: none;
+}
+
+.c-lower-about-top__points.is-number-only .c-lower-about-top__text {
+    font-weight: 700;
+    width: calc(100% - 70px);
+}
+
+
+.c-text-block {
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 59.3125em) and (min-width: 0em) {
+    .c-text-block {
+        padding-bottom: 40px;
+    }
+}
+
+.c-lower-content__lists li.is-no-check::before {
+    content: none;
+}
+
+.c-lower-content__lists li.is-no-check span {
+    border-bottom: none;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+}
+
+.c-lower-content__text-box {
+    padding: 40px;
+    background-color: #fcf8e1;
+    margin-top: 32px;
+    border-radius: 16px;
+}
+
+@media screen and (max-width: 59.3125em) and (min-width: 0em) {
+    .c-lower-content__lists li.is-no-check span {
+        font-size: 16px;
+    }
+    .c-lower-content__lists li:last-child {
+        margin-bottom: 0 !important;
+    }
+    .c-lower-content__text-box {
+        padding: 16px;
+        margin-top: 24px;
+    }
+}
+
+.c-faq.is-faq {
+    margin-bottom: 80px;
+}
+
+.c-faq__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    box-sizing: border-box;
+    background-color: #5ab8c8;
+    color: #fff;
+    border-radius: 1000px;
+    position: absolute;
+    left: 24px;
+    top: 12px;
+}
+
+.c-faq__icon.is-color-accent {
+    top: 26px;
+    background-color: #f5cf55;
+    color: #fff;
+}
+
+.c-faq.is-faq .c-faq__text {
+    padding: 32px 60px 32px 80px;
+}
+
+.c-faq.is-faq .c-faq__block {
+    margin-bottom: 20px;
+}
+
+.c-faq.is-faq .c-faq__block::after {
+    content: none;
+}
+
+@media screen and (max-width: 59.3125em) and (min-width: 0em) {
+    .c-faq.is-faq {
+        margin-bottom: 40px;
+    }
+
+    .c-faq__icon {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        left: 9px;
+        top: 12px;
+    }
+
+    .c-faq__icon.is-color-accent {
+        top: 10px;
+    }
+
+    .c-faq.is-faq .c-faq__text {
+        padding: 14px 36px 12px 50px;
+    }
+}
+
+/******** 20200420 費用について修正 ********/
+table.c-table.is-price-table {
+
+}
+
+table.c-table.is-price-table > thead > tr {
+
+}
+
+table.c-table.is-price-table > thead > tr > th {
+    background-color: #78c5d2;
+    border: 1px solid white;
+    color: white;
+    padding: 18px 18px;
+}
+
+table.c-table.is-price-table > tbody > tr > th {
+    padding: 18px 18px;
+    background-color: #d1ecf1;
+    border: 1px solid #78c5d2;
+    font-weight: bold;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+table.c-table.is-price-table > tbody > tr > td {
+    padding: 18px 18px;
+    background-color: white;
+    border: 1px solid #78c5d2;
+    font-size: 15px;
+}
+
+table.c-table.is-price-table > tbody > tr > td.is-price {
+    min-width: 300px;
+    text-align: right;
+}
+
+table.c-table.is-price-table > thead > tr > th small,
+table.c-table.is-price-table > tbody > tr > th small,
+table.c-table.is-price-table > tbody > tr > td small {
+    display: block;
+}
+
+
+@media screen and (max-width: 59.3125em) and (min-width: 0em) {
+
+    .heading.is-lg > .small {
+        display: block;
+        padding-bottom: 8px;
+        font-size: 12px;
+    }
+
+    table.c-table.is-price-table > thead {
+        display: none;
+    }
+
+    table.c-table.is-price-table,
+    table.c-table.is-price-table > tbody,
+    table.c-table.is-price-table > tbody > tr,
+    table.c-table.is-price-table > tbody > tr > th,
+    table.c-table.is-price-table > tbody > tr > td {
+        display: block;
+        width: 100%
+    }
+
+    table.c-table.is-price-table > tbody > tr > th,
+    table.c-table.is-price-table > tbody > tr > td {
+        font-size: 12px;
+    }
+
+    table.c-table.is-price-table > tbody > tr > td.is-price {
+        min-width: inherit;
+        text-align: left;
+    }
+
+    table.c-table.is-price-table > tbody > tr {
+        border: none;
+    }
+
+    table.c-table.is-price-table > tbody > tr > th,
+    table.c-table.is-price-table > tbody > tr > td {
+        border-bottom: none;
+    }
+
+    table.c-table.is-price-table {
+        border-bottom: 1px solid #78c5d2;
+    }
+
+    .c-tabs__navs.is-price-table li {
+        width: 30%;
+    }
+
+}
+
+.c-director__hobby a {
+    color: #FFF!important;
+}
+
+.c-director__text_copy {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.c-director__text_copy span {
+    color: #78c5d2;
+    font-weight: 700;
+}
+
+/* パンくず
+------------------------------------------ */
+#breadcrumb {
+	max-width: 1140px;
+	margin: 0 auto 7px auto;
+	font-size: 12px;
+}
+
+#breadcrumb.center {
+	text-align: center;
+}
+
+#breadcrumb.plain {
+	position: absolute;
+	top: 545px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+}
+
+@media screen and (max-width:1140px){
+	#breadcrumb {
+		padding-right: 32px;
+		padding-left: 32px;
+		box-sizing: border-box;
+	}
+
+	@media screen and (max-width:950px){
+		#breadcrumb {
+			padding-right: 16px;
+			padding-left: 16px;
+			box-sizing: border-box;
+		}
+		#breadcrumb.plain {
+			top: 217px;
+		}
+}

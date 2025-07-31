@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+.mv {
+  background-image: url(https://kondo-shika-shinbi.test-hug.net/periodontal/brushing/img/mv_brushing.jpg);
+}
+
+h3 {
+  padding-bottom: 20px;
+  color: #7ac96e;
+}
+
+.sec_01 h3 {
+  padding-top: 60px;
+}
+.sec_01 h4 {
+  padding-bottom: 20px;
+}
+.sec_01 img {
+  height: 200px;
+}
+.sec_01 .sec_01_box1 {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+.sec_01_box2 {
+  margin: 60px 0;
+}
+.sec_01_box2 > div,
+.sec_01_box3 > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec_02 {
+  background-color: #faf2e7;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+.sec_02 p:nth-child(2) {
+  padding-bottom: 60px;
+}
+
+.sec_02_box1 h3 {
+  padding-top: 30px;
+}
+
+@media screen and (min-width: 481px) {
+  .mv {
+    background-position: center -172px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sec_01_box1,
+  .sec_01_box2 div:nth-child(2),
+  .sec_01_box3 div:nth-child(2) {
+    flex-direction: column;
+  }
+  .sec_01 .sec_01_box1 div:first-child,
+  .sec_01_box2 div:nth-child(2) div:first-child,
+  .sec_01_box3 div:nth-child(2) div:first-child {
+    margin-top: 30px;
+    order: 2;
+  }
+  .sec_01 .sec_01_box1 div:last-child,
+  .sec_01_box2 div:nth-child(2) div:last-child,
+  .sec_01_box3 div:nth-child(2) div:last-child {
+    order: 1;
+  }
+}

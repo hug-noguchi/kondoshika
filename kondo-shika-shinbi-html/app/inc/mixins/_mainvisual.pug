@@ -1,0 +1,13 @@
+//- メインビジュアル
+mixin c_mainvisual
+  +c.main-visual
+    +img("img-clud-sp.png").u-hidden-lg.c-main-visual__cloud
+    +a("/aboutus/").c-main-visual__button
+      +img("main-visual-text.png","からだと歯にやさしい歯を抜かない矯正歯科")
+
+    +e.slider.owl-carousel.owl-theme
+      +bgimg("main-visual-01.jpg").c-main-visual__image
+      +bgimg("main-visual-02.jpg").c-main-visual__image
+      +bgimg("main-visual-03.jpg").c-main-visual__image
+
+

@@ -1,0 +1,37 @@
+// テキスト色
+
+.u-text-primary{
+  color: $color-primary-dark;
+}
+.u-text-danger {
+  color: $color-state-danger;
+}
+
+.u-text-info {
+  color: $color-state-info;
+}
+
+.u-text-success {
+  color: $color-state-info;
+}
+
+.u-text-bold{
+  font-weight: bold;
+}
+
+
+.u-marker-yellow{
+  position: relative;
+  padding-bottom: 6px;
+  &:before{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    content: "";
+    display: inline-block;
+    background: $color-accent-yellow;
+    height: 3px;
+    width: 100%;
+  }
+}
+

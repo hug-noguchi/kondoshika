@@ -1,0 +1,144 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "portion" // ページのID
+  - current.title = "部分矯正" // タイトル
+  - current.description = "これは部分矯正についての説明文です" // 説明文
+  - current.bodyClass = "portion" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-portion.jpg","部分矯正")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span: +a("/ortho/") 矯正治療
+        span >
+        span: +a("/ortho/adult/") 成人矯正
+        span >
+        span 部分矯正
+
+block body
+  section.l-main
+    .l-section.is-lower.is-top
+      .l-section.is-lower-inner
+        +c.lower-about-top
+          +img("img-cloud-blue.png").c-lower-about-top__deco
+          +e.inner
+            +e.conts.l-container
+              +e.images
+                .c-title-block
+                  .c-title-block__title
+                    h2.heading.is-xlg.is-xlg-left.
+                      部分矯正とは
+                +e.image
+                  +img("img-portion-top-01.jpg","予防矯正とは").u-image-radius
+              +e.text-block.
+                一般にお口の中全体の歯並びを変えていくのが通常の矯正治療ですが、部分的（前歯だけ、気になるところのみ）に歯並びを変えていく矯正治療を部分矯正といいます。通常、成長期のお子様の場合は、成長により、歯並び、噛み合わせも変化しますから、部分矯正は難しいです。<br>
+                ですから、“部分矯正”は成人のみ、ということになります。<br>
+                さらに、大人の矯正治療の場合、身体の成長はなく、身体も完成しているので、歯並びを大幅に変えてしまうと、噛み合わせもだいぶ変わってしまい、歯が弱くなるか、噛みにくくなるか、身体のどこかに支障がでてくる可能性もあります。<br>
+                なぜならば、歯並び、噛み合わせは、その人の身体の使い方、噛み方、生活習慣の結果なので、“原因”を変えずに“結果”のみ追求しても無理があるからです。<br>
+                さらに、大人の全体矯正は、永久歯を抜かなくては難しかったりします。<br>
+                したがって、大人の矯正の場合、全体矯正よりも部分矯正のほうが、歯のためにも体のためにも好ましいといえるでしょう。
+
+        +c.lower-content.is-bule
+          +e.inner
+            .l-container
+              +e.block
+                +e.title
+                  h3.heading.heading.is-lg.
+                    こんなことでお困りの方におススメです。
+                +e.lists.u-box-shadow
+                  ul
+                    li
+                      span 矯正費用を抑えたい
+                    li
+                      span 治療期間を短くしたい
+                    li
+                      span 永久歯を抜きたくない（ただし智歯は除く）
+                    li
+                      span 取り外し式の目立たない装置が希望
+                    li
+                      span 痛みが少ない矯正治療が希望
+                    li
+                      span 治療途中でも中断できる治療を希望
+              +e.block
+                +e.title
+                  h3.heading.heading.is-lg.
+                    近藤歯科クリニックの部分矯正では
+                +e.text-block.u-box-shadow
+                  +e.text-block-inner
+                    +e.text-block-top-text.
+                      当クリニックの大人の矯正治療は前歯などの気になるところを修正し、奥歯はなるべく動かさずに、噛み合わせを変えずに矯正する、いわゆる部分矯正が中心です。<br>
+                      大人の場合、永久歯を抜いて、歯並び、噛み合わせを大幅に変えてしまうと、噛みにくくなり、さらに歯の持ちも悪くなることがあります。<br>
+                      従って、永久歯を抜かない、歯にあまり負担をかけない部分矯正をおすすめしています。
+
+                    +e.text-block-2col
+                      +e.text-block-box
+                        +e.box-title
+                          h3.heading.is-xlg 部分矯正のメリット
+                        +e.box-text.u-text-center
+                          ul.ul-list.u-text-left
+                            li 歯を動かすのが少なくて済むので、患者さんのご負担が少ない。
+                            li 矯正治療の期間が短縮できます。
+                            li 矯正治療の費用も少なくできます。
+                            li 奥歯の噛み合わせなどがあまり変わらないので安全です。
+                            li 患者さんの治したいところ（気になるところ）優先の治療に！
+
+                      +e.text-block-box
+                        +e.box-title
+                          h3.heading.is-xlg 部分矯正のデメリット
+                        +e.box-text.u-text-center
+                          ul.ul-list.u-text-left
+                            li 部分矯正が可能かどうか、症例が限定されます。
+                            li 重度の歯の重なり（叢生）では、治療が困難になります。
+                            li 後戻りしやすい傾向にあります。
+
+        +c.overview-number
+          .c-title-block
+            .l-container
+              .c-title-block__title
+                h2.heading.is-xlg.
+                  当院の部分矯正の特徴
+              .c-title-block__lead.
+                部分矯正は、成人（１５歳以上）で軽度の歯の重なり（叢生）に限られます。
+
+          +e.inner
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 01
+                    h3.heading.is-xlg.is-xlg-left 永久歯を抜かずに治療
+                  +e.text.
+                    小児の矯正治療と同様、当クリニックでは、成人の矯正でも、永久歯は抜きません。なぜならば、健全な歯を抜くデメリットとともに、成人の場合、歯を大幅に動かしたり、かみ合わせを変えてしまうと、歯の持ちが悪くなったり、噛みにくくなったり、発音にも影響がでることもあります。また、術後の“後戻り”も、よく見られます。<br>
+                    したがって、当クリニックでは、永久歯を抜かずに“無理のない範囲での治療”を行っています。
+              +e.images
+                +img("img-portion-01.jpg","永久歯を抜かずに治療").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 02
+                    h3.heading.is-xlg.is-xlg-left 費用を抑え、矯正治療を身近に！
+                  +e.text.
+                    小児矯正と同様の方法で行いますので、費用も同様、他の矯正歯科の半分程度に抑えております。<br>
+                    お支払いの方法も、事前に一括ではなく、矯正装置が入る毎に支払う、分割式です。それでも、難しい場合は、個別でご相談、お受けいたします。ブライダルなど、費用のなにかとかかる時期での矯正治療にオススメです。
+              +e.images
+                +img("img-portion-02.jpg","費用を抑え、矯正治療を身近に！").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 03
+                    h3.heading.is-xlg.is-xlg-left 可能な限り短期間で！
+                  +e.text.
+                    矯正治療は、平均4，5年の長期に渡るものが多いですが、”患者さんが気になるところ”中心の部分矯正で、歯並び、噛み合わせを全体的に変えるわけではないので、期間も短めになります。<br>
+                    もちろん、装置の装着時間、歯の重なり具合など、個人差はありますが、2年から3年程度で終わるようにしています。
+              +e.images
+                +img("img-portion-03.jpg","可能な限り短期間で！").u-image-radius
+
+    +c_relation_lg("portion","is-lower","関連コンテンツ")

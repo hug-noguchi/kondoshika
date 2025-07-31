@@ -1,0 +1,41 @@
+extends /inc/foundation/_base-twocolumn.pug
+block append config
+  - current.id = "staff-blog" // ページのID
+  - current.title = "スタッフブログ" // タイトル
+  - current.description = "これはスタッフブログの説明文です" // 説明文
+  - current.bodyClass = "staff-blog" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-staff-blog.jpg","スタッフブログ")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span 患者様の声
+
+block body
+    .l-post-content
+      +c.content-box.is-staff
+        +e.inner
+          +e.content
+            - for (var i = 0; i<8; i++){
+              +a("#").c-content-box__block-link
+                +bgimg("img-no-image.jpg","no-image").c-content-box__images
+                +e("span").texts
+                  +e("span").title タイトルがここに入ります。
+                  +e("span").sup
+                    +e("span").label.c-label.
+                      カテゴリー
+                    +e("span").date.
+                      2019/06/08
+                  +e("span").text.
+                    本文内容の一文が抜粋されてここに掲載を行います。本文内容の一文が抜粋されてここに掲載を行います。⋯[続きを見る]
+            - }
+
+        +c_pagenaton()
+
+
+block aside
+  include /inc/layout/_aside.pug

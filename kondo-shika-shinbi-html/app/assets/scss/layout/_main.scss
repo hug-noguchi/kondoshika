@@ -1,0 +1,47 @@
+// メインカラム
+//
+// ページのメインとなるコンテンツを囲むラッパ
+//
+// markup:
+// <div class="l-main"></div>
+//
+// Styleguide 5.6.0
+
+// メインカラム
+$layout-main-width: calc(100% - rem-calc(296)) !default;
+$layout-main-float: left !default;
+
+.l-main {
+  position: relative;
+  z-index: 10;
+
+
+  &.is-top{
+    //background: $color-white;
+    margin-top: 680px;
+    position: relative;
+    @include breakpoint(small only){
+      margin-top: -100px;
+    }
+    &:before{
+      position: absolute;
+      z-index: -1;
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: $color-white;
+      top: 80px;
+    }
+  }
+
+
+  &.is-two-columns {
+    width: calc(100% - 293px - 68px);
+    @media (max-width: 950px) {
+      width: 100%;
+      margin-right: 0;
+      padding-bottom: 56px;
+    }
+  }
+}

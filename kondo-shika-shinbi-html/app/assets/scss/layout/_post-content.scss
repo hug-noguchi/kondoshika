@@ -1,0 +1,48 @@
+// エディタ出力調整
+//
+// ヴィジュアルエディタ出力調整用css
+//
+
+.l-post-content {
+  p,
+  img {
+    margin-bottom: 16px;
+  }
+  h2 {
+    @extend .heading;
+    @extend .heading.is-lg;
+    text-align: left;
+    position: relative;
+    &:before{
+      left: 0%;
+      transform: translateX(0%);
+      @include breakpoint(small only){
+      }
+    }
+  }
+  h3 {
+    @extend .heading;
+    @extend .heading.is-md;
+    margin-top: 48px;
+  }
+  h4 {
+    @extend .heading;
+    @extend .heading.is-sm;
+    margin-top: 32px;
+  }
+  h5 {
+    @extend .heading;
+    @extend .heading.is-xs;
+    color: $color-primary;
+    margin-top: 24px;
+  }
+  h6 {
+    @extend .heading;
+    @extend .heading.is-xs;
+    margin-top: 24px;
+  }
+  table {
+    @extend .c-table;
+  }
+
+}

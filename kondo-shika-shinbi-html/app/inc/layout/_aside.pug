@@ -1,0 +1,30 @@
+
+-if (current.id == "voice")
+  +c.sidebar
+    +e.title カテゴリー
+    ul
+      li.c-sidebar__item: +a("#") すべて
+      li.c-sidebar__item: +a("#") 小児矯正
+      li.c-sidebar__item: +a("#") 大人矯正
+      li.c-sidebar__item: +a("#") 部分矯正
+      li.c-sidebar__item: +a("#") ブライダル矯正
+
+-else if (current.id == "news" || current.id == "school-blog" || current.id == "staff-blog" || current.id == "column" || current.id == "page")
+  +c.sidebar
+    +e.title カテゴリー
+    ul
+      li.c-sidebar__item: +a("#") お知らせ
+  +c.sidebar
+    +e.title.is-archive 月間アーカイブ
+
+  +c.sidebar
+    +e.banners
+      +a("#").c-sidebar__banner
+        +img("img-banner-01.jpg","お知らせ")
+      +a("#").c-sidebar__banner
+        +img("img-banner-02.jpg","小学生のみなさんへ")
+      +a("#").c-sidebar__banner
+        +img("img-banner-03.jpg","スタッフブログ")
+      +a("#").c-sidebar__banner
+        +img("img-banner-04.jpg","コラム")
+

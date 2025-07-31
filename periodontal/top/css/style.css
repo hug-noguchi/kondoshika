@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+.mv {
+  background-image: url(https://kondo-shika-shinbi.test-hug.net/periodontal/top/img/mv_top.jpg);
+}
+.mv p {
+  color: #fff !important;
+  text-shadow: 1px 2px 3px #4c3b2a;
+}
+.mv p:first-child {
+  color: #4c3b2a;
+  font-size: 30px;
+  position: absolute;
+  bottom: 140px;
+  left: 70px;
+  line-height: 1.4;
+}
+.mv p:first-child::after {
+  content: "";
+  background: url(/periodontal/top/img/icon_teeth.png) no-repeat;
+  background-size: 100%;
+  width: 48px;
+  height: 46px;
+  position: absolute;
+  right: -52px;
+  bottom: 4px;
+}
+.mv p:first-child span {
+  font-weight: bold;
+}
+.mv p:last-child {
+  font-size: 20px;
+  position: absolute;
+  bottom: 120px;
+  right: 70px;
+  font-weight: bold;
+}
+.mv img {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  bottom: 40px;
+  left: 52%;
+}
+
+.top_box {
+  padding-top: 80px;
+}
+.top_box ul {
+  display: flex;
+  justify-content: space-between;
+}
+.top_box ul li {
+  width: 23%;
+}
+.top_box h4 {
+  text-align: center;
+  padding-bottom: 14px;
+  font-size: 15px;
+}
+.top_box h4::before {
+  content: "＼";
+  color: #ff9fa0;
+  padding: 0px 7px;
+}
+.top_box h4::after {
+  content: "／";
+  color: #ff9fa0;
+  padding: 0px 7px;
+}
+.top_box div {
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #ff9fa0;
+  width: 180px;
+  margin: 20px auto 0;
+  padding: 6px 0;
+  position: relative;
+}
+.top_box div a::after {
+  content: "＞";
+  color: #fff;
+  position: absolute;
+  right: 14px;
+}
+
+.welcome .welcome_box {
+  display: flex;
+  justify-content: space-between;
+}
+.welcome .welcome_box h3 {
+  padding-bottom: 20px;
+  color: #7ac96e;
+}
+.welcome .welcome_box ul {
+  padding-bottom: 50px;
+}
+.welcome .welcome_box p:last-child {
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+.about {
+  text-align: center;
+}
+.about .about_box {
+  text-align: left;
+}
+.about .about_list {
+  width: 40%;
+  margin: 20px 0;
+}
+.about .about_list ul {
+  font-weight: bold;
+  color: #7ac96e;
+}
+.about .btn_about {
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #ff9fa0;
+  width: 320px;
+  margin: 28px auto 0;
+  padding: 7px 0;
+  position: relative;
+}
+.about .btn_about:after {
+  content: "＞";
+  color: #fff;
+  position: absolute;
+  right: 20px;
+}
+
+.detail {
+  text-align: center;
+  display: block;
+}
+.detail .detail_box {
+  padding: 70px;
+  text-align: left;
+}
+
+.real .real_box {
+  display: flex;
+  justify-content: space-between;
+}
+.real .real_box div:first-child {
+  width: 42%;
+}
+.real .real_box div:first-child ul {
+  font-weight: bold;
+  color: #7ac96e;
+}
+.real .real_box div:first-child p {
+  padding-top: 30px;
+}
+.real .real_box div:nth-child(2) {
+  width: 52%;
+}
+.real .real_box .space {
+  letter-spacing: 1px;
+}
+
+.feature .feature_box {
+  display: flex;
+  justify-content: space-between;
+}
+.feature .feature_box .space {
+  letter-spacing: -0.6px;
+}
+
+.voice .voice_box {
+  display: flex;
+  justify-content: space-between;
+}
+.voice .voice_box > div > div {
+  margin-bottom: 30px;
+}
+.voice .voice_box div h4 {
+  padding-bottom: 10px;
+}
+.voice .voice_box div h4:nth-child(3) {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  .top_box ul {
+    flex-direction: column;
+  }
+  .top_box ul li {
+    width: 100%;
+  }
+  .top_box ul li:not(:last-child) {
+    padding-bottom: 60px;
+  }
+
+  .mv p:first-child {
+    font-size: 24px;
+    width: 340px;
+    bottom: 100px;
+    left: 20px;
+  }
+  .mv p:first-child::after {
+    width: 40px;
+    height: 40px;
+    right: 110px;
+    bottom: -2px;
+  }
+  .mv p:last-child {
+    font-size: 18px;
+    bottom: 40px;
+    right: 20px;
+  }
+
+  .welcome .welcome_box {
+    width: 100%;
+    flex-direction: column;
+  }
+  .welcome .welcome_box div:first-child {
+    order: 2;
+  }
+  .welcome .welcome_box div:nth-child(2) {
+    margin-bottom: 30px;
+    order: 1;
+  }
+
+  .about .about_list {
+    width: 100%;
+  }
+  .about .about_list ul {
+    padding: 10px;
+  }
+  .about .about_list ul li {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+  .about .btn_about {
+    width: 100%;
+  }
+  .about .btn_about:after {
+    right: 10px;
+  }
+
+  .real .real_box {
+    width: 100%;
+    flex-direction: column;
+  }
+  .real .real_box div:first-child {
+    width: 100%;
+    padding: 40px 0;
+    order: 2;
+  }
+  .real .real_box div:first-child ul {
+    padding: 10px;
+  }
+  .real .real_box div:nth-child(2) {
+    width: 100%;
+    order: 1;
+  }
+
+  .feature .feature_box {
+    width: 100%;
+    flex-direction: column;
+  }
+  .feature .feature_box div:first-child {
+    margin-bottom: 30px;
+  }
+
+  .voice .voice_box {
+    width: 100%;
+    flex-direction: column;
+  }
+  .voice .voice_box div:nth-child(1) {
+    order: 2;
+  }
+  .voice .voice_box div:nth-child(2) {
+    margin-bottom: 30px;
+    order: 1;
+  }
+}

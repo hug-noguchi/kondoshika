@@ -1,0 +1,47 @@
+.c-form-head {
+  &__tel{
+    margin-bottom: 40px;
+
+  }
+  &__tel-text{
+    margin-bottom: 16px;
+
+  }
+  &__tel-number{
+    text-align: center;
+    text-decoration: none;
+    @include webfont-Montserrat-normal();
+    display: block;
+    font-size: 40px;
+    i{
+      margin-right: 8px;
+    }
+    @include breakpoint(small only) {
+      font-size: (40px * 0.75);
+    }
+
+
+  }
+  &__title{
+
+  }
+  &__lead-lg{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 20px;
+    @include breakpoint(small only) {
+      font-size: 18px;
+    }
+  }
+  &__lead{
+    text-align: center;
+    margin-bottom: 24px;
+    &:last-child{
+      margin-bottom: 16px;
+    }
+  }
+
+
+
+}

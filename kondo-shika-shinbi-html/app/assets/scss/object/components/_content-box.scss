@@ -1,0 +1,149 @@
+.c-content-box {
+
+  &__inner{
+
+  }
+  &__content{
+
+  }
+
+  &__block-link{
+    display: block;
+    text-decoration: none;
+    color: $font-base-color;
+    padding: 24px 0px;
+    @include breakpoint(small only) {
+      padding: 16px 0px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+    &:first-child{
+      padding-top: 0px;
+    }
+
+  }
+  &__title{
+    font-size: 24px;
+    margin-bottom: 16px;
+    display: block;
+    @include breakpoint(small only) {
+      font-size: (24px * 0.7);
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sup{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 24px;
+    display: block;
+    @include breakpoint(small only) {
+      font-size: (24px * 0.6);
+      margin-bottom: 10px;
+    }
+
+  }
+  &__label.c-label{
+    margin-right: 32px;
+    display: inline-block;
+    @include breakpoint(small only) {
+      margin-right: 8px;
+    }
+
+  }
+  &__date{
+    display: inline-block;
+  }
+  &__name{
+    font-size: 18px;
+    color: $color-primary;
+    margin-bottom: 24px;
+    display: block;
+    @include breakpoint(small only) {
+      font-size: (18px * 0.75);
+      margin-bottom: 16px;
+    }
+
+
+  }
+
+
+  &__name{
+
+  }
+  &__text{
+    font-size: 16px;
+    @include breakpoint(small only) {
+      font-size: 12px;
+    }
+
+  }
+
+  &__block-link{
+
+
+  }
+
+
+
+  // voice
+  &.is-voice{
+
+  }
+  &.is-voice &{
+    &__block-link{
+      border-bottom: 1px solid rgba(#78c4d1,0.5);
+    }
+  }
+  // news
+  &.is-news{
+
+  }
+  &.is-news &{
+    &__block-link{
+      border-bottom: 1px solid rgba(#78c4d1,0.5);
+    }
+
+  }
+  // news
+  &.is-everyone{
+
+  }
+  &.is-everyone &{
+    &__block-link{
+      border-bottom: 1px solid rgba(#78c4d1,0.5);
+    }
+
+  }
+
+  // staff
+  &.is-staff{
+
+  }
+  &.is-staff &{
+    &__block-link{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(#78c4d1,0.5);
+    }
+    &__images{
+      width: 197 / 784 * 100%;
+      height: rem-calc(126);
+      @include bg-option();
+      display: block;
+      @include breakpoint(small only) {
+        height: 17vw;
+      }
+    }
+    &__texts{
+      width: calc(100% - (220 / 784 * 100%));
+
+    }
+
+  }
+
+
+}

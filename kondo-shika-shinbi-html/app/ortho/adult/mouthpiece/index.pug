@@ -1,0 +1,128 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "mouthpiece" // ページのID
+  - current.title = "マウスピース矯正" // タイトル
+  - current.description = "これはマウスピース矯正についての説明文です" // 説明文
+  - current.bodyClass = "mouthpiece" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-mouthpiece.jpg","マウスピース矯正")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span: +a("/ortho/") 矯正治療
+        span >
+        span: +a("/ortho/adult/") 成人矯正
+        span >
+        span マウスピース矯正
+
+block body
+  section.l-main
+    .l-section.is-lower.is-top
+      .l-section.is-lower-inner
+        +c.lower-about-top
+          +img("img-cloud-blue.png").c-lower-about-top__deco
+          +e.inner
+            +e.conts.l-container
+              +e.images
+                .c-title-block
+                  .c-title-block__title
+                    h2.heading.is-xlg.is-xlg-left.
+                      マウスピース矯正とは
+                +e.image
+                  +img("img-mouthpiece-top-01.jpg","予防矯正とは").u-image-radius
+              +e.text-block.
+                矯正治療といえば、固定式のワイヤー装置が定番でしたが、最近では、取り外し式の床装置やマウスピース型装置が多くなってきました。今後はこの“取り外し式の矯正装置が主流になっていくと思われます。<br>
+                このマウスピース装置は薄い板状の熱可塑性樹脂（ねつかそせいじゅし=加熱によって軟化、冷却によって固まる）で作られていて、丈夫で装着するだけで、歯を矯正的に動かすことが出来ます。<br>
+                そして、透明で見た目にも目立ちにくいため、最近、人気の矯正治療になってきています。<br>
+                ただし、症例によっては向いていないこともあります。
+
+        +c.lower-content.is-bule
+          +e.inner
+            .l-container
+              +e.block
+                +e.title
+                  h3.heading.heading.is-lg.
+                    こんな方におススメです
+                +e.lists.u-box-shadow
+                  ul
+                    li
+                      span 目立たない装置で矯正治療を受けたい
+                    li
+                      span 仕事など、よくしゃべる機会が多い
+                    li
+                      span 以前矯正治療を受けたが後戻りをした
+                    li
+                      span 金属アレルギーをもっている
+                    li
+                      span 比較的軽い歯の重なり（叢生＝そうせい）である
+
+              +e.block
+                +e.title
+                  h3.heading.heading.is-lg.
+                    近藤歯科クリ ニックのマウスピース矯正では
+                +e.text-block.u-box-shadow
+                  +e.text-block-inner.
+                    当クリニックでは、マウスピース矯正は、成人（大人）で、比較的軽度の叢生（歯の重なり）の場合、行うようにしております。何故ならば、お子様の場合は成長発育、歯の生え変わりがありますので、マウスピース矯正には適さないということと、重度の叢生、とくに抜歯を含む矯正治療は、歯並びだけでなく、歯のかみ合わせも変えていくことになりますので、あまり、おすすめしておりません。
+
+              +e.block
+                +e.title
+                  h3.heading.heading.is-lg.
+                    マウスピース矯正を始める時期
+                +e.text-block.u-box-shadow
+                  +e.text-block-inner.
+                    マウスピース矯正の場合、成人対象ですから、とくに、開始時期の決まりはありません。ただし、マウスピース矯正は装着時間が長いので、（床矯正装置は1日14時間以上ですが、マウスピース矯正は食事と歯みがき以外のほぼ２２～23時間装着の必要があります。）どうしても装着できない状況が無いように予定を組む必要があります。<br>
+                    さらに、お支払いも、分割ではなく、事前に一括式になりますので、金銭面での準備が必要になります。
+
+
+        +c.overview-number
+          .c-title-block
+            .l-container
+              .c-title-block__title
+                h2.heading.is-xlg.
+                  当院のマウスピース矯正の特徴
+              .c-title-block__lead.
+                当院のマウスピース矯正の特徴をご紹介いたします。
+
+          +e.inner
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 01
+                    h3.heading.is-xlg.is-xlg-left 永久歯を抜きません
+                  +e.text.
+                    当クリニックの矯正治療は一貫して“永久歯は抜かない”方針で行っております。マウスピース矯正の場合でもそれは同じです。永久歯を抜かない理由は、子どもでは、成長発育を妨げることと、心理的な理由、大人では、永久歯を抜いて歯並び、噛み合わせを変えることは、からだの完成した大人の場合、からだと噛み合わせ、歯並びには密接な関係があるからです。ですから、マウスピース矯正も永久歯を抜かずに出来る範囲で行います。したがって、完璧な、左右非対称な模型のような歯並びは目指さないので、ご了解ください。
+              +e.images
+                +img("img-mouthpiece-01.jpg","永久歯を抜きません").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 02
+                    h3.heading.is-xlg.is-xlg-left 軽度な叢生（歯の重なり）を短い期間で
+                  +e.text.
+                    比較的軽度の叢生で、永久歯を抜かなくて済むような症例を中心に治療を行います。何故ならば、成人の場合、歯並び、噛み合わせを大幅に変えてしまうと、リスクがあるからです。リスクとは、歯の持ちが悪くなる、かえって噛みにくくなる、食いしばりが多くなる・・など。<br>
+                    さらに、当クリニックでは、マウスピース矯正にも、小児矯正と同様に、機能トレーニングを導入し、“矯正治療後の後戻り”に対処しております。
+              +e.images
+                +img("img-mouthpiece-02.jpg","軽度な叢生（歯の重なり）を短い期間で").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 03
+                    h3.heading.is-xlg.is-xlg-left 金属アレルギーの方におすすめの矯正
+                  +e.text.
+                    近年、金属アレルギーの方が増えています。手足に白い小膿疱に出来る掌蹠膿疱症（しょうせきのうほうしょう）なども金属アレルギーが原因のひとつと言われています。<br>
+                    そこで、金属を全く使用しない、熱可塑性樹脂（プラスチックの一種）をしようするマウスピース矯正は、金属アレルギーの方も矯正治療を可能にしました。<br>
+                    当クリニックでは、被せ物、詰め物なども、セラミック治療を取り入れておりますので、お困りの方はぜひ、ご相談ください。<br>
+                    <a href="//kondo-shika-shinbi.com/ceramic/" target="_blank">セラミック治療についてはこちら</a>
+              +e.images
+                +img("img-mouthpiece-03.jpg","金属アレルギーの方におすすめの矯正").u-image-radius
+
+    +c_relation_lg("mouthpiece","is-lower","関連コンテンツ")

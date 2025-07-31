@@ -1,0 +1,11 @@
+// 2カラム サイドバー
+$layout-sidebar-width: rem-calc(293) !default;
+$layout-sidebar-float: left !default;
+
+.l-aside {
+  min-width: 293px;
+  margin-left: auto;
+  @media (max-width: 950px) {
+
+  }
+}

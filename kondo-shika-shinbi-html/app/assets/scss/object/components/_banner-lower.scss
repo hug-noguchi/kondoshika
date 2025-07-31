@@ -1,0 +1,15 @@
+.c-banner-lower{
+  max-width: 760px;
+  margin: 0 auto 80px;
+  @include breakpoint(small only){
+    margin: 0 auto 40px;
+  }
+  &__link{
+    display: block;
+    transition: all 0.2s;
+  }
+  &__image{
+    height: auto;
+    width: 100%;
+  }
+}

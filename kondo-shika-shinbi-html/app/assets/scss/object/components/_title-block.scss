@@ -1,0 +1,11 @@
+.c-title-block{
+  margin-bottom: 40px;
+  @include breakpoint(small only){
+    margin-bottom: 32px;
+  }
+  &__title{
+  }
+  &__lead{
+    text-align: center;
+  }
+}

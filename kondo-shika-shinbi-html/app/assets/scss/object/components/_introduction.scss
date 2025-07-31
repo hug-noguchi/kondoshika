@@ -1,0 +1,110 @@
+.c-introduction {
+  &__inner {
+
+  }
+  &__section{
+    margin-bottom: 120px;
+    @include breakpoint(small only) {
+      margin-bottom: 64px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+  &__conts{
+
+  }
+
+  &__block{
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(small only){
+      display: block;
+    }
+  }
+
+  &__box {
+    display: block;
+    width: 344 / 1140 * 100%;
+    text-decoration: none;
+    margin-right: 54 / 1140 * 100%;
+    transition: all 0.2s;
+    @include breakpoint(small only) {
+      width: 70%;
+      margin-right: 0px;
+      margin: 0 auto 48px;
+    }
+    &:nth-child(3n) {
+      margin-right: 0px;
+      @include breakpoint(small only) {
+        margin: 0 auto 48px;
+      }
+    }
+    &:nth-child(n + 4) {
+      margin-top: 56px;
+      @include breakpoint(small only) {
+        margin-top: 0px;
+      }
+    }
+    &:last-child {
+      @include breakpoint(small only) {
+        margin-bottom: 0px;
+      }
+    }
+    //ボーダー
+
+
+    &:nth-child(2n){
+      .u-image-circle{
+        border: solid 4px $color-accent-pink;
+      }
+    }
+    &:nth-child(2n + 1){
+      .u-image-circle{
+        border: solid 4px $color-accent-pink;
+      }
+    }
+    &:nth-child(3n){
+      .u-image-circle{
+        border: solid 4px $color-primary;
+      }
+    }
+    &:nth-child(3n + 1){
+      .u-image-circle{
+        border: solid 4px $color-primary;
+      }
+    }
+    &:nth-child(4n){
+      .u-image-circle{
+        border: solid 4px $color-accent-green;
+
+      }
+    }
+
+
+
+
+  }
+  &__images{
+    margin-bottom: 16px;
+  }
+
+  &__texts{
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 19px;
+    margin-bottom: 16px;
+    @include breakpoint(small only) {
+      font-size: (20px * 0.75);
+      margin-bottom: 8px;
+    }
+  }
+  &__text {
+    text-align: left;
+
+  }
+
+
+}

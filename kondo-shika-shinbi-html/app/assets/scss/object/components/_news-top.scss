@@ -1,0 +1,57 @@
+.c-news-top{
+  margin-bottom: 80px;
+  background: $color-white;
+  @include breakpoint(small only){
+    margin-bottom: 40px;
+
+  }
+
+  &__inner{
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(small only){
+      display: block;
+      padding-top: 48px;
+    }
+  }
+
+  // left
+  &__titles{
+    width: 160 / 1140 * 100%;
+    @include breakpoint(small only){
+      width: 100%;
+    }
+  }
+  &__title{
+
+  }
+  &__button{
+    @include breakpoint(small only){
+      display: none;
+    }
+
+  }
+  &__button-sp{
+    display: none;
+    @include breakpoint(small only){
+      display: block;
+      margin-top: 32px;
+    }
+    > a{
+      @include breakpoint(small only){
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // right
+  &__post{
+    width: 846 / 1140 * 100%;
+    @include breakpoint(small only){
+      width: 100%;
+
+    }
+
+  }
+}

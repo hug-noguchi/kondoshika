@@ -1,0 +1,151 @@
+.c-faq {
+  &__block {
+
+    margin-bottom: 64px;
+    position: relative;
+    @include breakpoint(small only) {
+      margin-bottom: 32px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.is-open{
+      .c-faq__title{
+        &:after{
+          content: "\f077";
+        }
+      }
+    }
+    &:after{
+      position: absolute;
+      left: 50%;
+      bottom: -35px;
+      content: "";
+      display: block;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 35px 36px 0 36px;
+      transform: translateX(-50%);
+      border-color: $color-accent-yellow transparent transparent transparent;
+      @include breakpoint(small only){
+        border-width: 16px 18px 0 18px;
+        bottom: -16px;
+      }
+    }
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+
+  }
+  &__title {
+    border: 1px solid $color-primary;
+    font-size: 18px;
+    position: relative;
+    padding: 18px 60px 18px 80px;
+    cursor: pointer;
+    @include breakpoint(small only) {
+      padding: 14px 36px 12px 50px;
+      font-size: 14px;
+    }
+
+    &:after {
+      content: "\f078";
+      font-family: "FontAwesome";
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      font-size: 16px;
+      color: $color-accent-yellow;
+      line-height: 1;
+      @include breakpoint(small only) {
+        font-size: 14px;
+        top: 21px;
+        right: 16px;
+      }
+    }
+  }
+  &__title-text{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    box-sizing: border-box;
+    background-color: $color-primary-dark;
+    color: $color-accent-yellow;
+    border-radius: 1000px;
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    @include breakpoint(small only) {
+      font-size: 15px;
+      padding: 0;
+      width: 26px;
+      height: 26px;
+      left: 14px;
+      top: 14px;
+    }
+  }
+  &__text-box{
+    margin-bottom: 56px;
+    @include breakpoint(small only){
+      margin-bottom: 32px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+  &__text {
+    display: none;
+    padding: 32px 10% 32px;
+    position: relative;
+    &:after{
+      z-index: -1;
+      opacity: 0.7;
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 100%;
+      width: 100%;
+      background-image: url("../images/bg-blue.jpg");
+      background-repeat: repeat;
+    }
+    @include breakpoint(small only) {
+      line-height: 2.1;
+      padding: 14px 16px;
+    }
+  }
+  &__text-lead{
+    margin-bottom: 16px;
+    @include breakpoint(small only){
+      margin-bottom: 12px;
+    }
+  }
+  &__text-title{
+
+  }
+  &__white-block{
+    background: $color-white;
+    padding: 52px 6%;
+    margin-bottom: 32px;
+    @include breakpoint(small only){
+      padding: 32px 4%;
+      margin-bottom: 16px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+
+  }
+}

@@ -1,0 +1,187 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "staff" // ページのID
+  - current.title = "院長・スタッフ紹介" // タイトル
+  - current.description = "これは院長・スタッフ紹介についての説明文です" // 説明文
+  - current.bodyClass = "staff" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-staff.jpg","院長・スタッフ紹介")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span 院長・スタッフ紹介
+
+block body
+  section.l-main
+    .l-section.is-lower.is-top
+      .l-section.is-lower-inner
+        +c.director.u-mbs.is-bottom.is-lg.js-fadein
+          .c-title-block
+            .l-container
+              .c-title-block__title
+                h2.heading.is-xlg.
+                  院長あいさつ
+
+          +e.inner
+            .l-container
+              +e.cont
+                +img("img-director.jpg","近藤哲夫").c-director__image
+                +e.detail.u-box-shadow
+                  +e.position.
+                    近藤歯科クリニック 院長
+                  +e.name.
+                    近藤哲夫
+                  +e.hobby
+                    <span>趣味</span>
+                    <span>-----------------------------</span>
+                  +e.text.
+                    自然、山、花が好きです。<br>
+                    自然の中にいると、生かされている幸せを実感します。
+                +img("img-star-yelloy.png","").c-director__deco.is-left
+                +img("img-star-yelloy.png","").c-director__deco.is-right
+              +e.text-block
+                +e.title
+                  h3.heading.is-lg 矯正治療に対しての想い
+                +e.text.
+                  永久歯は原則として抜かない。 装置は取り外しができる。費用は従来の矯正歯科（80万~100万）の1/2から1/3。<br>
+                  矯正歯科は費用も高額で、期間も長く、健康な永久歯も何本か抜かなくてはならず、むし歯の治療と違い、<br class="u-hidden-sm">
+                  敷居の高い、限られた人のものでした。さらに、歯に固定式の装置をばっちりとつけなくてはならない。<br>
+                  小学生のころの私、近藤も、実は上の前歯が出っ張っていて学校でからかわれた苦い経験があります。私の両親も私の歯並びに無関心で、<br class="u-hidden-sm">
+                  矯正をすすめてもらったことはありませんし、私の子供の頃○十年前には矯正歯科は一般的ではありませんでした。<br>
+                  その反動か、大学時代に先輩のところで、永久歯を抜いてもらい、固定装置の矯正をやってもらいました。
+
+        +c.lower-about-top.is-staff
+          +img("img-cloud-blue.png").c-lower-about-top__deco.is-left
+          +img("img-cloud-blue.png").c-lower-about-top__deco.is-right
+          +e.inner
+            +e.conts.l-container
+              +e.images
+                +e.image
+                  +img("img-director-01.jpg","近藤哲夫").u-image-circle.is-circle-primary
+              +e.text-block
+                +e.text-block-tilte
+                  h3.heading.is-lg.
+                    矯正治療を身近なものに！<br>
+                    立川の子供たちへ矯正治療を！<br>
+                    矯正治療を楽しんで！
+                +e.text-block-text.
+                  地元・立川の地に開業して20年以上、私たち近藤歯科クリニックのメインの取組みである小児矯正（子供の矯正）はこれらの問題を解決し、立川ならびに立川近隣の子供たちに矯正歯科を身近にするものです。
+                +e.text-block-text.
+                  子供たちに、矯正歯科治療を通して、“良い習慣づくり”を学んでもらい、バランスのとれたあごの成長、表情豊かな顔貌へ、と成長期しかできない貴重な体験をしていただきたいのです。
+                +e.text-block-text.
+                  そしてさらに大事なことは“子供たち、お母様方、お父様方も矯正治療を楽しんで!”ほしいのです。
+
+        +c.staff-list
+          +e.inner
+            .l-container
+              +e.title
+                h2.heading.is-xlg スタッフ紹介
+              +e.conts
+                +e.block
+                  +e.images
+                    +img("img-staff-01.jpg","スタッフ紹介").c-staff-list__image.u-image-circle.is-circle-primary
+                  +e.texts-block
+                    +e.block-title
+                      h3.heading.is-lg.is-lg-message.
+                        受付主任
+                    +e.texts
+                      p.
+                        おだやかで、おっとりした性格なので、後輩たちに慕われています。
+                      p.
+                        他のスタッフみんなが安心して有給をとれるのは、彼女のおかげです。<br>
+                        そして、患者さんが歯科に来院されるときの緊張感を受付でやわらげてくれます。<br>
+                        当クリニックの受付は3人のスタッフが交代で行っていますが、<br>
+                        彼女は土曜日以外の午前中が担当です。<br>
+                        15年間、当クリニックで働きながら、3人のお子さんを育て上げたのは、素晴らしい！！尊敬に値します。
+
+                +e.block
+                  +e.images
+                    +img("img-staff-01.jpg","スタッフ紹介").c-staff-list__image.u-image-circle.is-circle-primary
+                  +e.texts-block
+                    +e.block-title
+                      h3.heading.is-lg.is-lg-message.
+                        トリートメントコーディネーター
+                    +e.texts
+                      p.
+                        いつもテキパキと仕事をこなし、クリニック内を動き回っています。
+                      p.
+                        仕事の内容、質を常に向上させようと心掛け、テーマをもって取り組んでいます。患者さんへの説明が抜群に上手で、治療内容が複雑な時、たいてい彼女に頼んでいます。受付を担当するときも、迅速で、ハキハキと気持ちのいい対応をします。
+                      p.
+                        まだ、若く経験不足のところもありますが、向上心旺盛なので、忙しそうにしても、どんどん話しかけてもらえればと思います。
+
+                +e.block
+                  +e.images
+                    +img("img-staff-01.jpg","スタッフ紹介").c-staff-list__image.u-image-circle.is-circle-primary
+                  +e.texts-block
+                    +e.block-title
+                      h3.heading.is-lg.is-lg-message.
+                        受付・アシスタント
+                    +e.texts
+                      p.
+                        おっとり癒し系で、トリートメントコーディネーターの彼女とはいいコンビでいつも協力しあっています。
+                      p.
+                        当クリニックに新卒で入社し、まだ、3年目ですが、社会人としても、医療人としてもほぼ一人前になりました。アシスタントでは、とくに細かい気配りが素晴らしく、彼女のおかげで、実際の治療がたいへん速やかに進められます。
+                      p.
+                        体育大学出身で、運動神経抜群です。
+
+                +e.block
+                  +e.images
+                    +img("img-staff-01.jpg","スタッフ紹介").c-staff-list__image.u-image-circle.is-circle-primary
+                  +e.texts-block
+                    +e.block-title
+                      h3.heading.is-lg.is-lg-message.
+                        歯科衛生士
+                    +e.texts
+                      p.
+                        おっとりとしていて穏やかな感じです。<br>
+                        どちらかというと、無口でおとなしいですが、優しい性格なので、慣れて親しんでくると、さらに安心感がでてくると思います。
+                      p.
+                        治療は患者さんが主役ですから、クリニック側の指示として患者さんに一方的にお伝えするのではなく、“患者さんの立場に立ってともに考えて実践していく・・・”という近藤歯科クリニックのめざすところに近い人です。
+                      p.
+                        動物が好きです。
+
+                +e.block
+                  +e.images
+                    +img("img-staff-01.jpg","スタッフ紹介").c-staff-list__image.u-image-circle.is-circle-primary
+                  +e.texts-block
+                    +e.block-title
+                      h3.heading.is-lg.is-lg-message.
+                        歯科衛生士
+                    +e.texts
+                      p.
+                        歯科衛生士学校の実習で当クリニックに来ていて、それが縁で就職してくれました。<br>
+                        歯周治療、矯正治療、歯科一般と勉強中で、進歩もめざましいものがあります。穏やかで明るい人なので、お子様だけでなく、大人の患者さんの支持も得られると思います。<br>
+                        スタッフ同士の信頼関係も深まり、さらに、みんなから信頼され、経験も積んで向上し、いつも楽しく仕事に取り組んでいます。
+
+                +e.block
+                  +e.images
+                    +img("img-staff-01.jpg","スタッフ紹介").c-staff-list__image.u-image-circle.is-circle-primary
+                  +e.texts-block
+                    +e.block-title
+                      h3.heading.is-lg.is-lg-message.
+                        歯科衛生士
+                    +e.texts
+                      p.
+                        当クリニックの床矯正治療、位相差顕微鏡による歯周病治療に共感し、当クリニックに来られました。真面目で努力家で、謙虚であります。<br>
+                        経験も積み、社会人としても、歯科衛生士としても、1人前になりました。考え方、物事に取り組む姿勢は、大したものだと、いつも感心させられます。さらに、さらに、伸びて・・・楽しみです。
+                +e.block
+                  +e.images
+                    +img("img-staff-01.jpg","スタッフ紹介").c-staff-list__image.u-image-circle.is-circle-primary
+                  +e.texts-block
+                    +e.block-title
+                      h3.heading.is-lg.is-lg-message.
+                        受付・アシスタント
+                    +e.texts
+                      p.
+                        入社して、1年以上たち、ほぼ、受付の仕事は、こなせるようになりました。<br>
+                        彼女の凄いところは、仕事も正社員として、家庭でも、4人のお子様を育てているところです。<br>
+                        しかも、一番下のお子様はまだ2歳ちょっと。<br>
+                        子育て中のお母様方のお気持ちもよく、わかると思います。
+
+          +img("img-star-white.png","").c-staff-list__deco.is-top
+          +img("img-star-white.png","").c-staff-list__deco.is-center
+          +img("img-star-white.png","").c-staff-list__deco.is-bottom

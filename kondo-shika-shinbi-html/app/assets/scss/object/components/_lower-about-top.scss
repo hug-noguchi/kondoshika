@@ -1,0 +1,179 @@
+.c-lower-about-top{
+  margin-bottom: 80px;
+  position: relative;
+  @include breakpoint(small only){
+    margin-bottom: 40px;
+  }
+
+  &__deco{
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    width: 348px;
+    @include fuwafuwaAction(2s,10s);
+    @include breakpoint(small only){
+      display: none;
+    }
+    &.is-right{
+      left: auto;
+      right: 0px;
+      top: 20px;
+      @include fuwafuwaAction(5s,8s);
+
+    }
+  }
+  &__inner{
+
+  }
+  &__conts{
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(small only){
+      display: block;
+    }
+  }
+  &__images{
+    width: 552 / 1140 * 100%;
+    @include breakpoint(small only){
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+  &__image{
+  }
+
+  &__text-block{
+    padding-top: 100px;
+    @include breakpoint(small only){
+      padding-top: 0px;
+    }
+  }
+  &__text-block-tilte{
+    font-size: 24px;
+    margin-bottom: 32px;
+    @include breakpoint(small only){
+      font-size: (24px * 0.75);
+      margin-bottom: 16px;
+    }
+  }
+  &__text-block-text{
+    margin-bottom: 16px;
+    @include breakpoint(small only){
+      margin-bottom: 8px;
+    }
+  }
+  //points
+  &__points,&__text-block{
+    width: 500 / 1140 * 100%;
+    @include breakpoint(small only){
+      width: 100%;
+    }
+  }
+  &__point{
+    display: flex;
+    padding: 16px 0px;
+    border-bottom: 2px dotted rgba(#333, 0.3);
+    @include breakpoint(small only){
+      width: 100%;
+      min-height: 100px;
+    }
+  }
+  &__number{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $color-primary-dark;
+    background: $color-accent-yellow;
+    @include breakpoint(small only){
+      height: 64px;
+      width: 64px;
+    }
+  }
+  &__number-inner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    span:nth-child(1){
+      font-size: 16px;
+      display: block;
+      line-height: 1;
+      position: relative;
+      padding-bottom: 6px;
+      margin-bottom: 4px;
+
+      @include breakpoint(small only){
+        font-size: 13px;
+      }
+      &:before{
+        height: 2px;
+        width: 48px;
+        content: "";
+        display: block;
+        background: $color-primary;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include breakpoint(small only){
+          width: 40px;
+        }
+      }
+    }
+    span:nth-child(2){
+      font-size: 32px;
+      display: block;
+      line-height: 1;
+      letter-spacing: 2px;
+      @include webfont-Montserrat-normal();
+      @include breakpoint(small only){
+        font-size: 25px;
+      }
+    }
+
+  }
+  &__text{
+    width: calc(100% - 100px);
+    margin-left: auto;
+    @include breakpoint(small only){
+      width: calc(100% - 80px);
+    }
+  }
+
+  //staff
+  &.is-staff{
+    margin-bottom: 160px;
+    @include breakpoint(small only){
+      margin-bottom: 80px;
+    }
+  }
+
+  &.is-staff &{
+
+    &__conts{
+      max-width: 1000px;
+    }
+    &__image{
+      max-width: 420px;
+      @include breakpoint(small only){
+        width: 70%;
+        max-width: 100%;
+        margin: 0 auto 32px;
+      }
+    }
+    &__text-block{
+      padding-top: 0px;
+      max-width: 493px;
+      @include breakpoint(small only){
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,87 @@
+//各エフェクト
+
+//波
+
+//青
+.u-weave-blue {
+  //innerを挟む事
+  position: relative;
+  &:before{
+    content: "";
+    display: block;
+    top: 0px;
+    left: 0px;
+    background-image: url("../images/bg-wave-blue.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 90px;
+    width: 100%;
+    background-size: cover;
+    @include breakpoint(small only){
+      transform: scale(-1, 1);
+    }
+  }
+  text-align: center !important;
+}
+
+//青
+.u-weave-blue-top {
+  //innerを挟む事
+  position: relative;
+  &:before{
+    content: "";
+    display: block;
+    top: -10px;
+    left: 0px;
+    background-image: url("../images/bg-wave-blue-top.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 90px;
+    width: 100%;
+    background-size: cover;
+    z-index: 10;
+    @include breakpoint(small only){
+      transform: scale(-1, 1);
+    }
+  }
+  text-align: center !important;
+}
+
+
+//line
+.u-line-dot{
+  margin-top: 16px;
+  padding-top: 16px;
+  background-image: url("../images/bg-line-dot.png");
+  background-repeat: repeat-x;
+  background-position: top left;
+  @include breakpoint(small only){
+    padding-top: 20px;
+    margin-top: 0px;
+    background-position: top 14px left 0px;
+    background-size: 50%;
+  }
+}
+
+.u-image-radius{
+  border-radius: 40px;
+  border: solid 4px $color-primary;
+  box-sizing: border-box;
+
+}
+.u-image-circle{
+  border-radius: 1000px;
+  &.is-circle-primary{
+    border: solid 4px $color-primary;
+  }
+}
+
+
+.u-box-shadow{
+  box-shadow: 10px 10px 10px rgba(#000,0.1);
+}
+
+
+
+
+

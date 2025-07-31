@@ -1,0 +1,530 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "price" // ページのID
+  - current.title = "費用について" // タイトル
+  - current.description = "これは費用についての説明文です" // 説明文
+  - current.bodyClass = "price" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-preice.jpg","費用について")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span 費用について
+
+block body
+  section.l-main
+    .l-section.is-lower
+      .l-section.is-lower-inner
+        .c-title-block
+          .l-container
+            .c-title-block__title
+              h2.heading.is-xlg.
+                当院の費用について
+            .c-title-block__lead.
+              当院の床矯正の費用は装置代と調整費の合わせた費用となります。
+
+        +c.price-conts
+          +e.inner
+            +e.block#child
+              +c_tabs("child")
+              .l-container
+                +e.head
+                  +e.text.u-text-center.
+                    小児矯正は、従来の矯正治療の約半額（おおよそ35万～40万）です。<br>
+                    <span class="u-text-primary u-text-bold">その理由は</span><br>
+                    ①従来、第一期治療と第二期治療に分けていたが、第一期のみとし、第二期治療を無くしたため。<br>
+                    ②従来の分かりにくい技術料というのを無くし、費用の内訳は、装置料と調整料のみにしたため。<br>
+                    また、お支払いも一括ではなく、いくつかの装置を使用しながら治療を進めていきますので、装置が入る毎のお支払いになります。
+                +e.conts
+                  +e.title
+                    h3.heading.is-lg 小児矯正の費用について
+                  +e.faq-block
+                    .c-faq
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 1
+                          .c-faq__title-text 矯正相談：相談料3千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          最初に矯正相談です。<br>
+                          現在の状態、今後の予想、治療の流れ、大体の費用、期間などを説明します。<br>
+                          相談後、治療をご希望の方は、さらに細かい費用、治療の流れを説明し、レントゲン、歯型採り、診断・見積もりに進みます。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 2
+                          .c-faq__title-text 診断・見積もり：診断料1万5千円（相談後、詳しい説明と見積もりをご希望されレントゲン、歯型採りをされる場合）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          レントゲン、歯型採りをします。<br>
+                          レントゲンはその場ですぐ見られますので、ご両親にすぐ説明いたします。<br>
+                          もともと歯の数が少ない場合（先天性欠損）、多い場合（過剰歯）、永久歯の芽（歯胚＝しはい）の位置などがわかりますので、矯正治療の難易度、方法などが予測でき、お話しいたします。<br>
+                          歯型の方はその場では出来ないので、次回の見積もりのときにお見せして、ご説明いたします。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 3
+                          .c-faq__title-text 矯正初診料 → 初診料1万5千円（見積もりご説明後、実際に治療を始める場合）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          前回、撮影しましたレントゲンと歯型採りをして作成した歯型模型をもとに、矯正治療の期間、治療方針などの診断と、矯正治療費の見積もりをご説明いたします。<br>
+                          そして、実際に矯正治療を始められることをご希望される場合、初診料1万5千円をお支払いしていただき、矯正装置を技工所に依頼し、矯正治療を始める流れになります。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 4
+                          .c-faq__title-text 矯正初診料 → 初診料1万5千円（見積もりご説明後、実際に治療を始める場合）
+                        .c-faq__text(data-accordion-content="faq-text")
+                          .c-faq__text-box
+                            .c-faq__text-lead.
+                              矯正装置を初めてつける場合は調整料が2千円かかります。
+                            .c-faq__text-title
+                              h3.heading.is-table-caption 小児矯正装置の費用
+                            table.c-table.is-sub
+                              tr
+                                th 側方拡大装置
+                                td 6万円（2個目4万円）
+                              tr
+                                th 後方移動装置
+                                td 6万円（2個目4万円）
+                              tr
+                                th 前方移動装置
+                                td 6万円（2個目4万円）
+                              tr
+                                th 閉鎖型装置（保定）
+                                td 3万5千円（2個目2万円）
+                              tr
+                                th ワイヤー装置（銀色）
+                                td 10万円
+                              tr
+                                th ワイヤー装置（白色）
+                                td 12万円
+                              tr
+                                th マウスピース
+                                td 5千円
+
+                          .c-faq__text-box
+                            .c-faq__text-lead.
+                              では、実際の矯正費用の計算を、よくあるケースを例にして見てみましょう。
+                            .c-faq__text-title
+                              h3.heading.is-table-caption 実際の小児矯正のケース
+                            .c-faq__white-block
+                              h4.heading.is-md 小学校低学年で前歯の重なりが気になる場合
+                              .c-faq__text-lead.
+                                最も一般的で矯正開始時期としてもベストです。
+                              table.c-table.is-sub
+                                tr
+                                  th 1.上あご
+                                  td.
+                                    側方拡大装置２個（６万＋４万＝同じ種類の装置は２個目半額）<br>
+                                    閉鎖型装置２個（３万５千＋２万）<br>
+                                    計１５万５千
+                                tr
+                                  th 2.下あご
+                                  td.
+                                    ※上あごと同様<br>
+                                    側方拡大装置２個（６万＋４万）<br>
+                                    閉鎖型装置２個（３万５千＋２万）<br>
+                                    計１５万５千
+                                tr
+                                  th 合計
+                                  td.
+                                    １. ＋ ２．＝ 31万円
+
+                            .c-faq__white-block
+                              h4.heading.is-md 小学校高学年で犬歯が生え始めている時期で、歯並びが気になる場合
+                              .c-faq__text-lead.
+                                ちょっと治療開始時期としては遅めです。
+                              table.c-table.is-sub
+                                tr
+                                  th 1.上あご
+                                  td.
+                                    側方拡大装置２個（６万＋４万）<br>
+                                    前方移動装置（６万）（犬歯を入れるスペースをつくる）<br>
+                                    閉鎖型装置２個（３万５千＋２万）<br>
+                                    計２１万５千
+                                tr
+                                  th 2.下あご
+                                  td.
+                                    側方拡大装置２個（６万＋４万）<br>
+                                    後方移動装置（６万）（犬歯を入れるスペースをつくる）<br>
+                                    閉鎖型装置２個（３万５千＋２万）<br>
+                                    計２１万５千
+                                tr
+                                  th 合計
+                                  td.
+                                    １. ＋ ２．＝ 43万円
+                              .c-faq__text-lead.u-mbs.is-xs.is-top.
+                                矯正治療の開始時期が遅くなると、それだけ装置の数も増えてしまいます。<br>
+                                しかし、実際は上あごの前方移動装置、下あごの後方移動装置のどちらかは使用しないで済む場合が多いので、総額34万円前後が平均的な費用です。総額43万前後が平均的な費用です。
+
+                +e.conts
+                  +e.title
+                    h3.heading.is-lg その他、細かい費用（調整料など）について
+                  +e.faq-block
+                    .c-faq
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 1
+                          .c-faq__title-text 調整料（１カ月半～２カ月）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          矯正の治療は、装置の調整が必要で、毎回（１カ月半～２カ月）に１回です。<br>
+                          取り外し式の通常の矯正装置の場合：２千円<br>
+                          取り外しではない固定式装置（ＢＫ装置）：３千円
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 2
+                          .c-faq__title-text 装置の再製（紛失時、破損時）：４万円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          紛失は、装置装着の時、装置のケースをお渡ししますので、装置を口から外した時には、すぐにケースに入れてください。 とくに外出時、ケースに入れずにティッシュペーパーなどに包んだままですと、紛失しやすいです。<br>
+                          破損については、装着時、よくご説明いたしますが、普通に取り外しをしている状態であれば、まず、壊れません。<br>
+                          また、装置の使用が、装着時間が足りない場合に、同一装置の使用が長期間にわたった場合、装置の劣化により壊れることもあります。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 3
+                          .c-faq__title-text ボタン装置：３千円～５千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          ボタン装置は歯を細かく動かしたり、角度を変える場合、使用します。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 4
+                          .c-faq__title-text 部品の交換：５千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          装置の一部分が壊れた場合、パーツを交換することがあります。クラスプ（歯にかける金具）、唇側線、など。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 5
+                          .c-faq__title-text 装置の調整：２千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          通常の拡大装置ではなく、歯を後ろに下げる後方移動装置では、後方移動終了後、ゴムを掛けるために装置の調整が必要になることがあります。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 6
+                          .c-faq__title-text トレーニング用具
+                        .c-faq__text(data-accordion-content="faq-text").
+                          パナシールド：９千円（２個目は５千円）<br>
+                          タッチスティック：３百円
+
+
+
+            +e.block#prevention
+              +c_tabs("prevention")
+              .l-container
+                +e.head
+                  +e.text.u-text-center.
+                    説明テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
+                +e.conts
+                  +e.title
+                    h3.heading.is-lg 装置費用
+                  +e.faq-block
+                    .c-faq
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 1
+                          .c-faq__title-text お支払について教えてください。
+                        .c-faq__text(data-accordion-content="faq-text").
+                          最初に矯正相談です。<br>
+                          現在の状態、今後の予想、治療の流れ、大体の費用、期間などを説明します。<br>
+                          相談後、治療をご希望の方は、さらに細かい費用、治療の流れを説明し、レントゲン、歯型採り、診断・見積もりに進みます。
+
+                +e.conts
+                  +e.title
+                    h3.heading.is-lg 調整費用
+                  +e.faq-block
+                    .c-faq
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 1
+                          .c-faq__title-text お支払について教えてください。
+                        .c-faq__text(data-accordion-content="faq-text").
+                          最初に矯正相談です。<br>
+                          現在の状態、今後の予想、治療の流れ、大体の費用、期間などを説明します。<br>
+                          相談後、治療をご希望の方は、さらに細かい費用、治療の流れを説明し、レントゲン、歯型採り、診断・見積もりに進みます。
+
+
+
+            +e.block#portion
+              +c_tabs("portion")
+              .l-container
+                +e.head
+                  +e.text.u-text-center.
+                    成人の部分矯正は“気になるところ”を中心に、口の中全体というよりは、限定的な矯正治療でありますので、当クリニックの小児矯正より、さらに、費用を少なめにすることが可能です。<br>
+                    そして、小児矯正と同様に、矯正費用は、装置料と調整料にしてありますので、内容もわかりやすく、安心して治療を受けられると思います。
+                +e.conts
+                  +e.title
+                    h3.heading.is-lg 部分矯正の費用について
+                  +e.faq-block
+                    .c-faq
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 1
+                          .c-faq__title-text 矯正相談：相談料3千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          最初に矯正相談です。<br>
+                          現在の状態、今後の予想、治療の流れ、大体の費用、期間などを説明します。<br>
+                          相談後、治療をご希望の方は、さらに細かい費用、治療の流れを説明し、レントゲン、歯型採り、診断・見積もりに進みます。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 2
+                          .c-faq__title-text 診断・見積もり：診断料1万5千円（相談後、詳しい説明と見積もりをご希望されレントゲン、歯型採りをされる場合）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          レントゲン、歯型採りをします。<br>
+                          レントゲンはその場ですぐ見られますので、ご両親にすぐ説明いたします。<br>
+                          もともと歯の数が少ない場合（先天性欠損）、多い場合（過剰歯）、永久歯の芽（歯胚＝しはい）の位置などがわかりますので、矯正治療の難易度、方法などが予測でき、お話しいたします。<br>
+                          歯型の方はその場では出来ないので、次回の見積もりのときにお見せして、ご説明いたします。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 3
+                          .c-faq__title-text 矯正初診料 → 初診料1万5千円（見積もりご説明後、実際に治療を始める場合）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          前回、撮影しましたレントゲンと歯型採りをして作成した歯型模型をもとに、矯正治療の期間、治療方針などの診断と、矯正治療費の見積もりをご説明いたします。<br>
+                          そして、実際に矯正治療を始められることをご希望される場合、初診料1万5千円をお支払いしていただき、矯正装置を技工所に依頼し、矯正治療を始める流れになります。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 4
+                          .c-faq__title-text 矯正初診料 → 初診料1万5千円（見積もりご説明後、実際に治療を始める場合）
+                        .c-faq__text(data-accordion-content="faq-text")
+                          .c-faq__text-box
+                            .c-faq__text-lead.
+                              矯正装置を初めてつける場合は調整料が2千円かかります。
+                            .c-faq__text-title
+                              h3.heading.is-table-caption 部分矯正装置の費用
+                            table.c-table.is-sub
+                              tr
+                                th 側方拡大装置
+                                td 6万円（2個目4万円）
+                              tr
+                                th 後方移動装置
+                                td 6万円（2個目4万円）
+                              tr
+                                th 前方移動装置
+                                td 6万円（2個目4万円）
+                              tr
+                                th 閉鎖型装置（保定）
+                                td 3万5千円（2個目2万円）
+                              tr
+                                th ワイヤー装置（銀色）
+                                td 10万円
+                              tr
+                                th ワイヤー装置（白色）
+                                td 12万円
+                              tr
+                                th マウスピース
+                                td 5千円
+
+                          .c-faq__text-box
+                            .c-faq__text-lead.
+                              では、実際の矯正費用の計算を、よくあるケースを例にして見てみましょう。
+                            .c-faq__text-title
+                              h3.heading.is-table-caption 実際の部分矯正のケース
+                            .c-faq__white-block
+                              h4.heading.is-md 小学校低学年で前歯の重なりが気になる場合
+                              .c-faq__text-lead.
+                                最も一般的で矯正開始時期としてもベストです。
+                              table.c-table.is-sub
+                                tr
+                                  th 1.上あご
+                                  td.
+                                    側方拡大装置２個（６万＋４万＝同じ種類の装置は２個目半額）<br>
+                                    閉鎖型装置２個（３万５千＋２万）<br>
+                                    計１５万５千
+                                tr
+                                  th 2.下あご
+                                  td.
+                                    ※上あごと同様<br>
+                                    側方拡大装置２個（６万＋４万）<br>
+                                    閉鎖型装置２個（３万５千＋２万）<br>
+                                    計１５万５千
+                                tr
+                                  th 合計
+                                  td.
+                                    １. ＋ ２．＝ 31万円
+
+                            .c-faq__white-block
+                              h4.heading.is-md 小学校高学年で犬歯が生え始めている時期で、歯並びが気になる場合
+                              .c-faq__text-lead.
+                                ちょっと治療開始時期としては遅めです。
+                              table.c-table.is-sub
+                                tr
+                                  th 1.上あご
+                                  td.
+                                    側方拡大装置２個（６万＋４万）<br>
+                                    前方移動装置（６万）（犬歯を入れるスペースをつくる）<br>
+                                    閉鎖型装置２個（３万５千＋２万）<br>
+                                    計２１万５千
+                                tr
+                                  th 2.下あご
+                                  td.
+                                    側方拡大装置２個（６万＋４万）<br>
+                                    後方移動装置（６万）（犬歯を入れるスペースをつくる）<br>
+                                    閉鎖型装置２個（３万５千＋２万）<br>
+                                    計２１万５千
+                                tr
+                                  th 合計
+                                  td.
+                                    １. ＋ ２．＝ 43万円
+                              .c-faq__text-lead.u-mbs.is-xs.is-top.
+                                矯正治療の開始時期が遅くなると、それだけ装置の数も増えてしまいます。<br>
+                                しかし、実際は上あごの前方移動装置、下あごの後方移動装置のどちらかは使用しないで済む場合が多いので、総額34万円前後が平均的な費用です。総額43万前後が平均的な費用です。
+
+                +e.conts
+                  +e.title
+                    h3.heading.is-lg その他、細かい費用（調整料など）について
+                  +e.faq-block
+                    .c-faq
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 1
+                          .c-faq__title-text 調整料（１カ月半～２カ月）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          矯正の治療は、装置の調整が必要で、毎回（１カ月半～２カ月）に１回です。<br>
+                          取り外し式の通常の矯正装置の場合：２千円<br>
+                          取り外しではない固定式装置（ＢＫ装置）：３千円
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 2
+                          .c-faq__title-text 装置の再製（紛失時、破損時）：４万円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          紛失は、装置装着の時、装置のケースをお渡ししますので、装置を口から外した時には、すぐにケースに入れてください。 とくに外出時、ケースに入れずにティッシュペーパーなどに包んだままですと、紛失しやすいです。<br>
+                          破損については、装着時、よくご説明いたしますが、普通に取り外しをしている状態であれば、まず、壊れません。<br>
+                          また、装置の使用が、装着時間が足りない場合に、同一装置の使用が長期間にわたった場合、装置の劣化により壊れることもあります。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 3
+                          .c-faq__title-text ボタン装置：３千円～５千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          ボタン装置は歯を細かく動かしたり、角度を変える場合、使用します。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 4
+                          .c-faq__title-text 部品の交換：５千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          装置の一部分が壊れた場合、パーツを交換することがあります。クラスプ（歯にかける金具）、唇側線、など。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 5
+                          .c-faq__title-text 装置の調整：２千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          通常の拡大装置ではなく、歯を後ろに下げる後方移動装置では、後方移動終了後、ゴムを掛けるために装置の調整が必要になることがあります。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 6
+                          .c-faq__title-text トレーニング用具
+                        .c-faq__text(data-accordion-content="faq-text").
+                          パナシールド：９千円（２個目は５千円）<br>
+                          タッチスティック：３百円
+
+
+
+
+
+
+            +e.block#mouthpiece
+              +c_tabs("mouthpiece")
+              .l-container
+                +e.head
+                  +e.text.u-text-center.
+                    マウスピース矯正は、矯正治療は従来のように、ワイヤー装置など、歯に装置を装着するのではなくて、透明のマウスピースを歯並びの状態に合わせて、いくつも作り変えながら、徐々に歯を動かしていく治療法です。
+                +e.conts
+                  +e.title
+                    h3.heading.is-lg マウスピース矯正の費用について
+                  +e.faq-block
+                    .c-faq
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 1
+                          .c-faq__title-text 矯正相談：相談料3千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          最初に矯正相談です。<br>
+                          現在の状態、今後の予想、治療の流れ、大体の費用、期間などを説明します。<br>
+                          相談後、治療をご希望の方は、さらに細かい費用、治療の流れを説明し、レントゲン、歯型採り、診断・見積もりに進みます。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 2
+                          .c-faq__title-text 診断・見積もり：診断料1万5千円（相談後、詳しい説明と見積もりをご希望されレントゲン、歯型採りをされる場合）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          レントゲン、歯型採りをします。<br>
+                          レントゲンはその場ですぐ見られますので、ご両親にすぐ説明いたします。<br>
+                          もともと歯の数が少ない場合（先天性欠損）、多い場合（過剰歯）、永久歯の芽（歯胚＝しはい）の位置などがわかりますので、矯正治療の難易度、方法などが予測でき、お話しいたします。<br>
+                          歯型の方はその場では出来ないので、次回の見積もりのときにお見せして、ご説明いたします。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 3
+                          .c-faq__title-text 矯正初診料 → 初診料30万円（見積もりご説明後、実際に治療を始める場合）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          マウスピース矯正は、この時点で海外の会社にマウスピースの制作を頼まなくてはならないので、開始前にある程度のまとまった金額をお支払いいただきます。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 4
+                          .c-faq__title-text 初回 矯正装置装着 装置料（状態により幅があります。20万円～50万円になります。）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          マウスピース矯正の場合、費用は、初診料30万と装置装着料の20万～50万で合わせて50万～80万になります。
+
+                +e.conts
+                  +e.title
+                    h3.heading.is-lg その他、細かい費用（調整料など）について
+                  +e.faq-block
+                    .c-faq
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 1
+                          .c-faq__title-text 調整料（１カ月半～２カ月）
+                        .c-faq__text(data-accordion-content="faq-text").
+                          矯正の治療は、装置の調整が必要で、毎回（１カ月半～２カ月）に１回です。<br>
+                          取り外し式の通常の矯正装置の場合：２千円<br>
+                          取り外しではない固定式装置（ＢＫ装置）：３千円
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 2
+                          .c-faq__title-text 装置の再製（紛失時、破損時）：４万円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          紛失は、装置装着の時、装置のケースをお渡ししますので、装置を口から外した時には、すぐにケースに入れてください。 とくに外出時、ケースに入れずにティッシュペーパーなどに包んだままですと、紛失しやすいです。<br>
+                          破損については、装着時、よくご説明いたしますが、普通に取り外しをしている状態であれば、まず、壊れません。<br>
+                          また、装置の使用が、装着時間が足りない場合に、同一装置の使用が長期間にわたった場合、装置の劣化により壊れることもあります。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 3
+                          .c-faq__title-text ボタン装置：３千円～５千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          ボタン装置は歯を細かく動かしたり、角度を変える場合、使用します。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 4
+                          .c-faq__title-text 部品の交換：５千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          装置の一部分が壊れた場合、パーツを交換することがあります。クラスプ（歯にかける金具）、唇側線、など。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 5
+                          .c-faq__title-text 装置の調整：２千円
+                        .c-faq__text(data-accordion-content="faq-text").
+                          通常の拡大装置ではなく、歯を後ろに下げる後方移動装置では、後方移動終了後、ゴムを掛けるために装置の調整が必要になることがあります。
+
+                      .c-faq__block.js-accordion
+                        .c-faq__title(data-accordion-title="faq-title")
+                          .c-faq__number 6
+                          .c-faq__title-text トレーニング用具
+                        .c-faq__text(data-accordion-content="faq-text").
+                          パナシールド：９千円（２個目は５千円）<br>
+                          タッチスティック：３百円

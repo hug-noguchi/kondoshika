@@ -1,0 +1,73 @@
+<?php
+/**
+ * アーカイブテンプレート
+ * =====================================================
+ * @package  growp
+ * @license  GPLv2 or later
+ * @since 1.0.0
+ * @see http://codex.wordpress.org/Template_Hierarchy
+ * =====================================================
+ */
+
+ // アクセス制限
+//header('HTTP/1.1 301 Moved Permanently');
+//header('Location: https://kondo-shika-shinbi.com/');
+//exit();
+
+
+// ページヘッダーの設定
+add_filter( 'growp/page_header/title', function () {
+	return '矯正を動画で分かりやすく解説';
+} );
+add_filter( 'growp/page_header/image', function () {
+	return GUrl::asset( '/assets/images/pagehead-movie.jpg' );
+} );
+// カラム設定
+add_action("growp/wrapper", function () {
+	return "twocolumn";
+});
+if ( have_posts() ) :
+?>
+<div class="c-content-box  is-movie">
+    <div class="c-content-box__inner">
+        <div class="c-content-box__content">
+			<div id="breadcrumb" class="wrap-auto center">
+			    <!-- Breadcrumb NavXT 6.6.0 -->
+				<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to 立川の矯正歯科・小児矯正なら【近藤歯科クリニック】にお任せ。." href="https://kondo-shika-shinbi.test-hug.net" class="home"><span property="name">トップ</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name" class="post post-page current-item">矯正を動画で分かりやすく解説</span><meta property="url" content="https://kondo-shika-shinbi.test-hug.net/flow/"><meta property="position" content="2"></span>
+			</div>
+			<div class="c-title-block__title">
+				<h2 class="heading is-xlg">矯正を動画で分かりやすく解説</h2>
+			</div>
+		    <ul class="movie">
+		      <?php if(have_posts()): ?>
+		      <?php while(have_posts()): the_post(); ?>
+        <li>
+          <video loop muted poster="<?php the_post_thumbnail_url(); ?>" playsinline controls>
+              <source src="<?php the_field('movie'); ?>">
+          </video>
+          <h3><?php the_title(); ?></h3>          
+        </li>
+		      <?php endwhile; ?>
+		      <?php else: ?>
+		      <?php endif; ?>
+<!--
+		        <li>
+		          <a href="<?php the_field('movie'); ?>" title="<?php the_title_attribute(); ?>" class="video-open">
+		            <div class="img">
+		              <?php if(has_post_thumbnail()): ?>
+		                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"/>                    
+		              <?php endif; ?>
+		            </div>
+		          </a>
+		          <h3><a href="<?php the_field('movie'); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>          
+		        </li>
+-->
+		    </ul>
+        </div>
+    </div>
+	<?php
+	// ページネーション
+	echo GNav::get_paging_nav();
+	?>
+</div>
+<?php endif;

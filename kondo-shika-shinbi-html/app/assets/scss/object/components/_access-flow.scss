@@ -1,0 +1,94 @@
+.c-access-flow {
+  background: $color-white;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include breakpoint(small only) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &__section{
+    margin-bottom: 124px;
+    @include breakpoint(small only){
+      margin-bottom: 64px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+  &__inner{
+
+  }
+  &__title {
+
+  }
+
+  &__block {
+    border: solid 1px $color-primary;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 64px;
+    @include breakpoint(small only) {
+      display: block;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+      &:after{
+        display: none;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      left: 50%;
+      bottom: -35px;
+      content: "";
+      display: block;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 35px 36px 0 36px;
+      transform: translateX(-50%);
+      border-color: $color-accent-yellow transparent transparent transparent;
+      @include breakpoint(small only) {
+        border-width: 16px 18px 0 18px;
+        bottom: -16px;
+      }
+    }
+
+  }
+  &__images {
+    width: 400 / 1140 * 100%;
+    padding: 24px;
+    position: relative;
+    @include breakpoint(small only) {
+      width: 100%;
+      padding: 24px 16px 8px 16px;
+
+    }
+
+
+  }
+  &__image{
+    height: auto;
+    width: 100%;
+  }
+  &__text {
+    width: calc(100% - (400 / 1140 * 100%));
+    display: flex;
+    align-items: center;
+    @include breakpoint(small only) {
+      width: 100%;
+    }
+  }
+  &__text-inner {
+    padding: 8px 40px;
+    @include breakpoint(small only) {
+      padding: 8px 16px 32px;
+      width: 100%;
+    }
+  }
+}

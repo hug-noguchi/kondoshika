@@ -1,0 +1,26 @@
+//- 2カラムのベースファイル
+extends /inc/foundation/_head.pug
+block layout
+  //- ヘッダー
+  block header
+    include /inc/layout/_header.pug
+
+  // ページヘッダー
+  block page_header
+
+  .l-wrapper
+    .l-wrapper__inner
+      +c_title-block-two(current.id)
+      .l-container.is-two-columns
+        section.l-main.is-two-columns
+          .l-post-content
+            //- メインコンテンツ
+            block body
+
+        aside.l-aside
+          block aside
+
+  //- フッター
+  block footer
+    include /inc/layout/_footer.pug
+

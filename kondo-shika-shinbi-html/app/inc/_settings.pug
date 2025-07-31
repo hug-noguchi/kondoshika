@@ -1,0 +1,170 @@
+//- サイトの設定
+-
+  // --------------------------
+  // 現在のページを保持するための変数
+  // --------------------------
+  current = {
+    depth: 1,
+    id: "",
+    title: "",
+    description: "",
+    bodyClass: ""
+  }
+
+  config = {
+
+    get rootpath(){
+      if ( this.root === "" ){
+        return this.root;
+      }
+      // 第一階層の場合
+      if ( current.depth === 1 ){
+        return this.root
+      }
+      var i = current.depth
+      var path = ""
+      while( i > 1 ){
+        path += "../"
+        i--;
+      }
+      // 末尾のスラッシュを削除
+      return path.replace(/\/$/g,"")
+    },
+
+    // --------------------------
+    // 1. サイト情報
+    // --------------------------
+
+    // サイトのルートパスを設定
+    // "" でドメイン直下からパスを開始
+    root: "",
+    site: {
+      title: "立川市の矯正歯科・小児矯正歯科なら近藤歯科クリニック",
+      titleSeparator: " | ",
+      description: "近藤歯科クリニックは立川駅にある矯正歯科、小児矯正歯科クリニックです。最新の矯正歯科で部分矯正やブライダル矯正、マウスピース矯正、インプラント矯正なども幅広く取り扱い、大人からお子様までおひとりお一人に合った方法をご提案しています。",
+      keywords: "",
+      viewport: "width=device-width,initial-scale=1",
+      favicon: "/assets/images/favicon.ico",
+      "apple-touch-icon": "/assets/images/web-clipicon.png",
+      ogp: {
+        locale: "ja_JP",
+        type: "website",
+        title: "立川市の矯正歯科・小児矯正歯科なら近藤歯科クリニック",
+        description: "近藤歯科クリニックは立川駅にある矯正歯科、小児矯正歯科クリニックです。最新の矯正歯科で部分矯正やブライダル矯正、マウスピース矯正、インプラント矯正なども幅広く取り扱い、大人からお子様までおひとりお一人に合った方法をご提案しています。",
+        url: "",
+        site_name: "立川市の矯正歯科・小児矯正歯科なら近藤歯科クリニック",
+        image: "/assets/images/ogp.png"
+      },
+    },
+
+    // --------------------------
+    // ナビゲーション
+    // nav("global_nav") 等で呼び出し可能
+    // --------------------------
+    navs: {
+      global_nav: [
+        {
+          url: "/",
+          text: "ホーム"
+        },{
+          url: "/aboutus/",
+          text: "私たちについて"
+        },{
+          url: "/service/",
+          text: "事業紹介"
+        },{
+          url: "/company/",
+          text: "企業情報"
+        },{
+          url: "/recruit/",
+          text: "採用情報"
+        },{
+          url: "/contact/",
+          text: "お問い合わせ"
+        },
+      ]
+    },
+
+    // ページ情報
+    pages: {
+      'top': {
+        name: "top",
+        title: "ホーム",
+        description: "",
+      },
+      'about': {
+        name: "about",
+        title: "私たちについて",
+        description: "",
+      },
+      'service': {
+        name: "service",
+        title: "サービス紹介",
+        description: "",
+      },
+      'works': {
+        name: "works",
+        title: "実績紹介",
+        description: "",
+      },
+      'contact': {
+        name: "contact",
+        title: "お問合せ",
+        description: "",
+      },
+    },
+  }
+
+  cssrules = {
+    component: [],
+    cleanComponent: function(){
+      var tempComponents = []
+      for(var key in cssrules.component){
+        tempComponents.push(cssrules.component[key])
+      }
+      cssrules.component = tempComponents
+    },
+    addComponent: function(component){
+      cssrules.cleanComponent()
+      cssrules.component.push(component)
+    },
+    getComponent: function(number){
+      if ( typeof cssrules.component[cssrules.component.length-(number+1)] !== "undefined" ){
+        return cssrules.component[cssrules.component.length-(number+1)]
+      }
+      return false
+    },
+    get currentComponent(){
+      cssrules.cleanComponent()
+      if ( typeof cssrules.component[cssrules.component.length-1] !== "undefined" ){
+        return cssrules.component[cssrules.component.length-1]
+      }
+      return false
+    },
+    element: "",
+  }
+
+  // ページごとの情報を取得
+  getPagesValue = function(id,key){
+    if ( typeof config.pages[id] !== "undefined" && typeof config.pages[id][key] !== "undefined" ){
+      return config.pages[id][key];
+    }
+    // タイトル,説明文等についてはサイトの設定を返す
+    if ( typeof config.site[key] !== "undefined" ){
+      return config.site[key]
+    }
+    return "";
+  }
+  // ナビゲーションを取得
+  nav = function(id) {
+    if ( typeof config.navs[id] === "undefined" ){
+      return false;
+    }
+    return config.navs[id]
+  }
+
+  isUpperCase = function(word){
+    return (word[0] === word[0].toUpperCase());
+  }
+
+

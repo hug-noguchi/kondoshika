@@ -1,0 +1,79 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "ortho" // ページのID
+  - current.title = "矯正治療" // タイトル
+  - current.description = "これは矯正治療についての説明文です" // 説明文
+  - current.bodyClass = "ortho" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-ortho.jpg","矯正治療")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span 矯正治療
+
+block body
+  section.l-main
+    .l-section.is-lower
+      .l-section.is-lower-inner
+        +c.title-block
+          .l-container
+            +e.title
+              h2.heading.is-xlg.
+                近藤歯科クリニックの矯正治療
+        +c.ortho-top
+          +e.inner
+            +e.content.u-box-shadow
+              +e.title.
+                患者さんのご負担を減らし、<br class="u-hidden-lg">矯正治療を身近な治療
+              +e.text.
+                近藤歯科クリニックでは、子供たちの健全な成長発育を第一に考えております。したがって、矯正治療で大事な永久歯は抜かずに治療いたします。<br>
+                歯並びには原因があります。その原因を考えて、対処していけば、<br class="u-hidden-sm">矯正治療後の後戻りも少なくなります。<br>
+                床型の拡大装置は少しずつ広がりますので、矯正治療時の痛みはほとんどありません。<br>
+                取り外しの装置なので、固定式の矯正装置より、歯みがきをしやすく、<br class="u-hidden-sm">
+                矯正の治療費も、従来行われてきた矯正治療の約半分以下、ほとんどの場合は三分の一程度で、患者さんのご負担を減らし、矯正治療を身近な治療にしていくのが目標です。
+
+        +c.overview-normal.u-line-dot
+          +e.inner
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    h3.heading.is-lg 小児矯正について
+                  +e.text.
+                    永久歯の抜歯をせずに、健全な成長発育を引き出し、歯並びだけでなく、お顔のお口周りの自然な感じ、美しさを目指します。実際に矯正治療を始めるかどうかは別として、出来るだけ幼少期からの来院がおすすめです。
+                  +e.button
+                    +a("/ortho/child/").c-button.is-md.is-arrow.is-primary.is-effect.
+                      詳細を見る
+              +e.images
+                +img("img-ortho-01.jpg","小児矯正について").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    h3.heading.is-lg 予防矯正について
+                  +e.text.
+                    従来の矯正治療は、ぼぼ、永久歯が生えそろって歯の重なりが重症になって、始めていました。<br>
+                    しかし、できる限り早期に、お子様が小さい時から、“歯並びをよくする育て方”をしていくと、費用と手間のかかる矯正治療をより軽く、または、行わずに済むケースもあると思います。
+                  +e.button
+                    +a("/ortho/prevention/").c-button.is-md.is-arrow.is-primary.is-effect.
+                      詳細を見る
+              +e.images
+                +img("img-ortho-02.jpg","小児矯正について").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    h3.heading.is-lg 成人矯正について
+                  +e.text.
+                    大人の矯正の場合も、原則として、永久歯を抜かずに矯正治療を行います。したがって、全体的に歯を大幅に動かす矯正ではなく、奥歯のかみ合わせは出来るだけ変えずに、気になるところを部分的に動かす“部分矯正”、並びに短期間で可能な範囲で歯を動かす“ブライダル矯正”に力を入れています。
+                  +e.button
+                    +a("/ortho/adult/").c-button.is-md.is-arrow.is-primary.is-effect.
+                      詳細を見る
+              +e.images
+                +img("img-ortho-03.jpg","小児矯正について").u-image-radius

@@ -1,0 +1,109 @@
+.c-relation-lg{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include breakpoint(small only){
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  &__inner{
+
+  }
+  &__title{
+    margin-bottom: 40px;
+  }
+  &__links{
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(small only){
+      display: block;
+    }
+  }
+
+  &__block{
+    display: block;
+    width: 344 / 1140 * 100%;
+    text-decoration: none;
+    margin-right: 54 / 1140 * 100%;
+    transition: all 0.2s;
+    @include breakpoint(small only){
+      width: 70%;
+      margin-right: 0px;
+      margin: 0 auto 48px;
+    }
+    &:nth-child(3n){
+      margin-right: 0px;
+      @include breakpoint(small only){
+        margin: 0 auto 48px;
+      }
+    }
+    &:nth-child(n + 4){
+      margin-top: 56px;
+      @include breakpoint(small only){
+        margin-top: 0px;
+      }
+    }
+    &:last-child{
+      @include breakpoint(small only){
+        margin-bottom: 0px;
+      }
+    }
+  }
+  &__image{
+    display: block;
+    margin-bottom: 16px;
+
+  }
+  &__block-title{
+    display: block;
+    font-size: 20px;
+    //vertical-align: middle;
+    //display: flex;
+    //align-items: center;
+    text-decoration: underline;
+    color: $font-base-color;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 32px;
+    letter-spacing: 0.5px;
+    @include breakpoint(small only){
+      font-size: 15px;
+      padding-left: 24px;
+    }
+    &:before{
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      margin-right: 8px;
+      content: "";
+      display: block;
+      background: url("../images/icon-arrow-relation.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      @include breakpoint(small only){
+        top: 5px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  &__text{
+    display: block;
+    color: $font-base-color;
+    font-size: $font-base-size-sub;
+    letter-spacing: 0.5px;
+
+  }
+
+  //top
+  &.is-top{
+    background: $color-accent-cream;
+  }
+  &.is-top &{
+
+  }
+
+
+}

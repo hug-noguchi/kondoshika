@@ -1,0 +1,103 @@
+.c-offer {
+  position: relative;
+  z-index: 10;
+  background: url("../images/bg-offer.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: $color-white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  @include breakpoint(small only) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  &__lead{
+    margin-bottom: 32px;
+  }
+
+
+  &__inner {
+    z-index: 99;
+    position: relative;
+  }
+
+  // ボタン
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint(small only) {
+      display: block;
+    }
+  }
+
+  &__button {
+    &:first-child{
+      width: 312/1140*100%;
+      margin-right: 24px;
+      position: relative;
+      @include breakpoint(small only){
+        width: 100%;
+      }
+      &:before{
+        position: absolute;
+        content: "";
+        height: 72px;
+        width: 2px;
+        right: -24px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $color-white;
+        @include breakpoint(small only){
+          display: none;
+        }
+      }
+    }
+    &:last-child{
+      width: 400/1140*100%;
+      margin-left: 24px;
+      @include breakpoint(small only){
+        width: 100%;
+        margin-left: 0px;
+      }
+      > a{
+        @include breakpoint(small only){
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    @include breakpoint(small only) {
+      width: 100%;
+      margin: 0 0 10px;
+    }
+
+  }
+
+  &__tel-text{
+    font-size: $font-base-size-sub;
+    padding: 2px 8px;
+    border-radius: 100px;
+    border: solid 1px $color-accent-yellow;
+    color: $color-accent-yellow;
+    margin-bottom: 4px;
+    @include breakpoint(small only){
+      width: 88%;
+      margin: 0 auto;
+    }
+  }
+  &__tel{
+    font-size: 30px;
+    text-decoration: none;
+    color: $color-white;
+    transition: all 0.2s;
+    @include webfont-Montserrat-bold();
+
+    i{
+      color: $color-accent-yellow;
+      margin-right: 4px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// Webフォント用
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600&display=swap');
+
+
+
+@mixin webfont-normal() {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+}
+@mixin webfont() {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+@mixin webfont-bold() {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+
+//Rounded
+@mixin webfont-Rounded-normal() {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 400;
+}
+@mixin webfont-Rounded-bold() {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 500;
+}
+
+//Montserrat
+@mixin webfont-Montserrat-normal() {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+@mixin webfont-Montserrat-bold() {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+

@@ -1,0 +1,49 @@
+.c-post-head {
+  &__title{
+    font-size: 24px;
+    margin-bottom: 16px;
+    display: block;
+    @include breakpoint(small only) {
+      font-size: (24px * 0.75);
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sup{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 24px;
+    display: block;
+    @include breakpoint(small only) {
+      font-size: (24px * 0.75);
+      margin-bottom: 16px;
+    }
+
+  }
+  &__label.c-label{
+    margin-right: 32px;
+    display: inline-block;
+    @include breakpoint(small only) {
+      margin-right: 16px;
+    }
+
+  }
+  &__date{
+    display: inline-block;
+  }
+  &__name{
+    font-size: 18px;
+    color: $color-primary;
+    margin-bottom: 24px;
+    display: block;
+    @include breakpoint(small only) {
+      font-size: (18px * 0.75);
+      margin-bottom: 16px;
+    }
+
+
+  }
+
+
+}

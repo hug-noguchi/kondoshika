@@ -1,0 +1,39 @@
+.c-price-conts{
+  &__inner{
+
+
+  }
+
+  &__block{
+    margin-bottom: 112px;
+    @include breakpoint(small only){
+      margin-bottom: 64px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+  &__head{
+    margin-bottom: 72px;
+    @include breakpoint(small only){
+      margin-bottom: 32px;
+    }
+  }
+  &__conts{
+    margin-bottom: 88px;
+    @include breakpoint(small only){
+      margin-bottom: 40px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+  &__text{
+
+  }
+
+  &__title{
+
+  }
+
+}

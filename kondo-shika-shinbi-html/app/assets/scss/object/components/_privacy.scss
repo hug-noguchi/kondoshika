@@ -1,0 +1,24 @@
+.c-privacy{
+
+  &__inner{
+
+  }
+
+  &__block{
+    margin-bottom: 56px;
+    @include breakpoint(small only){
+      margin-bottom: 32px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+  &__title{
+
+  }
+  &__text{
+
+  }
+
+
+}

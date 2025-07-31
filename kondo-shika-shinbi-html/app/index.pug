@@ -1,0 +1,212 @@
+//- filename: index.jade
+//- description: サイトのトップページ
+
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "top" // ページのID
+  - current.title = "トップページ" // タイトル
+  - current.description = "これはトップページの説明文です" // 説明文
+  - current.bodyClass = "top" // body に付与するクラス
+  - current.depth = 1 // ページの階層
+
+block body
+  +c_mainvisual()
+  section.l-main.is-top
+    +c.opening.u-weave-blue-top
+      +img("img-cloud-top-left.png").c-opening__image-deco.is-left
+      +img("img-cloud-top-right.png").c-opening__image-deco.is-right
+      +img("img-cloud-top-bird.png").c-opening__image-deco.is-bird
+      +img("img-cloud-top-cloud.png").c-opening__image-deco.is-cloud
+
+      +e.inner
+        .l-container
+          +c.title-block.l-container.u-mbs.is-top.is-bottom
+            +e.title
+              h2.heading.is-xlg.
+                クリニック紹介
+            +e.lead.
+              東京都立川市にある矯正歯科、近藤歯科クリニックは、矯正歯科に本気で取り組んでいます。<br>
+              立川北口、昭島、小平、府中、国立、周辺地域での唯一の床矯正研究会会員です。
+      .c-opening__inner.is-bottom
+        .c-opening__blocks.js-fadein
+          .c-opening__block
+            .c-opening__block-image
+              +img("img-opening-01.png","クリニック紹介")
+            .c-opening__block-name
+              span 近藤歯科クリニック
+              span Kondoshika Clinic
+            .c-opening__block-table
+              +c_time_table()
+
+          .c-opening__block
+            .c-opening__block-title
+              h2.heading.is-bottom-border.u-text-left
+                <i class="fa fa-map-marker" aria-hidden="true"></i>アクセス
+            .c-opening__block-add-texts
+              .c-opening__block-add-text.
+                東京都立川市高松町2-25-3 メープル立川1F<br>
+                立川駅徒歩10分
+              .c-opening__block-add-map-button
+                a(href="//goo.gl/maps/UtkYHCBFPCzSBrga6" target="_blank").c-button.is-md.is-arrow.is-primary.is-effect.
+                  Mapを見る
+            .c-opening__block-add-map
+              +c_map()
+            .c-opening__block-add-buttons
+              .c-opening__block-add-button
+                a(href="tel:042-524-0722").c-button.is-phone.is-arrow.is-yellow.is-effect.
+                  042-524-0722
+              .c-opening__block-add-button
+                a(href="/contact/").c-button.is-normal.is-arrow.is-yellow.is-effect.
+                  お問い合わせ
+
+    +c.feature-top
+      .c-feature-top__slider
+        .c-feature-top__slider-inner
+      +e.inner
+        +c.title-block
+          +e.title
+            h2.heading.is-xlg.
+              近藤歯科クリニックの<br class="u-hidden-lg">“矯正治療“<span class="heading-text-big">3</span>つの特徴
+          +e.lead.
+            近藤歯科クリニックは立川駅にある矯正歯科、小児歯科クリニックです。<br>
+            歯を抜かない、費用を抑えた、むし歯になりにくい、最新の矯正治療、小児矯正、予防矯正に取り組んでいます。<br>
+            成人の場合は部分矯正、ブライダル矯正など、おひとりお一人に合った方法をご提案しています。
+        .c-feature-top__points.js-fadein
+          +a("/ortho/").c-feature-top__point
+            .c-feature-top__images
+              .c-feature-top__number
+                .c-feature-top__number-inner
+                  span 特徴
+                  span 01
+              +img("img-point-top-01.png","歯を抜かない、身体にやさしい矯正歯科").c-feature-top__image
+            .c-feature-top__text.
+              <span class="u-marker-yellow">歯を抜かない、</span><br>
+              <span class="u-marker-yellow">身体にやさしい矯正歯科</span>
+          +a("/price/").c-feature-top__point
+            .c-feature-top__images
+              .c-feature-top__number
+                .c-feature-top__number-inner
+                  span 特徴
+                  span 02
+              +img("img-point-top-02.png","費用を抑えた矯正治療従来の半分以下").c-feature-top__image
+            .c-feature-top__text.
+              <span class="u-marker-yellow">費用を抑えた矯正治療・</span><br>
+              <span class="u-marker-yellow">従来の半分以下</span>
+          +a("/flow/").c-feature-top__point
+            .c-feature-top__images
+              .c-feature-top__number
+                .c-feature-top__number-inner
+                  span 特徴
+                  span 03
+              +img("img-point-top-03.png","診療日であればいつでも可能な矯正治療").c-feature-top__image
+            .c-feature-top__text.
+              <span class="u-marker-yellow">診療日であればいつでも</span><br>
+              <span class="u-marker-yellow">可能な矯正治療</span>
+        .c-feature-top__button
+          +a("/aboutus/").c-button.is-lg.is-arrow.is-primary.is-effect.
+            近藤歯科について
+
+    +c.about-top
+      +e.inner.l-container
+        +c.title-block
+          +e.title
+            h2.heading.is-xlg.
+              矯正治療について
+          +e.lead.
+            矯正治療は、小児と成人では、考え方が少し違います。<br>
+            小児は成長発育を考えながら行い、成人は、身体と歯に負担がかかるため、噛み合わせは大きく変えないように対応しています。
+      .c-about-top__blocks
+        .c-about-top__block
+          .c-about-top__block-image
+            +img("img-about-top-01.png","小児矯正について")
+          .c-about-top__block-title
+            h3.heading.is-lg-center.
+              小児矯正について
+          .c-about-top__block-lead.
+            非抜歯で、生活習慣を変え、良い成長発育を引き出し、歯並びだけでなく、<br class="u-hidden-sm">口元の美しさを目指す、最新の子どもの矯正治療です。
+          .c-about-top__block-button
+            +a("/ortho/child/").c-button.is-md.is-arrow.is-primary.is-effect.
+              詳細を見る
+
+        .c-about-top__block
+          .c-about-top__block-image
+            +img("img-about-top-02.png","予防矯正について")
+          .c-about-top__block-title
+            h3.heading.is-lg-center.
+              予防矯正について
+          .c-about-top__block-lead.
+            従来の矯正治療は、成長発育がだいぶ進んでから、歯並び、かみ合わせが重篤化してから行っていました。しかし、乳児期、幼児期から取り組めば、費用も手間もかかる矯正治療をしないで済むこともあると考えます。
+          .c-about-top__block-button
+            +a("/ortho/prevention/").c-button.is-md.is-arrow.is-primary.is-effect.
+              詳細を見る
+
+
+    +c_relation_lg("top","is-top","初めての方へ")
+
+
+    +c.news-top.u-line-dot
+      +e.inner.l-container
+        +e.titles
+          +e.title
+            h2.heading.is-news
+              span News
+              small お知らせ
+          +e.button
+            +a("/post/news/").c-button.is-md.is-arrow.is-primary.is-effect.
+              一覧を見る
+        +e.post
+          +c.post-item
+            +e.inner
+              - for(var i = 0; i<3; i++){
+                +a("/news/page/").c-post-item__block
+                  +e.sup
+                    +e.date 2017.01.01
+                    +e.category カテゴリー
+                  +e.title タイトルがここに入ります。タイトルがここに入ります。
+              - }
+        .c-news-top__button-sp
+          +a("/post/news/").c-button.is-md.is-arrow.is-primary.is-effect.
+            一覧を見る
+
+
+    +c.relation-top.u-weave-blue
+      +img("img-star.png").c-relation-top__star.is-left
+      +img("img-star-rev.png").c-relation-top__star.is-right
+      +e.inner
+        +e.buttons.l-container
+          +e.button
+            +a("/flow/").c-button.is-bg-image.is-flow.
+              診療の流れ
+          +e.button
+            +a("/ortho/child/").c-button.is-bg-image.is-qa.
+              小児矯正Q＆A
+          +e.button
+            +a("/ortho/child/").c-button.is-bg-image.is-bio.
+              小児矯正と<br>
+              バイオセラピー
+        +e.banner.l-container
+          +e.banner-button
+            a(href="//doctorsfile.jp/h/38731/df/1/" target="_blank")
+              +img("img-banner-doctors-top.png","ドクターズファイル").u-hidden-sm
+              +img("img-banner-doctors-top-sp.png","ドクターズファイル").u-hidden-lg
+          +e.banner-button
+            a(href="//appt.doctorsfile.jp/Patient/?hid=38731" target="_blank")
+              +img("img-banner-res-top.png","ドクターズファイル")
+
+        .l-container
+          +e.relation
+            +e.title
+              h3.heading.is-xlg.
+                関連情報
+            +e.relation-buttons
+              +e.relation-button
+                +a("/post/column/").c-button.is-lg.is-arrow.is-primary.is-effect.
+                  コラム
+              +e.relation-button
+                +a("/post/staff/").c-button.is-lg.is-arrow.is-primary.is-effect.
+                  スタッフブログ
+              +e.relation-button
+                +a("/post/school/").c-button.is-lg.is-arrow.is-primary.is-effect.
+                  小学生のみなさんへ
+
+

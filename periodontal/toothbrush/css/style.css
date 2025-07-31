@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+.mv {
+  background-image: url(https://kondo-shika-shinbi.test-hug.net/periodontal/toothbrush/img/mv_toothbrush.jpg);
+}
+
+.box_white,
+.box_yellow {
+  padding: 70px;
+}
+
+.sec_02,
+.sec_04,
+.sec_06 {
+  background-color: #faf2e7;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+.list_title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7ac96e;
+  border-left: 5px solid #7ac96e;
+  padding: 0px 12px;
+}
+.sec_02 ul li:nth-child(2) {
+  margin: 40px 0;
+}
+
+.sec_06 li {
+  display: flex;
+  justify-content: space-between;
+}
+.sec_06 li:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.price {
+  color: #84b9e5;
+}
+
+@media screen and (min-width: 481px) {
+  .mv {
+    background-position: center -110px;
+  }
+  .sec_02 ul {
+    padding-top: 40px;
+  }
+  .sec_06 li div:nth-child(1),
+  .sec_06 li div:nth-child(3),
+  .sec_06 li div:nth-child(5) {
+    margin-right: 30px;
+  }
+  .sec_06 li div:nth-child(2),
+  .sec_06 li div:nth-child(4) {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sec_06 li {
+    flex-direction: column;
+  }
+  .sec_06 li:not(:last-child) {
+    padding-bottom: 20px;
+  }
+  .sec_06 li p img {
+    margin-top: 20px;
+  }
+}

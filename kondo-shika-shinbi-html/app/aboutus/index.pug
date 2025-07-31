@@ -1,0 +1,120 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "aboutus" // ページのID
+  - current.title = "近藤歯科クリニックについて" // タイトル
+  - current.description = "これは近藤歯科クリニックについての説明文です" // 説明文
+  - current.bodyClass = "aboutus" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block page_header
+  +c.page-header-outer
+    +c_page_header("pagehead-aboutus.jpg","近藤歯科クリニックについて")
+    +c.breadcrumb
+      .l-container
+        span: +a("/") ホーム
+        span >
+        span 近藤歯科クリニックについて
+
+block body
+  section.l-main
+    .l-section.is-lower.is-top
+      .l-section.is-lower-inner
+        +c.lower-about-top
+          +img("img-cloud-blue.png").c-lower-about-top__deco.is-left
+          +img("img-cloud-blue.png").c-lower-about-top__deco.is-right
+          +e.inner
+            +e.conts.l-container
+              +e.images
+                .c-title-block
+                  .c-title-block__title
+                    h2.heading.is-xlg.is-xlg-left.
+                      ご挨拶
+                +e.image
+                  +img("img-aboutus-top-01.jpg","予防矯正とは").u-image-radius
+              +e.text-block
+                +e.text-block-tilte.
+                  からだと歯と心にもやさしい<br>
+                  歯を抜かない矯正歯科
+                p.
+                  当クリニックの小児矯正は身体にやさしい矯正歯科です。永久歯も抜きませんし、歯にかかる力も固定式のワイヤー、ブラケット装置よりも少ないです。ですから、矯正歯科にありがちな痛みもほとんどありません。<br>
+                  ただし、装置が歯ぐきに当たって痛いこともありますから、その時は装置を外しっぱなしにせず、すぐにご連絡してください。<br>
+                  さらに小児矯正治療は“かたち”よりも“正しい機能”を重視します。<br>
+                  それは、“歯並び”は、その人の噛み方、生活習慣、口に周りの筋肉の状態の結果だからです。<br>
+                  いくら「かたち＝良い歯並び」に歯を動かしても、「正しい機能＝正しい噛み方、舌の動き、生活習慣」が身についていないと「良い歯並び」は維持できません。小学生時代は心も体もいっぱい成長する大事な時期ですが、この大事な時に小児矯正治療をとおして「良い習慣づくり」をしてみませんか？<br>
+                  きれいな歯並びとともに「良い習慣を身に着ける」ことはお子様方の一生の宝となりますね。
+
+        +c.overview-number
+          .c-title-block
+            .l-container
+              .c-title-block__title
+                h2.heading.is-xlg.
+                  近藤歯科クリニックの<br class="u-hidden-lg">3つのポイント
+              .c-title-block__lead.
+                近藤歯科クリニックは立川の矯正歯科、小児矯正歯科、予防歯科です。<br>
+                歯も抜かず、費用も抑え、歯並びに良い生活習慣を身に着けてもらうことで、健全で安心な矯正治療を行っています。
+
+          +e.inner
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 01
+                    h3.heading.is-xlg.is-xlg-left 歯を抜かない、身体にやさしい矯正歯科
+                  +e.text.
+                    “永久歯を抜く”ということは、あごの成長をとめてしまうこと、”ワイヤー、ブラケット装置に頼った矯正治療”は患者さんが痛いだけでなく、歯並びのアーチも不自然に小さくし、舌のスペースを少なくし”矯正治療の後戻り”の原因になります。
+              +e.images
+                +img("img-aboutus-01.jpg","歯を抜かない、身体にやさしい矯正歯科").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 02
+                    h3.heading.is-xlg.is-xlg-left 費用を抑えた矯正治療
+                  +e.text.
+                    矯正費用は、従来80万～100万というのが平均的でしたが、当クリニックは20万～40万で行っております。より多くの方が、気軽に矯正治療を受けていただけるように願い、他の半額以下で設定しています。さらに、お支払い方法も、一括ではなく、矯正装置が入る毎の分割式です。
+              +e.images
+                +img("img-aboutus-02.jpg","費用を抑えた矯正治療").u-image-radius
+
+            +e.block
+              +e.texts
+                +e.texts-inner
+                  +e.title
+                    span.c-overview-number__number 03
+                    h3.heading.is-xlg.is-xlg-left 矯正治療は診療日すべて可能です
+                  +e.text.
+                    矯正医が来るときのみ対応の歯科が多いですが、当クリニックでは、院長がすべて対応しますので、診療日であれば、いつでも診させていただきます。さらに、矯正治療時にむし歯のチェックもしておりますので安心です。
+              +e.images
+                +img("img-aboutus-03.jpg","矯正治療は診療日すべて可能です").u-image-radius
+
+        +c.aboutus-power
+          .c-title-block
+            .l-container
+              .c-title-block__title
+                h2.heading.is-xlg.
+                  近藤歯科クリニックの<br class="u-hidden-lg">スタッフ力
+          +e.top-image
+            +img("img-aboutus-power.jpg","近藤歯科クリニックのスタッフ力")
+          +e.content
+            +img("img-cloud-aboutus-left.png").c-aboutus-power__deco.is-left
+            +img("img-cloud-aboutus-right.png").c-aboutus-power__deco.is-right
+            +e.text-block.u-box-shadow
+              +e.title
+                h3.heading.is-md-normal 立川近藤歯科クリニックの小児矯正とスタッフ力
+              +e.text.
+                小児矯正は成長期のお子様が多いので、毎回の治療時に目が離せません。<br>
+                当クリニックの矯正の予約間隔は一ケ月半。したがって少しの変化でも、見逃してしまうと三ヶ月後になってしまいます。もちろん、毎回、院長近藤は必ず診て確認はしますが、どんな小さな変化も見逃さないように歯科衛生士のスタッフの協力が欠かせません。<br>
+                そこで、毎日の昼休みの打ち合わせ、2週に1回の院内ミーティング、約3カ月に1回の講習会参加と密度も濃く勉強をして、さらに、意見の統一をはかり、チームワークの強化をしています。<br>
+                毎日朝礼も行っており、気づいたことがあれば、すぐに受付、助手を含めた全員で確認もしています。さらに、個々のコミ二ケ―ションも欠かせません。さらに、混雑時に患者さんをお待たせしないように助手の人が、院長、歯科衛生士に声掛けし治療のスムーズ化を図っています。
+              +e.text.
+                そして、小児矯正の考え方、重要なポイントは常にスタッフ一同徹底して確認し、個々の患者さんの治療の進み具合、矯正装置の状況、その患者さんの治療の難易度などもクリニック全員で共有しています。<br>
+                一般的にインプラント治療も“チーム力”が不可欠と言われていますが、当クリニックの小児矯正治療は受付、アシスタント、歯科衛生士、歯科医師が全員で情報を共有しながら、各自がそれぞれの視点で考え、問題提起するということにおいて、それに勝るとも劣らないチーム体制になっています。
+              +e.text.
+                そして、“スタッフ力”“チーム力”としては、立川ならびに立川周辺の矯正歯科医院のなかでも、<br>
+                多摩地区でも知る限りにおきましては、トップレベルのものと自負しております。<br>
+                「クリニックのスタッフの“個性”を生かし、その長所をいかに伸ばすか」これが当クリニックの人材育成のテーマなのです。
+
+
+    +c_relation_lg("aboutus","is-lower","関連コンテンツ")
+    .u-mbs.is-bottom.is-lg
+      +c_doctors_banner("is-sm")

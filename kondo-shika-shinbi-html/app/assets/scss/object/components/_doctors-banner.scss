@@ -1,0 +1,54 @@
+.c-doctors-banner{
+  &__banner{
+    padding: 24px 0px 48px;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1080px){
+      display: block;
+      margin: 0 auto;
+      padding: 16px 0px 40px;
+    }
+  }
+  &__banner-button{
+    display: block;
+    //width: 760 / 1140 * 100%;
+    //width: 420 / 1140 * 100%;
+    > a{
+      transition: all 0.2s;
+    }
+    @media (max-width: 1080px){
+      width: 100%;
+      max-width: 500px;
+    }
+    &:nth-child(1){
+      width: 512 / 1140 * 100%;
+      margin-right: 8px;
+      @media (max-width: 1080px){
+        width: 76%;
+        margin: 0 auto 16px;
+      }
+    }
+    &:nth-child(2){
+      width: 400 / 1140 * 100%;
+      margin-left: 8px;
+      @media (max-width: 1080px){
+        width: 76%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+  //small
+  &.is-sm &{
+    &__banner{
+      padding: 0px 0px 0px;
+      @media (max-width: 1080px){
+        padding: 0px 0px 0px;
+      }
+    }
+  }
+
+}

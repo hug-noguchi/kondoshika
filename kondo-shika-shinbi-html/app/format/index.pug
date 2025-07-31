@@ -1,0 +1,85 @@
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "format" // ページのID
+  - current.title = "フォーマット" // タイトル
+  - current.description = "これはフォーマットページの説明文です" // 説明文
+  - current.bodyClass = "format" // body に付与するクラス
+  - current.depth = 2 // ページの階層
+
+block body
+  // メインビジュアル
+  +c_page_header("pagehead-default.jpg","スタイルガイド","STYLE GUIDE")
+  +c.breadcrumb
+    .l-container
+      span: +a("/") ホーム
+      span >
+      span 私たちについて
+
+  // テキスト関係
+  .u-mbs.is-bottom.is-sm
+    h2.heading.is-xlg.
+      ＜h1＞30px／line-height46px
+    h2.heading.is-lg.
+      ＜h1＞30px／line-height46px
+    h2.heading.is-lg.is-center.is-line-center.
+      ＜h1＞30px／line-height46px
+    h2.heading.is-md.
+      ＜h1＞30px／line-height46px
+
+  //ボタン関係
+  .u-mbs.is-bottom.is-sm
+    +a("#").c-button.is-bg-image.is-flow.
+      診療の流れ
+    +a("#").c-button.is-bg-image.is-qa.
+      小児矯正Q＆A
+    +a("#").c-button.is-bg-image.is-bio.
+      小児矯正と<br>
+      バイオセラピー
+  .u-mbs.is-bottom.is-sm
+    +a("#").c-button.is-mail.is-arrow.is-yellow.is-effect.
+      メールでのお問い合わせはこちら
+    a(href="tel:042-524-0722").c-button.is-phone.is-arrow.is-yellow.is-effect.
+      042-524-0722
+    +a("#").c-button.is-lg.is-arrow.is-primary.is-effect.
+      近藤歯科について
+    +a("#").c-button.is-md.is-arrow.is-primary.is-effect.
+      Mapを見る
+
+
+
+
+  include /format/components/_text.pug
+
+  // ボタン関係
+  include /format/components/_buttons.pug
+
+  // カードデザイン
+  include /format/components/_card.pug
+
+  // ブロックデザイン
+  include /format/components/_block.pug
+
+  // タブ
+  include /format/components/_tab.pug
+
+  // バナー
+  include /format/components/_banner.pug
+
+  // オファー
+  include /format/components/_offer.pug
+
+  // お知らせ
+  include /format/components/_news.pug
+
+  // 導入事例スライダー
+  include /format/components/_case-slider.pug
+
+  // フッター
+  include /format/components/_footer.pug
+
+  // ヘッダー
+  include /format/components/_header.pug
+
+  // メインビジュアル
+  include /format/components/_mainvisual.pug
+
