@@ -17435,3 +17435,72 @@ article {
     height: auto;
   }
 }
+
+/* トップページ 小児矯正治療について */
+.c-about-top__blocks--top {
+  display: block;
+}
+.c-about-top__block--top {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+.c-about-top__block--top .c-lower-about-top__left {
+  width: 43.85965%;
+}
+.c-about-top__block--top .c-about-top__block-image,
+.c-about-top__block02--top .c-about-top__block-image {
+  max-width: 450px;
+  margin: 0 auto 24px;
+}
+.c-about-top__block--top .c-about-top__block-image img,
+.c-about-top__block02--top .c-about-top__block-image img {
+  border-radius: 40px;
+  border: solid 4px #78c5d2;
+  box-sizing: border-box;
+}
+.c-about-top__block02--top {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.c-about-top__block02--top .c-about-top__block02-left {
+  width: 43.85965%;
+}
+.c-about-top__block02--top .c-about-top__block02-right {
+  width: 43.85965%;
+}
+.c-about-top__blocks--top {
+  display: block;
+}
+@media screen and (min-width: 0em) and (max-width: 59.3125em) {
+  .c-about-top__block--top {
+    display: block;
+  }
+  .c-about-top__block--top .c-lower-about-top__left {
+    width: 100%;
+  }
+  .c-about-top__block--top .c-about-top__block-lead {
+    margin-bottom: 0;
+  }
+  .c-lower-about-top__points--top {
+    margin-bottom: 24px;
+  }
+  .c-lower-about-top__point--top {
+    padding: 34px 0;
+  }
+  .c-about-top__block02--top {
+    display: block;
+  }
+  .c-about-top__block02--top .c-about-top__block02-left {
+    width: 100%;
+  }
+  .c-about-top__block02--top .c-lower-about-top__image {
+    width: 100%;
+  }
+  .c-about-top__block02--top .c-about-top__block02-right {
+    width: 100%;
+  }
+}
