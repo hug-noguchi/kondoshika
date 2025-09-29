@@ -17504,3 +17504,15 @@ article {
     width: 100%;
   }
 }
+
+/* 小児矯正 */
+.c-doctors-banner__banner-button:nth-child(1).banner-doctors-top {
+  width: 64%;
+  margin-right: 0;
+}
+@media (max-width: 1080px) {
+  .c-doctors-banner__banner-button:nth-child(1).banner-doctors-top {
+    margin-right: auto !important;
+    margin: 0 auto;
+  }
+}
